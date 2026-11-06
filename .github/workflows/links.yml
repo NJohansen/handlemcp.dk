@@ -1,0 +1,29 @@
+name: links
+
+# Outside links break without warning and fail now and then for no reason,
+# so they run once a week and never block a pull request.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept '200..=299,429'
+            --root-dir ${{ github.workspace }}
+            --exclude 'api\.github\.com'
+            --exclude 'cloud\.umami\.is'
+            index.html privatliv/index.html llms.txt
