@@ -267,6 +267,7 @@ nav{height:auto;background:#fff;border:1px solid var(--line);border-radius:999px
 .brand b{color:var(--green);font-weight:inherit}
 nav ul{gap:6px}
 nav ul a{display:block;padding:10px 16px;border-radius:999px}
+
 nav ul a:hover{background:var(--soft)}
 .stars{display:inline-flex;align-items:center;gap:4px;margin-left:8px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}
 nav ul a.gh{display:flex;align-items:center}
@@ -308,7 +309,7 @@ body{overflow-x:clip}
 .band::before{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);z-index:-1;background:var(--sky-soft)}
 .band.sky::before{background:var(--sky-soft)}
 .band.sand::before{background:#f4f0e6}
-.band.sand .fact,.band.sand .fact+.fact{background:#fff}
+.band .fact,.band .fact+.fact{background:#fff}
 .band .chat{background:#fff}
 .band .ai .bubble{background:var(--sky-soft)}
 .band.sky .promise{background:transparent;padding:0;border-radius:0}
@@ -388,17 +389,17 @@ nav .navcta{min-height:68px;padding:8px 12px 8px 22px}
 .textlink:hover{text-decoration-color:var(--ink)}
 main{position:relative}
 .hero{padding-bottom:340px}
-#hvorfor.band{margin-top:0}
+#losning.band{margin-top:0}
 .stage{position:relative}
 .stage+.band{margin-top:0}
 .hero{position:sticky;z-index:0}
 .hero::after{content:"";position:absolute;top:-140px;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);background:#1c241e;opacity:var(--dim,0);pointer-events:none;z-index:3}
-#hvorfor.band{z-index:1}
-#hvorfor.band::before{border-radius:44px 44px 0 0}
+#losning.band{z-index:1}
+#losning.band::before{border-radius:44px 44px 0 0}
 /* rounded top on every section, the previous colour shows in the corners */
 main>section{position:relative;z-index:1}
 main>section::before{content:"";position:absolute;top:0;bottom:-44px;left:calc(50% - 50vw);right:calc(50% - 50vw);z-index:-1;background:#fff;border-radius:44px 44px 0 0}
-main>section.band::before{bottom:-44px}main>section.band.sand::before,main>section.band.sol::before{background:#f4f0e6}main>section.band:not(.sand):not(.sol)::before{background:var(--sky-soft)}
+main section.band::before{bottom:-44px}main>section.band.sand::before,main>section.band.sol::before{background:#f4f0e6}main>section.band:not(.sand):not(.sol)::before{background:var(--sky-soft)}
 footer{z-index:1;border-radius:44px 44px 0 0}
 @media (max-width:640px){main>section::before,footer{border-radius:28px 28px 0 0}}
 /* solution: full-colour band, text left, photo right */
@@ -418,8 +419,8 @@ footer{z-index:1;border-radius:44px 44px 0 0}
 .sol .me figcaption span{font-size:16px;color:#1d1e1b}
 @media (max-width:900px){.sol .split{grid-template-columns:1fr;gap:40px}.sol .me{position:relative;top:0;justify-self:center;max-width:420px}.sol .blob{justify-self:center;max-width:420px}.sol p,.sol .asks{font-size:18px}.sol .lead{font-size:21px}}
 .hero-basket{position:absolute;left:0;top:0;width:600px;height:auto;z-index:4;pointer-events:none;will-change:transform;visibility:hidden}
-.basketx{aspect-ratio:420/300;z-index:3}.basketx svg{display:block;width:100%;height:100%;overflow:visible}.basketx .pop{transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .45s cubic-bezier(.34,1.7,.5,1)}.basketx .pop.on{transform:scale(1)}.basketx .drop{transform:translateY(-60px);opacity:0;transition:transform .5s cubic-bezier(.3,1.5,.5,1),opacity .2s}.basketx .drop.on{transform:none;opacity:1}.basketx .gl{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:gl 4.6s ease-out infinite 2s}@keyframes gl{0%,84%,100%{transform:scale(0) rotate(0)}89%{transform:scale(1.2) rotate(45deg)}95%{transform:scale(0) rotate(90deg)}}@media (prefers-reduced-motion:reduce){.basketx{display:none}}
-@media (max-width:900px){.hero{padding-bottom:190px}#hvorfor.band{padding-top:130px}.brand{font-size:21px;gap:9px}.logo,.logo svg{width:38px;height:32px}.hero-basket{width:300px}}
+.basketx{aspect-ratio:420/300;z-index:3}.basketx svg{display:block;width:100%;height:100%;overflow:visible}.basketx .coins{transform-box:view-box;transform-origin:10px 297px}.basketx .pop{transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .45s cubic-bezier(.34,1.7,.5,1)}.basketx .pop.on{transform:scale(1)}.basketx .drop{transform:translateY(-60px);opacity:0;transition:transform .5s cubic-bezier(.3,1.5,.5,1),opacity .2s}.basketx .drop.on{transform:none;opacity:1}.basketx .gl{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:gl 4.6s ease-out infinite 2s}@keyframes gl{0%,84%,100%{transform:scale(0) rotate(0)}89%{transform:scale(1.2) rotate(45deg)}95%{transform:scale(0) rotate(90deg)}}@media (prefers-reduced-motion:reduce){.basketx{display:none}}
+@media (max-width:900px){.hero{padding-bottom:190px}#losning.band{padding-top:130px}.brand{font-size:21px;gap:9px}.logo,.logo svg{width:38px;height:32px}.hero-basket{width:300px}}
 .preload{display:none}
 .pl .preload{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#f4f0e6;pointer-events:none;animation:pl-out .55s cubic-bezier(.7,0,.25,1) 1.7s forwards}
 .preload svg{width:min(260px,56vw);height:auto;overflow:visible}
@@ -430,6 +431,11 @@ footer{z-index:1;border-radius:44px 44px 0 0}
 @keyframes pl-in{to{opacity:1}}
 @keyframes pl-pop{0%{opacity:0;transform:translateY(60%) scale(.3,.15);animation-timing-function:ease-out}20%{opacity:1;transform:translateY(25%) scale(1.5,.55);animation-timing-function:cubic-bezier(.2,.8,.4,1)}50%{transform:translateY(-40%) scale(.8,1.3);animation-timing-function:cubic-bezier(.5,0,.5,1)}75%{transform:translateY(6%) scale(1.1,.9)}100%{opacity:1;transform:none}}
 @keyframes pl-out{to{transform:translateY(-100%);visibility:hidden}}
+/* nav: one line from 901px up */
+nav ul a{white-space:nowrap}
+@media (max-width:1180px){nav ul li.wide{display:none}}
+@media (max-width:1100px){nav ul a{padding:10px 9px}}
+@media (max-width:1040px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -459,7 +465,7 @@ footer{z-index:1;border-radius:44px 44px 0 0}
       "sameAs": ["https://github.com/NJohansen/handle-mcp"],
       "author": {"@type": "Person", "name": "Niclas Johansen", "url": "https://github.com/NJohansen"}
     },
-    {"@type": "FAQPage", "@id": "https://handlemcp.dk/#faq", "inLanguage": "da", "mainEntity": [{"@type": "Question", "name": "Hvad er en MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Et stik. AI'en kan ikke se nemlig.com. Med HandleMCP kan den søge, se tilbud og fylde kurven. Det er det hele."}}, {"@type": "Question", "name": "Hvordan virker det?", "acceptedAnswer": {"@type": "Answer", "text": "Du skriver: \"Madplan til 4. Budget 900 kr. Brug tilbuddene.\" Du får en plan, en liste og den billigste butik. Intet regneark. Ingen app at lære."}}, {"@type": "Question", "name": "Hvad hvis listen er forkert?", "acceptedAnswer": {"@type": "Answer", "text": "Så siger du det. \"Vi har mælk.\" \"Kylling, ikke laks.\" Den retter. Intet ryger i kurven, før du siger ja."}}, {"@type": "Question", "name": "Hvordan ved den, hvad jeg har?", "acceptedAnswer": {"@type": "Answer", "text": "Det gør den ikke. Den kan ikke se ind i dit køleskab. Du siger det: \"Vi har mælk og pasta.\" Eller du har en kort liste, som den læser hver uge. Den kan også se, hvad du plejer at købe."}}, {"@type": "Question", "name": "Tilbud og levering?", "acceptedAnswer": {"@type": "Answer", "text": "Den læser ugens tilbud og planlægger efter dem. Den viser ledige tider. Du vælger selv."}}, {"@type": "Question", "name": "Hvad koster det?", "acceptedAnswer": {"@type": "Answer", "text": "Intet. HandleMCP er gratis og open source, og det bliver ved. Du skal bruge en AI-app, fx Claude. Varer og levering betaler du til butikken, som du plejer. Vil du slippe for det tekniske? Skriv dig på ventelisten."}}, {"@type": "Question", "name": "Hvad er den mest populære MCP til nemlig.com og BilkaToGo?", "acceptedAnswer": {"@type": "Answer", "text": "HandleMCP. Den har flest stjerner på GitHub af alle MCP'er til nemlig.com og BilkaToGo (november 2026). Og den sammenligner begge butikker i én kurv."}}, {"@type": "Question", "name": "Kan den bestille eller betale?", "acceptedAnswer": {"@type": "Answer", "text": "Nej. Det kan den ikke, og det kommer den aldrig til. Du godkender og betaler selv. Dit login bliver på din computer."}}]}
+    {"@type": "FAQPage", "@id": "https://handlemcp.dk/#faq", "inLanguage": "da", "mainEntity": [{"@type": "Question", "name": "Hvad er en MCP?", "acceptedAnswer": {"@type": "Answer", "text": "Et stik. AI'en kan ikke se nemlig.com. Med HandleMCP kan den søge, se tilbud og fylde kurven. Det er det hele."}}, {"@type": "Question", "name": "Hvad hvis listen er forkert?", "acceptedAnswer": {"@type": "Answer", "text": "Så siger du det. \"Vi har mælk.\" \"Kylling, ikke laks.\" Den retter. Intet ryger i kurven, før du siger ja."}}, {"@type": "Question", "name": "Hvordan ved den, hvad jeg har?", "acceptedAnswer": {"@type": "Answer", "text": "Det gør den ikke. Den kan ikke se ind i dit køleskab. Du siger det: \"Vi har mælk og pasta.\" Eller du har en kort liste, som den læser hver uge. Den kan også se, hvad du plejer at købe."}}, {"@type": "Question", "name": "Tilbud og levering?", "acceptedAnswer": {"@type": "Answer", "text": "Den læser ugens tilbud og planlægger efter dem. Den viser ledige tider. Du vælger selv."}}, {"@type": "Question", "name": "Hvad koster det?", "acceptedAnswer": {"@type": "Answer", "text": "Intet. HandleMCP er gratis og open source, og det bliver ved. Du skal bruge en AI-app, fx Claude. Varer og levering betaler du til butikken, som du plejer. Vil du slippe for det tekniske? Skriv dig på ventelisten."}}, {"@type": "Question", "name": "Hvad er den mest populære MCP til nemlig.com og BilkaToGo?", "acceptedAnswer": {"@type": "Answer", "text": "HandleMCP. Den har flest stjerner på GitHub af alle MCP'er til nemlig.com og BilkaToGo (november 2026). Og den sammenligner begge butikker i én kurv."}}]}
   ]
 }
 </script>
@@ -473,7 +479,8 @@ footer{z-index:1;border-radius:44px 44px 0 0}
     <div class="navbox">
     <a class="brand" href="./" aria-label="HandleMCP"><span class="logo"><svg aria-hidden="true" viewBox="1.4 2.6 33.6 28.2" fill="none"><defs><linearGradient id="hm-l" x1="5" y1="3" x2="33" y2="30" gradientUnits="userSpaceOnUse"><stop stop-color="#8bd86a"/><stop offset="1" stop-color="#62c24a"/></linearGradient><radialGradient id="hm-r0" cx="13.777323152349465" cy="27.351026727848833" r="5.1" gradientUnits="userSpaceOnUse"><stop offset=".3" stop-color="#1f6e34" stop-opacity=".75"/><stop offset="1" stop-color="#1f6e34" stop-opacity="0"/></radialGradient><radialGradient id="hm-r1" cx="21.57735077331905" cy="27.351130921906602" r="5.1" gradientUnits="userSpaceOnUse"><stop offset=".3" stop-color="#1f6e34" stop-opacity=".75"/><stop offset="1" stop-color="#1f6e34" stop-opacity="0"/></radialGradient></defs><path d="M8.5 13 C 5.5 13, 3.2 13.4, 3.6 16.4 C 4.4 22.5, 6.2 29, 11 29 C 15.5 29, 16 19.8, 12.9 19.8 C 10.4 19.8, 10.5 24, 12.6 26.3 C 13.6 27.4, 14.8 28.1, 16.2 28.5 C 17 28.8, 17.8 29, 18.8 29 C 23.3 29, 23.8 19.8, 20.7 19.8 C 18.2 19.8, 18.3 24, 20.4 26.3 C 21.4 27.4, 22.6 28.1, 24 28.5 C 24.8 28.8, 25.6 29, 26.5 29 C 30.6 29, 32.2 22.5, 32.9 16.4 C 33.3 13.4, 30.8 13, 27.8 13 C 28 2.8, 8.3 2.8, 8.5 13" stroke="url(#hm-l)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.11 23.23 L11.13 23.32 L11.15 23.41 L11.17 23.50 L11.19 23.59 L11.21 23.67 L11.23 23.76 L11.26 23.85 L11.28 23.94 L11.31 24.02 L11.34 24.11 L11.37 24.19 L11.40 24.28 L11.43 24.36 L11.46 24.45 L11.49 24.53 L11.53 24.62 L11.57 24.70 L11.60 24.78 L11.64 24.86 L11.68 24.94 L11.72 25.03 L11.76 25.11 L11.81 25.19 L11.85 25.26 L11.90 25.34 L11.94 25.42 L11.99 25.50 L12.04 25.57 L12.09 25.65 L12.14 25.72 L12.19 25.80 L12.25 25.87 L12.30 25.94 L12.36 26.01 L12.41 26.08 L12.47 26.15 L12.53 26.22 L12.59 26.29 L12.65 26.36 L12.71 26.42 L12.78 26.49 L12.84 26.55 L12.90 26.62 L12.97 26.68 L13.04 26.74 L13.10 26.80 L13.17 26.86 L13.24 26.92 L13.31 26.98 L13.38 27.04 L13.45 27.10 L13.52 27.16 L13.59 27.21 L13.66 27.27 L13.73 27.32 L13.81 27.37 L13.88 27.42 L13.96 27.47 L14.03 27.52 L14.11 27.57 L14.18 27.62 L14.26 27.67 L14.34 27.72 L14.42 27.76 L14.50 27.80 L14.58 27.85 L14.66 27.89 L14.74 27.93 L14.82 27.97 L14.90 28.01 L14.98 28.05 L15.06 28.09 L15.15 28.12 L15.23 28.16 L15.31 28.19 L15.40 28.23 L15.48 28.26 L15.57 28.29 L15.65 28.32 L15.74 28.35 L15.82 28.38 L15.91 28.41 L15.99 28.44 L16.08 28.47 L16.17 28.49 L16.25 28.52 L16.34 28.55 L16.42 28.58 L16.51 28.61 L16.60 28.64 L16.68 28.67 L16.77 28.69 L16.85 28.72 L16.94 28.74 L17.03 28.77 L17.12 28.79 L17.20 28.81 L17.29 28.83 L17.38 28.85 L17.47 28.87 L17.56 28.89 L17.65 28.90 L17.74 28.92 L17.83 28.93 L17.92 28.94 L18.01 28.96 L18.10 28.97 L18.19 28.97 L18.28 28.98 L18.37 28.99 L18.46 28.99" stroke="url(#hm-r0)" stroke-width="3.4" stroke-linecap="butt"/><path d="M18.91 23.21 L18.92 23.30 L18.94 23.39 L18.96 23.47 L18.98 23.56 L19.00 23.65 L19.03 23.74 L19.05 23.83 L19.08 23.91 L19.10 24.00 L19.13 24.09 L19.16 24.17 L19.19 24.26 L19.22 24.34 L19.25 24.43 L19.29 24.51 L19.32 24.59 L19.36 24.68 L19.39 24.76 L19.43 24.84 L19.47 24.92 L19.51 25.00 L19.55 25.08 L19.60 25.16 L19.64 25.24 L19.68 25.32 L19.73 25.40 L19.78 25.48 L19.83 25.55 L19.88 25.63 L19.93 25.70 L19.98 25.78 L20.03 25.85 L20.09 25.92 L20.14 26.00 L20.20 26.07 L20.26 26.14 L20.32 26.20 L20.38 26.27 L20.44 26.34 L20.50 26.41 L20.56 26.47 L20.62 26.54 L20.69 26.60 L20.75 26.66 L20.82 26.73 L20.88 26.79 L20.95 26.85 L21.02 26.91 L21.09 26.97 L21.16 27.03 L21.23 27.08 L21.30 27.14 L21.37 27.20 L21.44 27.25 L21.51 27.30 L21.59 27.36 L21.66 27.41 L21.74 27.46 L21.81 27.51 L21.89 27.56 L21.96 27.61 L22.04 27.66 L22.12 27.70 L22.20 27.75 L22.28 27.79 L22.35 27.84 L22.43 27.88 L22.51 27.92 L22.60 27.96 L22.68 28.00 L22.76 28.04 L22.84 28.08 L22.92 28.11 L23.01 28.15 L23.09 28.19 L23.17 28.22 L23.26 28.25 L23.34 28.28 L23.43 28.32 L23.51 28.35 L23.60 28.38 L23.69 28.40 L23.77 28.43 L23.86 28.46 L23.95 28.48 L24.03 28.51 L24.12 28.54 L24.20 28.57 L24.29 28.60 L24.37 28.63 L24.46 28.66 L24.55 28.69 L24.63 28.71 L24.72 28.74 L24.81 28.76 L24.89 28.79 L24.98 28.81 L25.07 28.83 L25.16 28.85 L25.25 28.87 L25.33 28.89 L25.42 28.90 L25.51 28.92 L25.60 28.93 L25.69 28.95 L25.78 28.96 L25.87 28.97 L25.96 28.98 L26.05 28.98 L26.14 28.99 L26.23 28.99 L26.32 29.00" stroke="url(#hm-r1)" stroke-width="3.4" stroke-linecap="butt"/><path d="M8.70 28.41 L8.78 28.46 L8.86 28.50 L8.94 28.54 L9.02 28.58 L9.10 28.62 L9.19 28.65 L9.27 28.68 L9.36 28.72 L9.44 28.75 L9.53 28.77 L9.61 28.80 L9.70 28.83 L9.79 28.85 L9.88 28.87 L9.96 28.89 L10.05 28.91 L10.14 28.93 L10.23 28.94 L10.32 28.95 L10.41 28.97 L10.50 28.98 L10.59 28.98 L10.68 28.99 L10.77 29.00 L10.86 29.00 L10.95 29.00 L11.04 29.00 L11.13 29.00 L11.22 28.99 L11.31 28.98 L11.40 28.97 L11.49 28.96 L11.58 28.95 L11.67 28.93 L11.76 28.91 L11.85 28.88 L11.93 28.86 L12.02 28.83 L12.10 28.80 L12.19 28.76 L12.27 28.72 L12.35 28.68 L12.43 28.64 L12.51 28.60 L12.59 28.55 L12.67 28.50 L12.74 28.45 L12.81 28.40 L12.89 28.34 L12.96 28.29 L13.03 28.23 L13.09 28.17 L13.16 28.11 L13.22 28.04 L13.29 27.98 L13.35 27.91 L13.41 27.84 L13.47 27.77 L13.52 27.70 L13.58 27.63 L13.63 27.56 L13.69 27.49 L13.74 27.41 L13.79 27.34 L13.84 27.26 L13.88 27.18 L13.93 27.10 L13.97 27.03 L14.02 26.95 L14.06 26.87 L14.10 26.79 L14.14 26.70 L14.18 26.62 L14.22 26.54 L14.25 26.46 L14.29 26.37 L14.32 26.29 L14.35 26.20 L14.38 26.12 L14.42 26.03 L14.44 25.95 L14.47 25.86 L14.50 25.78 L14.53 25.69 L14.55 25.60 L14.58 25.52 L14.60 25.43 L14.62 25.34 L14.64 25.25 L14.66 25.16 L14.68 25.08 L14.70 24.99 L14.72 24.90 L14.74 24.81 L14.75 24.72 L14.77 24.63 L14.78 24.54 L14.79 24.45 L14.80 24.36 L14.82 24.27 L14.83 24.18 L14.83 24.09 L14.84 24.00 L14.85 23.91 L14.86 23.82 L14.86 23.73 L14.86 23.64 L14.87 23.55 L14.87 23.46 L14.87 23.37 L14.87 23.28 L14.87 23.19 L14.87 23.10 L14.87 23.01 L14.86 22.92 L14.86 22.83 L14.85 22.74 L14.84 22.65 L14.83 22.56 L14.82 22.47 L14.81 22.38 L14.80 22.29 L14.79 22.20 L14.77 22.11 L14.76 22.02 L14.74 21.93 L14.72 21.84" stroke="url(#hm-l)" stroke-width="3.4" stroke-linecap="butt"/><path d="M16.51 28.61 L16.60 28.64 L16.68 28.67 L16.77 28.69 L16.85 28.72 L16.94 28.74 L17.03 28.77 L17.12 28.79 L17.20 28.81 L17.29 28.83 L17.38 28.85 L17.47 28.87 L17.56 28.89 L17.65 28.90 L17.74 28.92 L17.83 28.93 L17.92 28.94 L18.01 28.96 L18.10 28.97 L18.19 28.97 L18.28 28.98 L18.37 28.99 L18.46 28.99 L18.55 29.00 L18.64 29.00 L18.73 29.00 L18.82 29.00 L18.91 29.00 L19.00 28.99 L19.09 28.99 L19.18 28.98 L19.27 28.97 L19.36 28.95 L19.45 28.93 L19.54 28.91 L19.62 28.89 L19.71 28.86 L19.80 28.83 L19.88 28.80 L19.97 28.77 L20.05 28.73 L20.13 28.70 L20.21 28.65 L20.29 28.61 L20.37 28.56 L20.45 28.52 L20.52 28.47 L20.59 28.41 L20.67 28.36 L20.74 28.30 L20.81 28.24 L20.88 28.18 L20.94 28.12 L21.01 28.06 L21.07 28.00 L21.13 27.93 L21.19 27.86 L21.25 27.79 L21.31 27.72 L21.36 27.65 L21.42 27.58 L21.47 27.51 L21.52 27.43 L21.57 27.36 L21.62 27.28 L21.67 27.20 L21.72 27.13 L21.76 27.05 L21.81 26.97 L21.85 26.89 L21.89 26.81 L21.93 26.73 L21.97 26.64 L22.01 26.56 L22.04 26.48 L22.08 26.40 L22.11 26.31 L22.14 26.23 L22.18 26.14 L22.21 26.06 L22.24 25.97 L22.27 25.89 L22.29 25.80 L22.32 25.71 L22.35 25.63 L22.37 25.54 L22.39 25.45 L22.42 25.36 L22.44 25.28 L22.46 25.19 L22.48 25.10 L22.50 25.01 L22.52 24.92 L22.53 24.83 L22.55 24.74 L22.56 24.65 L22.58 24.57 L22.59 24.48 L22.60 24.39 L22.61 24.30 L22.62 24.21 L22.63 24.12 L22.64 24.03 L22.65 23.94 L22.65 23.85 L22.66 23.76 L22.66 23.66 L22.67 23.57 L22.67 23.48 L22.67 23.39 L22.67 23.30 L22.67 23.21 L22.67 23.12 L22.67 23.03 L22.66 22.94 L22.66 22.85 L22.65 22.76 L22.64 22.67 L22.64 22.58 L22.63 22.49 L22.62 22.40 L22.60 22.31 L22.59 22.22 L22.58 22.13 L22.56 22.04 L22.54 21.95 L22.52 21.86" stroke="url(#hm-l)" stroke-width="3.4" stroke-linecap="butt"/><circle cx="16.8" cy="15.6" r="2.4" fill="url(#hm-l)"/></svg></span><span>handleMCP</span></a>
     <ul>
-      <li class="opt"><a href="#hvorfor">Hvorfor</a></li>
+      <li class="opt"><a href="#losning">Historien bag</a></li>
+      <li class="opt wide"><a href="#hvorfor">Hvorfor</a></li>
       <li class="opt"><a href="#saadan">Sådan virker det</a></li>
       <li class="opt"><a href="#faq">Spørgsmål</a></li>
       <li class="opt"><a class="gh" href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="nav">GitHub<span class="stars" id="stars" hidden aria-label="stjerner på GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .9l2.2 4.5 4.9.7-3.6 3.5.9 4.9L8 12.2l-4.4 2.3.9-4.9L.9 6.1l4.9-.7z"/></svg><span id="stars-n"></span></span></a></li>
@@ -517,46 +524,8 @@ footer{z-index:1;border-radius:44px 44px 0 0}
     </div>
   </div>
 
-  <div class="hero-basket basketx" id="basketx" aria-hidden="true"><svg viewBox="0 0 420 300" overflow="visible"><g class="drop" data-out="0.78" data-back=".55"><ellipse cx="10" cy="289" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="284" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="284" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="284" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out="0.66" data-back=".7"><ellipse cx="10" cy="280" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="275" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="275" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="275" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out="0.54" data-back=".85"><ellipse cx="10" cy="271" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="266" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="266" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="266" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out="0.42"><ellipse cx="10" cy="262" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="257" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="257" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="257" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out="0.3"><ellipse cx="10" cy="253" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="248" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="248" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="248" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="pop" data-at=".9"><rect x="296" y="52" width="30" height="74" rx="9" fill="#2ba0ff"/><rect x="304" y="38" width="14" height="18" rx="3" fill="#2ba0ff"/><rect x="306" y="30" width="10" height="10" rx="2" fill="#46b35f"/><rect x="301" y="74" width="20" height="24" rx="4" fill="#fff"/><path d="M302 60 v20" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/></g><g class="pop" data-at=".95"><rect x="88" y="56" width="40" height="70" rx="8" fill="#f1ede2"/><ellipse cx="108" cy="58" rx="20" ry="7" fill="#e2ddcf"/><ellipse cx="108" cy="58" rx="7" ry="3" fill="#c9c4b6"/><path d="M90 84 h36 M90 104 h36" stroke="#e2ddcf" stroke-width="2"/></g><g class="pop" data-at=".45"><g transform="translate(-4 -20)"><circle cx="112" cy="104" r="22" fill="#ff705d"/><path d="M112 82 l5 -6 M103 86 q9 -8 18 0 q-9 4 -18 0z" stroke="#46b35f" stroke-width="3" stroke-linecap="round" fill="#8ed462"/><ellipse cx="104" cy="98" rx="5" ry="3.4" fill="#fff" opacity=".8"/></g></g><g class="pop" data-at=".6"><g transform="translate(0 -22)"><ellipse cx="318" cy="104" rx="26" ry="19" fill="#f5e211" transform="rotate(-20 318 104)"/><path d="M297 113 l-6 4 M339 95 l6 -4" stroke="#f5e211" stroke-width="7" stroke-linecap="round"/><path d="M307 96 q8 -6 18 -4" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".85"/></g></g><g class="pop" data-at=".75"><g transform="translate(-30 -22)"><path d="M156 118 v-14" stroke="#46b35f" stroke-width="7" stroke-linecap="round"/><circle cx="146" cy="96" r="11" fill="#46b35f"/><circle cx="162" cy="90" r="12" fill="#46b35f"/><circle cx="155" cy="80" r="10" fill="#5fc477"/></g></g></svg></div>
+  <div class="hero-basket basketx" id="basketx" aria-hidden="true"><svg viewBox="0 0 420 300" overflow="visible"><g class="coins"><g class="drop" data-out=".4" data-back=".84"><ellipse cx="10" cy="289" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="284" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="284" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="284" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out=".34" data-back=".88"><ellipse cx="10" cy="280" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="275" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="275" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="275" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out=".28" data-back=".92"><ellipse cx="10" cy="271" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="266" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="266" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="266" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out=".22" data-back=".96"><ellipse cx="10" cy="262" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="257" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="257" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="257" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g><g class="drop" data-out=".16" data-back="1"><ellipse cx="10" cy="253" rx="24" ry="8" fill="#e0b800"/><rect x="-14" y="248" width="48" height="5" fill="#e0b800"/><ellipse cx="10" cy="248" rx="24" ry="8" fill="#f5e211"/><ellipse cx="10" cy="248" rx="15" ry="4.6" fill="none" stroke="#e0b800" stroke-width="2"/></g></g><g class="pop" data-at=".76"><rect x="296" y="52" width="30" height="74" rx="9" fill="#2ba0ff"/><rect x="304" y="38" width="14" height="18" rx="3" fill="#2ba0ff"/><rect x="306" y="30" width="10" height="10" rx="2" fill="#46b35f"/><rect x="301" y="74" width="20" height="24" rx="4" fill="#fff"/><path d="M302 60 v20" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/></g><g class="pop" data-at=".8"><rect x="88" y="56" width="40" height="70" rx="8" fill="#f1ede2"/><ellipse cx="108" cy="58" rx="20" ry="7" fill="#e2ddcf"/><ellipse cx="108" cy="58" rx="7" ry="3" fill="#c9c4b6"/><path d="M90 84 h36 M90 104 h36" stroke="#e2ddcf" stroke-width="2"/></g><g class="pop" data-at=".55"><g transform="translate(-4 -20)"><circle cx="112" cy="104" r="22" fill="#ff705d"/><path d="M112 82 l5 -6 M103 86 q9 -8 18 0 q-9 4 -18 0z" stroke="#46b35f" stroke-width="3" stroke-linecap="round" fill="#8ed462"/><ellipse cx="104" cy="98" rx="5" ry="3.4" fill="#fff" opacity=".8"/></g></g><g class="pop" data-at=".63"><g transform="translate(0 -22)"><ellipse cx="318" cy="104" rx="26" ry="19" fill="#f5e211" transform="rotate(-20 318 104)"/><path d="M297 113 l-6 4 M339 95 l6 -4" stroke="#f5e211" stroke-width="7" stroke-linecap="round"/><path d="M307 96 q8 -6 18 -4" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".85"/></g></g><g class="pop" data-at=".7"><g transform="translate(-30 -22)"><path d="M156 118 v-14" stroke="#46b35f" stroke-width="7" stroke-linecap="round"/><circle cx="146" cy="96" r="11" fill="#46b35f"/><circle cx="162" cy="90" r="12" fill="#46b35f"/><circle cx="155" cy="80" r="10" fill="#5fc477"/></g></g></svg></div>
   <img class="hero-basket" id="basket" src="basket.svg" alt="" aria-hidden="true" width="420" height="300">
-
-  <section id="hvorfor" class="band sand"><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/apple.svg" alt="" width="84" style="top:70px;right:7%;--r:-8deg;--d:7s"><img class="doodle" src="doodles/cloud.svg" alt="" width="120" style="top:36px;left:52%;--r:0deg;--d:9s"><img class="doodle" src="doodles/lemon.svg" alt="" width="74" style="bottom:48px;left:3%;--r:14deg;--d:8s"><img class="doodle" src="doodles/spark.svg" alt="" width="26" style="top:118px;left:43%;--r:0deg;--d:5s"></div>
-    <h2>Kender I det her?</h2>
-    <div class="facts">
-      <div class="fact">
-        <div class="num"><s>6</s>1<small>handel om ugen</small></div>
-        <h3>I handler hele tiden</h3>
-        <p>En tur efter mælk, en efter aftensmad, en fordi noget mangler. Med en plan for hele ugen kommer det hele med én levering.</p>
-      </div>
-      <div class="fact">
-        <div class="num"><s>20.</s>31.<small>i måneden</small></div>
-        <h3>Madkontoen løber tør før tid</h3>
-        <p>Sig hvor meget der er til mad. Din AI planlægger ugen inden for budgettet, bygger på tilbuddene og finder den billigste butik.</p>
-      </div>
-    </div>
-  </section>
-  </div>
-
-  <section class="band"><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/pear.svg" alt="" width="96" style="top:200px;right:10%;--r:10deg;--d:8s"><img class="doodle" src="doodles/cloud.svg" alt="" width="140" style="top:96px;right:20%;--r:0deg;--d:10s"><img class="doodle" src="doodles/egg.svg" alt="" width="62" style="bottom:130px;right:5%;--r:-14deg;--d:7s"><img class="doodle" src="doodles/carrot.svg" alt="" width="80" style="bottom:14px;left:1%;--r:8deg;--d:6s"><img class="doodle" src="doodles/tomato.svg" alt="" width="50" style="top:70px;left:47%;--r:0deg;--d:6s"></div>
-    <h2>Sådan ser det ud</h2>
-    <p class="sub">Du skriver én besked. Den tjekker begge butikker og fylder kurven. Betalingen er din.</p>
-    <div class="agent" aria-label="Eksempel på en samtale med en AI-assistent">
-      <div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">AI-assistent</span><span class="conn"><i></i>HandleMCP tilsluttet</span></div>
-      <div class="log">
-        <div class="you"><div class="bubble">Der er 700 kr til mad i denne uge. Lav en madplan til 4 ud fra tilbuddene, og fyld den billigste kurv.</div></div>
-        <div class="tools">
-          <div class="tool"><span class="ti">⚙</span><span><b>Finder ugens tilbud</b></span><em>nemlig.com + BilkaToGo · 214 tilbud · 1 gratis vare</em><span class="ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span></div>
-          <div class="tool"><span class="ti">⚙</span><span><b>Finder opskrifter</b></span><em>nemlig.com · Familievenlig</em><span class="ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span></div>
-          <div class="tool"><span class="ti">⚙</span><span><b>Henter opskrifter</b></span><em>3 opskrifter · 4 personer</em><span class="ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span></div>
-          <div class="tool"><span class="ti">⚙</span><span><b>Sammenligner butikker</b></span><em>28 varer · nemlig.com 693 kr · BilkaToGo 741 kr</em><span class="ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span></div>
-          <div class="tool"><span class="ti">⚙</span><span><b>Fylder kurven</b></span><em>28 varer i kurven hos nemlig.com</em><span class="ok"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span></div>
-        </div>
-        <div class="ai"><div class="bubble">Hele ugen: one pot-lasagne i stor portion, rugbrødsaften med frikadeller, sprøde kyllingenuggets, laks i citronsauce og harira. Bygget på ugens tilbud i begge butikker, og gratis rosinboller kommer med. nemlig.com er 48 kr billigere end BilkaToGo, og I har 7 kr tilbage. Kurven er klar: åbn den, vælg en tid og betal.</div></div>
-      </div>
-      <div class="input"><span>Skriv en besked …</span><i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 10V2M2.5 5.5 6 2l3.5 3.5"/></svg></i></div>
-    </div>
-    <p class="note">Et eksempel. Rigtige svar bruger butikkernes priser lige nu.</p>
-  </section>
 
   <section id="losning" class="band sol">
     <div class="split">
@@ -574,10 +543,29 @@ footer{z-index:1;border-radius:44px 44px 0 0}
       <figure class="me"><img class="blob" src="niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption><b><svg viewBox="0 0 64 16" aria-hidden="true"><path d="M2 3c8 6 20 10 60 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Niclas</b><span>Far til 2. Har bygget HandleMCP.</span></figcaption></figure>
     </div>
   </section>
+  </div>
+
+  <section id="hvorfor" class="band"><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/apple.svg" alt="" width="84" style="top:70px;right:7%;--r:-8deg;--d:7s"><img class="doodle" src="doodles/cloud.svg" alt="" width="120" style="top:36px;left:52%;--r:0deg;--d:9s"><img class="doodle" src="doodles/lemon.svg" alt="" width="74" style="bottom:48px;left:3%;--r:14deg;--d:8s"><img class="doodle" src="doodles/spark.svg" alt="" width="26" style="top:118px;left:43%;--r:0deg;--d:5s"></div>
+    <h2>Kender I det her?</h2>
+    <div class="facts">
+      <div class="fact">
+        <div class="num"><s>6</s>1<small>handel om ugen</small></div>
+        <h3>I handler hele tiden</h3>
+        <p>En tur efter mælk, en efter aftensmad, en fordi noget mangler. Med en plan for hele ugen kommer det hele med én levering.</p>
+      </div>
+      <div class="fact">
+        <div class="num"><s>20.</s>31.<small>i måneden</small></div>
+        <h3>Madkontoen løber tør før tid</h3>
+        <p>Sig hvor meget der er til mad. Din AI planlægger ugen inden for budgettet, bygger på tilbuddene og finder den billigste butik.</p>
+      </div>
+    </div>
+  </section>
+
+
   <section id="saadan"><div class="doodles" aria-hidden="true"><img class="doodle" src="doodles/banana.svg" alt="" width="112" style="top:84px;right:9%;--r:-10deg;--d:8s"><img class="doodle" src="doodles/spark.svg" alt="" width="30" style="top:70px;right:26%;--r:0deg;--d:5s"><img class="doodle" src="doodles/tomato.svg" alt="" width="40" style="top:150px;left:56%;--r:-20deg;--d:7s"></div>
     <h2>Sådan virker det</h2>
     <div class="steps">
-      <div><span>1</span><h3>Sig budgettet</h3><p>"900 kr til 4 personer." Og hvad I kan lide, og hvad I har hjemme.</p></div>
+      <div><span>1</span><h3>Sig budgettet</h3><p>"700 kr til 4 personer." Og hvad I kan lide, og hvad I har hjemme.</p></div>
       <div><span>2</span><h3>Den planlægger</h3><p>Den læser tilbud i begge butikker, finder gratis varer og bruger butikkens opskrifter.</p></div>
       <div><span>3</span><h3>Den fylder kurven</h3><p>Den regner hele kurven i begge butikker, med levering, og fylder den billigste.</p></div>
       <div><span>4</span><h3>Du betaler</h3><p>Du tjekker kurven, vælger leveringstid og betaler. Maden kommer til døren.</p></div>
@@ -600,13 +588,11 @@ footer{z-index:1;border-radius:44px 44px 0 0}
     <h2>Spørgsmål og svar</h2>
     <div class="faq">
       <details><summary>Hvad er en MCP?</summary><p>Et stik. AI'en kan ikke se nemlig.com. Med HandleMCP kan den <mark>søge, se tilbud og fylde kurven</mark>. Det er det hele.</p></details>
-      <details><summary>Hvordan virker det?</summary><p>Du skriver: "Madplan til 4. Budget 900 kr. Brug tilbuddene." Du får en plan, en liste og <mark>den billigste butik</mark>. Intet regneark. Ingen app at lære.</p></details>
       <details><summary>Hvad hvis listen er forkert?</summary><p>Så siger du det. "Vi har mælk." "Kylling, ikke laks." Den retter. Intet ryger i kurven, <mark>før du siger ja</mark>.</p></details>
       <details><summary>Hvordan ved den, hvad jeg har?</summary><p>Det gør den ikke. Den kan ikke se ind i dit køleskab. <mark>Du siger det</mark>: "Vi har mælk og pasta." Eller du har en kort liste, som den læser hver uge. Den kan også se, hvad du plejer at købe.</p></details>
       <details><summary>Tilbud og levering?</summary><p>Den læser ugens tilbud og planlægger efter dem. Den viser ledige tider. <mark>Du vælger selv</mark>.</p></details>
       <details><summary>Hvad koster det?</summary><p>Intet. HandleMCP er <mark>gratis og open source</mark>, og det bliver ved. Du skal bruge en AI-app, fx Claude. Varer og levering betaler du til butikken, som du plejer. Vil du slippe for det tekniske? <a href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="faq">Skriv dig på ventelisten.</a></p></details>
       <details><summary>Hvad er den mest populære MCP til nemlig.com og BilkaToGo?</summary><p>HandleMCP. Den har <mark>flest stjerner på GitHub</mark> af alle MCP'er til nemlig.com og BilkaToGo (november 2026). Og den sammenligner begge butikker i én kurv.</p></details>
-      <details><summary>Kan den bestille eller betale?</summary><p>Nej. Det kan den ikke, og det kommer den aldrig til. <mark>Du godkender og betaler selv</mark>. Dit login bliver på din computer.</p></details>
     </div>
   </section>
 
@@ -654,18 +640,22 @@ claude mcp add handle -- uvx --from git+https://github.com/NJohansen/handle-mcp@
 })();
 </script>
 <script>
-(()=>{const X=document.getElementById('basketx'),sol=document.getElementById('saadan'),b=document.getElementById('basket'),hero=document.querySelector('.hero'),sec=document.getElementById('hvorfor'),main=b&&b.parentElement;if(!b||!hero||!sec||!sol)return;
-const still=matchMedia('(prefers-reduced-motion: reduce)');let a,z,z2,raf=0;
+(()=>{const X=document.getElementById('basketx'),b=document.getElementById('basket'),hero=document.querySelector('.hero'),story=document.getElementById('losning'),main=b&&b.parentElement,img=story&&story.querySelector('.blob');if(!b||!hero||!story||!img)return;
+// The basket flies from the hero down onto the tiles in the story photo, shrinks and stays there. Coins stack in front of the man.
+const still=matchMedia('(prefers-reduced-motion: reduce)'),coins=X&&X.querySelector('.coins');let a,T=1,dim=0,sm=false,raf=0;
 const box=e=>{const r=e.getBoundingClientRect(),m=main.getBoundingClientRect();return{x:r.left-m.left,y:r.top-m.top,w:r.width,h:r.height}};
-function measure(){hero.style.position='relative';hero.style.top='';const m0=main.getBoundingClientRect().top+scrollY,h=box(hero),s=box(sec),f=box(sec.querySelector('.facts')),c=box(hero.querySelector('.ctas')),pr=box(hero.querySelector('.proof')||hero.querySelector('.ctas')),w=b.offsetWidth,bh=b.offsetHeight;
-const sm=innerWidth<900;a=sm?{x:h.x+h.w/2-w/2,y:h.y+h.h-bh*0.62}:{x:c.x+c.w/2-w/2,y:Math.max(pr.y+pr.h+28,Math.min(h.y+h.h-bh*0.62,innerHeight-m0-bh*0.62,box(sec.querySelector('h2')).y-bh-20))};
-const k=sm?1:.62;z=sm?a:{x:s.x+s.w-w*k/2-8-w/2,y:f.y+24-bh*k/2-bh/2};z.k=k;z.top=s.y;const s2=box(sol),g=box(sol.querySelector('h2'));z2=sm?a:{x:s2.x+s2.w-w*k/2-8-w/2,y:g.y+g.h/2-bh/2-10};z.t1=m0+s.y+s.h-innerHeight*.55;z.t2=Math.max(z.t1+1,m0+s2.y-innerHeight*.2);
-hero.style.position='';hero.style.top=Math.min(0,innerHeight-h.h)+'px';z.dim=m0+h.y+Math.max(0,h.h-innerHeight)}
-function draw(){raf=0;const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,cl=t=>Math.min(1,Math.max(0,t));let p=still.matches?0:ease(cl(scrollY/Math.max(1,z.top-innerHeight*0.35))),p2=still.matches?0:ease(cl((scrollY-z.t1)/(z.t2-z.t1)));
-const L=p2>0,x=L?z.x+(z2.x-z.x)*p2:a.x+(z.x-a.x)*p,y=L?z.y+(z2.y-z.y)*p2:a.y+(z.y-a.y)*p,k=1+(z.k-1)*p,r=L?4-8*p2:-6+10*p;b.style.transform=`translate(${x}px,${y}px) rotate(${r}deg) scale(${k})`;b.style.visibility='visible';if(X){X.style.transform=b.style.transform;X.style.visibility='visible';for(const e of X.querySelectorAll('[data-at]'))e.classList.toggle('on',p2>=+e.dataset.at);for(const e of X.querySelectorAll('[data-out]'))e.classList.toggle('on',p<+e.dataset.out||(!!e.dataset.back&&p2>=+e.dataset.back))}const q=Math.min(1,Math.max(0,(scrollY-z.dim)/innerHeight));hero.style.setProperty('--dim',still.matches?0:(q*.22).toFixed(3))}
+function measure(){hero.style.position='relative';hero.style.top='';const m0=main.getBoundingClientRect().top+scrollY,h=box(hero),c=box(hero.querySelector('.ctas')),pr=box(hero.querySelector('.proof')||hero.querySelector('.ctas')),w=b.offsetWidth,bh=b.offsetHeight;
+sm=innerWidth<900;a=sm?{x:h.x+h.w/2-w/2,y:h.y+h.h-bh*0.62}:{x:c.x+c.w/2-w/2,y:Math.max(pr.y+pr.h+28,Math.min(h.y+h.h-bh*0.62,innerHeight-m0-bh*0.62))};
+T=Math.max(1,m0+box(story.querySelector('.split')).y-150);
+hero.style.position='';hero.style.top=Math.min(0,innerHeight-h.h)+'px';dim=m0+h.y+Math.max(0,h.h-innerHeight)}
+function draw(){raf=0;const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,cl=t=>Math.min(1,Math.max(0,t)),w=b.offsetWidth,bh=b.offsetHeight;const p=still.matches?0:ease(cl(scrollY/T));
+let x=a.x,y=a.y,k=1,r=-6*(1-p);if(!sm){const f=box(img),K=f.w*.36/w;k=1+(K-1)*p;x=a.x+(f.x+f.w*.6-w/2-a.x)*p;y=a.y+(f.y+f.h*.87-bh*K/2-bh/2-a.y)*p}
+b.style.transform=`translate(${x}px,${y}px) rotate(${r}deg) scale(${k})`;b.style.visibility='visible';
+if(X){X.style.transform=b.style.transform;X.style.visibility='visible';for(const e of X.querySelectorAll('[data-at]'))e.classList.toggle('on',p>=+e.dataset.at);for(const e of X.querySelectorAll('[data-out]'))e.classList.toggle('on',p<+e.dataset.out||p>=+e.dataset.back);if(coins)coins.style.transform=`scale(${sm?1:1+.8*p})`}
+const q=Math.min(1,Math.max(0,(scrollY-dim)/innerHeight));hero.style.setProperty('--dim',still.matches?0:(q*.22).toFixed(3))}
 const go=()=>{if(!raf)raf=requestAnimationFrame(draw)};
 const init=()=>{measure();draw()};
-addEventListener('scroll',go,{passive:true});addEventListener('resize',init);addEventListener('load',init);b.complete?init():b.addEventListener('load',init)})();
+addEventListener('scroll',go,{passive:true});addEventListener('resize',init);addEventListener('load',init);img.complete||img.addEventListener('load',init);b.complete?init():b.addEventListener('load',init)})();
 </script>
 <script>
 // Hero demo: four example conversations. Numbers are an example, not live prices.
