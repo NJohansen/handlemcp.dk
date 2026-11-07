@@ -451,6 +451,21 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
 @media (max-width:1260px){nav ul li.wide{display:none}.ghmark{display:block}.ghw{display:none}}
 @media (max-width:1100px){nav ul a{padding:10px 9px}}@media (max-width:1000px){nav ul a{padding:10px 5px}}@media (max-width:960px){nav ul a{padding:10px 3px}}
 @media (max-width:1040px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}
+/* mobile hero: centred, one voice, tight type */
+.hero h1 .chip,.hero h1 br.m{display:none}
+@media (max-width:640px){
+.hero>div:first-child{text-align:center}
+.hero h1 br.m{display:inline}
+.hero h1{font-size:46px;line-height:1.02;letter-spacing:-.045em;margin-bottom:20px}
+.hero h1 .soft{display:block;font-family:Inter,system-ui,sans-serif;font-style:normal;font-weight:700;letter-spacing:-.045em;color:#4f6478;margin-top:10px;font-size:32px;line-height:1.08;letter-spacing:-.035em;text-wrap:balance}
+.hero h1 .chip{display:inline-grid;place-items:center;width:58px;height:48px;margin-left:10px;vertical-align:-6px;border-radius:13px;background:#fff;box-shadow:0 1px 0 rgba(10,28,53,.06),0 8px 20px -8px rgba(10,28,53,.35);transform:rotate(-6deg)}
+.hero h1 .chip img{width:34px;height:auto}
+.hero .lead{font-size:17px;line-height:1.5;margin:0 auto 28px;max-width:34ch;text-wrap:balance}
+.hero .ctas{flex-direction:column;gap:16px}
+.hero .ctas .btn{width:100%;justify-content:space-between;box-shadow:0 10px 24px -12px rgba(10,28,53,.45)}
+.hero .textlink{font-size:15px}
+.hero .proof{justify-content:center;text-align:left;font-size:15px;max-width:300px;margin:24px auto 0}
+}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -509,7 +524,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
   <div class="stage">
   <div class="hero">
     <div>
-      <h1>Din AI handler ind. <span class="soft">Du sparer penge, og får mere tid.</span></h1>
+      <h1>Din AI<span class="chip" aria-hidden="true"><img src="logo.svg" alt="" width="34" height="28"></span><br class="m"> handler ind. <span class="soft">Du sparer penge, og får mere tid.</span></h1>
       <p class="lead">Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. <strong>Du betaler, og pengene holder måneden ud.</strong></p>
       <div class="ctas">
         <a class="btn coral" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="hero">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
