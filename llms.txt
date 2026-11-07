@@ -15,6 +15,17 @@ Works with any client that supports the Model Context Protocol, for example Clau
 - [Why the human always pays](https://github.com/NJohansen/handle-mcp/blob/main/docs/adr/0001-the-human-always-pays.md)
 - [Releases](https://github.com/NJohansen/handle-mcp/releases)
 
+## Pages (Danish)
+
+For developers:
+- [nemlig.com MCP](https://handlemcp.dk/nemlig-mcp/): setup for Claude Code and Claude Desktop, example prompts, nemlig.com's offer types, lessons from building against nemlig.com
+- [BilkaToGo API](https://handlemcp.dk/bilkatogo-api/): BilkaToGo has no public API; how HandleMCP uses the website's own, BilkaToGo vs nemlig.com, five pitfalls (amounts in øre, errors with HTTP 200, login can replace the cart)
+
+For families:
+- [AI madplan med budget](https://handlemcp.dk/ai-madplan-budget/): a meal-plan-on-a-budget prompt to copy, and what HandleMCP adds (real prices and offers)
+- [Madkontoen hele måneden](https://handlemcp.dk/madkonto-hele-maaneden/): weekly amount = food account balance ÷ weeks left, five rules for making the food budget last the month
+- [Billigere end måltidskasse](https://handlemcp.dk/billigere-end-maaltidskasse/): how to compare price per portion with a meal kit, and an honest comparison
+
 ## What it can do
 
 Both stores (nemlig.com and BilkaToGo), see [handlemcp.dk/#kan](https://handlemcp.dk/#kan):
@@ -28,6 +39,13 @@ Both stores (nemlig.com and BilkaToGo), see [handlemcp.dk/#kan](https://handlemc
 - List free delivery times with the fee per slot, cheapest first. The human chooses.
 - Read past orders, for "what we usually buy".
 - Give one link to the cart, where the human checks and pays.
+
+## What it cannot do
+
+- Order, pay, read payment cards, choose a delivery time or change the address. That code does not exist, and a test fails if it is added.
+- See what is in the fridge. The human says it, or keeps a short list the AI reads.
+- Promise a saving. It shows prices; what a family saves depends on its habits.
+- Run without some setup today: it needs an MCP client and a terminal. A one-click version is planned (waitlist on the landing page).
 
 ## FAQ
 

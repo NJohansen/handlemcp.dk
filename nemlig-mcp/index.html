@@ -77,18 +77,18 @@
     },
     {
      "@type": "Question",
-     "name": "Hvilke AI-apps virker den med?",
+     "name": "Virker den uden login?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Alle, der kan bruge en lokal MCP-server, fx Claude Code, Claude Desktop og Codex. Den kører på din egen computer."
+      "text": "Delvist. Ugens tilbud kan den læse uden login. Søgning, kurv og leveringstider kræver dit nemlig-login."
      }
     },
     {
      "@type": "Question",
-     "name": "Hvad sker der med mit login?",
+     "name": "Hvilke AI-apps virker den med?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Det bliver på din computer, i nøgleringen. Navn, adresse og telefon bliver fjernet, før din AI ser svaret fra butikken."
+      "text": "Alle, der kan bruge en lokal MCP-server, fx Claude Code, Claude Desktop og Codex. Den kører på din egen computer."
      }
     },
     {
@@ -124,7 +124,7 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
 </head>
 <body>
-<div class="top"><div class="doodles" aria-hidden="true"><img class="doodle" src="/doodles/milk.svg" alt="" width="70" style="top:150px;right:7%;--r:8deg"><img class="doodle d2" src="/doodles/spark.svg" alt="" width="30" style="top:120px;right:15%;--r:0deg"></div>
+<div class="top"><div class="doodles" aria-hidden="true"><img class="doodle" src="/doodles/milk.svg" alt="" width="70" style="top:150px;right:7%;--r:8deg"><img class="doodle d2" src="/doodles/lemon.svg" alt="" width="64" style="bottom:40px;right:16%;--r:-10deg"></div>
 <header class="wrap navwrap">
   <nav>
     <div class="navbox">
@@ -142,10 +142,10 @@
 </header>
 <div class="wrap"><div class="intro">
 <ol class="crumbs" aria-label="Brødkrumme"><li><a href="/">HandleMCP</a></li><li aria-current="page">nemlig.com MCP</li></ol>
-<p class="tag">Til udviklere</p>
 <h1>nemlig.com MCP</h1>
 <p class="lead">HandleMCP er en gratis MCP-server til nemlig.com. Med den kan din AI søge varer, læse ugens tilbud og fylde kurven. Den kan aldrig bestille eller betale. Det gør du selv.</p>
 <p class="proof">Gratis og open source (MIT). 607 unikke kloner på GitHub (november 2026).</p>
+<p class="toplink"><a href="https://github.com/NJohansen/handle-mcp?ref=seo-nemlig-mcp-top" data-umami-event="github" data-umami-event-sted="seo-nemlig-mcp-top">Gratis og open source på GitHub</a></p>
 </div></div>
 </div>
 
@@ -173,12 +173,12 @@ claude mcp add handle -- uvx --from git+https://github.com/NJohansen/handle-mcp@
 }</code></pre>
 <p class="small">Andre AI-apps, servere uden skærm og AI-agenter: se <a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md">vejledningen</a> (på engelsk).</p>
 
-<h2 id="eksempel">Eksempel</h2>
-<p>Du skriver én sætning. Din AI bruger værktøjerne og spørger, før noget kommer i kurven.</p>
-<div class="chat"><p class="hd"><span>Eksempel</span><span>Tallene er kun til illustration</span></p>
+<h2 id="eksempel">Skriv én sætning</h2>
+<p>Din AI vælger værktøjerne selv. Den spørger, før noget kommer i kurven.</p>
+<div class="chat"><p class="hd"><span>Sådan kan et svar se ud</span></p>
 <p class="you"><span>Lav 5 aftensmåltider til 4 personer for højst 900 kr. Byg dem på ugens tilbud.</span></p>
 <div class="tools"><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>list_offers</b>ugens tilbud</div><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>list_recipes</b>nemlig.com's opskrifter</div><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>compare_basket</b>nemlig.com og BilkaToGo</div></div>
-<p class="ai">Fx 5 retter for 842 kr. med levering. Hakket oksekød er på tilbud, så det bliver lasagne tirsdag. nemlig.com er billigst. Skal jeg lægge varerne i kurven?</p></div>
+<p class="ai">Her er 5 retter bygget på ugens tilbud. Hakket oksekød er på tilbud, så det bliver lasagne tirsdag. Hele kurven holder sig under 900 kr. med levering. Skal jeg lægge varerne i kurven?</p></div>
 <p class="label try">Flere at prøve</p>
 <ul class="rows">
 <li>"Hvad er på tilbud i nemlig.com i denne uge? Er der gratis varer?"</li>
@@ -186,25 +186,32 @@ claude mcp add handle -- uvx --from git+https://github.com/NJohansen/handle-mcp@
 <li>"Hvad plejer vi at købe? Lav en liste ud fra vores sidste ordrer."</li>
 </ul>
 
-<h2 id="vaerktoejer">Det kan den</h2>
-<p>Kun to værktøjer skriver, og kun i kurven.</p>
+<h2 id="tilbud">Ugens tilbud i nemlig.com</h2>
+<p>nemlig.com har flere slags tilbud. Mange af dem finder du ikke ved at søge. <code>list_offers</code> læser dem alle:</p>
+<ul class="rows">
+<li><b>Skarp pris og Priskup.</b> Lavere pris i en periode. Ikke altid med en overstreget førpris.</li>
+<li><b>Dagstilbud.</b> Gælder kort tid. Tjek dem tæt på bestillingen.</li>
+<li><b>Undgå madspild.</b> Varer med kort dato til lavere pris. Godt til i aften, dårligt til fryseren.</li>
+<li><b>Gratis varer.</b> Koster 0 kr., men har et maks pr. ordre.</li>
+</ul>
+<p>Tilbud kræver intet login. Med login passer de til din leveringsadresse. Leveringstider har en pris pr. tid, og <code>list_delivery_slots</code> viser de billigste først.</p>
+
+<h2 id="vaerktoejer">Værktøjerne</h2>
+<p>Kun to af dem skriver, og kun i kurven.</p>
 <ul class="rows">
 <li><code>search_products</code>: pris, pris pr. kg/l og tilbud.</li>
-<li><code>list_offers</code>: ugens tilbud og gratis varer. Virker uden login.</li>
 <li><code>search_recipes</code>, <code>list_recipes</code>, <code>get_recipe</code>: nemlig.com's opskrifter med varer og pris.</li>
 <li><code>compare_basket</code>: hele listen i nemlig.com og BilkaToGo, med levering og minimumskøb.</li>
-<li><code>list_delivery_slots</code>: ledige tider med pris, de billigste først.</li>
 <li><code>get_cart</code>, <code>get_orders</code>: kurven og det, I plejer at købe.</li>
 <li><code>set_cart_quantities</code>, <code>add_recipe_to_cart</code>: skriver i kurven. Intet andet.</li>
 </ul>
 <p class="small">Alle felter og argumenter: <a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/tools.md">docs/tools.md</a>.</p>
 
-<h2 id="faelder">5 ting, vi lærte om nemlig.com</h2>
+<h2 id="faelder">4 ting, vi lærte om nemlig.com</h2>
 <p>Bygger du selv mod nemlig.com? Brug dem, også uden HandleMCP.</p>
 <ul class="rows">
-<li><b>Tilbud kræver intet login.</b> Søgning gør. Uden login svarer søgningen med en fejl.</li>
+<li><b>Søgning kræver login.</b> Uden login svarer søgningen med en fejl. Tilbud virker uden.</li>
 <li><b>Et login holder ca. et år.</b> Gem sessionen, ikke koden. Så logger brugeren sjældent ind igen.</li>
-<li><b>Beløb kan komme i øre.</b> Regn om til kroner med det samme. Brug decimaltal, ikke float.</li>
 <li><b>Sæt antal, læg ikke til.</b> "Sæt mælk til 2" kan prøves igen uden fejl. "Læg 1 til" kan ikke.</li>
 <li><b>Respekter køen.</b> Har nemlig.com travlt, kommer du i kø. Sig det til brugeren, og vent.</li>
 </ul>
@@ -213,8 +220,8 @@ claude mcp add handle -- uvx --from git+https://github.com/NJohansen/handle-mcp@
 <div class="faq">
   <details><summary>Er det nemlig.com's eget?</summary><p>Nej. HandleMCP bruger nemlig.com's egen hjemmeside. Den kan gå i stykker, når de ændrer noget. Den er ikke tilknyttet nemlig.com.</p></details>
   <details><summary>Kan den bestille eller betale?</summary><p>Nej. Den kode findes ikke. En test fejler, hvis nogen tilføjer den. Du vælger leveringstid og betaler selv på nemlig.com.</p></details>
+  <details><summary>Virker den uden login?</summary><p>Delvist. Ugens tilbud kan den læse uden login. Søgning, kurv og leveringstider kræver dit nemlig-login.</p></details>
   <details><summary>Hvilke AI-apps virker den med?</summary><p>Alle, der kan bruge en lokal MCP-server, fx Claude Code, Claude Desktop og Codex. Den kører på din egen computer.</p></details>
-  <details><summary>Hvad sker der med mit login?</summary><p>Det bliver på din computer, i nøgleringen. Navn, adresse og telefon bliver fjernet, før din AI ser svaret fra butikken.</p></details>
   <details><summary>Findes der andre MCP'er til nemlig.com?</summary><p>Ja, fx nemlig-mcp af kraenhansen på GitHub. HandleMCP dækker også BilkaToGo og sammenligner hele kurven i begge butikker.</p></details>
 </div>
 
@@ -224,14 +231,14 @@ claude mcp add handle -- uvx --from git+https://github.com/NJohansen/handle-mcp@
 <a class="btn" href="https://github.com/NJohansen/handle-mcp?ref=seo-nemlig-mcp" data-umami-event="github" data-umami-event-sted="seo-nemlig-mcp">Se HandleMCP på GitHub <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
 </div>
 </article>
-<aside class="toc" aria-label="På siden"><b>På siden</b><ul><li><a href="#saet-op">Sæt den op</a></li><li><a href="#eksempel">Eksempel</a></li><li><a href="#vaerktoejer">Det kan den</a></li><li><a href="#faelder">Fælder</a></li><li><a href="#faq">Spørgsmål</a></li></ul></aside>
+<aside class="toc" aria-label="På siden"><b>På siden</b><ul><li><a href="#saet-op">Sæt den op</a></li><li><a href="#eksempel">Eksempel</a></li><li><a href="#tilbud">Ugens tilbud</a></li><li><a href="#vaerktoejer">Værktøjer</a></li><li><a href="#faelder">Lært undervejs</a></li><li><a href="#faq">Spørgsmål</a></li></ul></aside>
 </div>
 
-<div class="more"><h2>Læs også</h2><div class="cards"><a href="/bilkatogo-api/"><b>BilkaToGo API</b><span>Søg, sammenlign og fyld kurven i BilkaToGo.</span></a><a href="/"><b>Hvad er HandleMCP?</b><span>Historien bag, og hvad den kan for en familie.</span></a></div></div>
+<div class="more"><h2>Læs også</h2><div class="cards"><a href="/bilkatogo-api/"><b>BilkaToGo API</b><span>Fælderne i BilkaToGo, og hvordan den adskiller sig fra nemlig.com.</span></a><a href="/"><b>Hvad er HandleMCP?</b><span>Historien bag, og hvad den kan for en familie.</span></a></div></div>
 </main>
 
 <footer>
-  <div class="wrap"><div class="cols"><div><h2>Til udviklere</h2><ul><li><a href="/nemlig-mcp/" aria-current="page">nemlig.com MCP</a></li><li><a href="/bilkatogo-api/">BilkaToGo API</a></li></ul></div><div><h2>HandleMCP</h2><ul><li><a href="/">Forside</a></li><li><a href="https://github.com/NJohansen/handle-mcp">GitHub</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a></li></ul></div><div><h2>Om</h2><ul><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a></li><li><a href="/privatliv/">Privatliv</a></li></ul></div></div>
+  <div class="wrap"><div class="cols"><div><h2>Til familier</h2><ul><li><a href="/ai-madplan-budget/">AI madplan med budget</a></li><li><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a></li><li><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></li></ul></div><div><h2>Til udviklere</h2><ul><li><a href="/nemlig-mcp/" aria-current="page">nemlig.com MCP</a></li><li><a href="/bilkatogo-api/">BilkaToGo API</a></li><li><a href="https://github.com/NJohansen/handle-mcp">GitHub</a></li></ul></div><div><h2>HandleMCP</h2><ul><li><a href="/">Forside</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a></li><li><a href="/privatliv/">Privatliv</a></li></ul></div></div>
   <p class="note">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com eller Salling Group.</p></div>
 </footer>
 <script>

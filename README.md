@@ -8,6 +8,10 @@ The MCP server itself, its docs and its MIT licence live in [NJohansen/handle-mc
 
 © Niclas Johansen. All rights reserved. Text, design, photos and illustrations on this site may not be copied or reused without permission. The fonts in `fonts/` keep their own licences.
 
+## Topic pages
+
+`nemlig-mcp/`, `bilkatogo-api/`, `ai-madplan-budget/`, `madkonto-hele-maaneden/` and `billigere-end-maaltidskasse/` share `sider.css`. The developer pages show the install pin (`@vX.Y.Z`): bump it there too on a release (`grep -rn "@v" --include=index.html .`).
+
 ## Checks
 
 Every pull request runs `.github/workflows/site.yml`:
