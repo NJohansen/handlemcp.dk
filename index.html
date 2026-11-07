@@ -360,7 +360,7 @@ body{overflow-x:clip}
 @media(max-width:700px){.agent .log{padding:20px 16px 4px}.tool{grid-template-columns:18px 1fr 16px}.tool em{grid-column:2}.agent .conn{display:none}}
 
 /* v6: sand hero, boxed nav, white CTA with round dot */
-:root{--sand:#9ccbf3;--navy:#0a1c35}.hero h1{color:#2c2e2a}#saadan,#kom-i-gang,footer{position:relative}.doodles{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}.doodle{position:absolute;height:auto;transform:rotate(var(--r));animation:bob var(--d) ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px) rotate(calc(var(--r) + 5deg))}}.band>:not(.doodles),#saadan>:not(.doodles),#kom-i-gang>:not(.doodles),footer>:not(.doodles){position:relative;z-index:1}@media (max-width:900px){.doodle{scale:.7}.doodle:not(.m){display:none}}@media (prefers-reduced-motion:reduce){.doodle{animation:none}}nav .navcta .sm{display:none}@media (max-width:640px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}@media (min-width:901px){.hero>div:first-child{align-self:start;padding-top:24px}}.hero .proof,.hero .textlink,.hero .lead strong{color:var(--navy)}.hero .lead{color:#1c3a60}.hero .textlink{text-decoration-color:#5f7a94}.hero h1 .soft{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+:root{--sand:#9ccbf3;--navy:#0a1c35}.hero h1{color:#2c2e2a}#saadan,#kom-i-gang,footer{position:relative}.doodles{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}.doodle{position:absolute;height:auto;transform:rotate(var(--r));animation:bob var(--d) ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px) rotate(calc(var(--r) + 5deg))}}.band>:not(.doodles),#saadan>:not(.doodles),#kom-i-gang>:not(.doodles),footer>:not(.doodles){position:relative;z-index:1}@media (max-width:900px){.doodle{scale:.7}.doodle:not(.m){display:none}}@media (prefers-reduced-motion:reduce){.doodle{animation:none}}nav .navcta .sm{display:none}@media (max-width:640px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}@media (min-width:901px){.hero>div:first-child{align-self:start;padding-top:0}}.hero .proof,.hero .textlink,.hero .lead strong{color:var(--navy)}.hero .lead{color:#1c3a60}.hero .textlink{text-decoration-color:#5f7a94}.hero h1 .soft{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
 .hero{position:relative;padding-bottom:88px}
 .hero::before{content:"";position:absolute;top:-140px;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);z-index:-1;background:var(--sand)}
 .navwrap{position:sticky;top:0;z-index:50}
@@ -451,6 +451,9 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
 @media (max-width:1260px){nav ul li.wide{display:none}.ghmark{display:block}.ghw{display:none}}
 @media (max-width:1100px){nav ul a{padding:10px 9px}}@media (max-width:1000px){nav ul a{padding:10px 5px}}@media (max-width:960px){nav ul a{padding:10px 3px}}
 @media (max-width:1040px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}
+/* hero polish: soft fade at the top of the demo log, calmer italic subline */
+.demo .agent .log{-webkit-mask-image:linear-gradient(transparent,#000 18px);mask-image:linear-gradient(transparent,#000 18px)}
+.hero h1 .soft{display:block;font-size:.86em;line-height:1.08;margin-top:6px;text-wrap:balance}
 /* hero GitHub link: icon, label, live stars */
 .hero .ghl{display:inline-flex;align-items:center;gap:8px}.hero .ghl .ghmark{display:block;width:18px;height:18px;fill:currentColor;flex:none}.hero .textlink{text-decoration:none;font-weight:500;color:var(--navy)}.hero .ghtx{text-decoration:underline;text-decoration-color:#5f7a94;text-underline-offset:4px}
 /* mobile hero: centred, one voice, tight type */
@@ -531,7 +534,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
       <li class="opt"><a class="gh" href="https://github.com/NJohansen/handle-mcp" aria-label="GitHub" data-umami-event="github" data-umami-event-sted="nav"><svg class="ghmark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span class="ghw">GitHub</span><span class="stars" id="stars" hidden aria-label="stjerner på GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .9l2.2 4.5 4.9.7-3.6 3.5.9 4.9L8 12.2l-4.4 2.3.9-4.9L.9 6.1l4.9-.7z"/></svg><span id="stars-n"></span></span></a></li>
     </ul>
     </div>
-    <a class="btn navcta" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="nav"><span class="lg">Kom på ventelisten</span><span class="sm">Venteliste</span> <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+    <a class="btn navcta" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="nav"><span class="lg">Skriv mig på ventelisten</span><span class="sm">Venteliste</span> <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
   </nav>
 </header>
 
@@ -554,7 +557,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
         <div class="body">
           <div class="side" aria-label="Eksempler">
             <div class="grp">Denne uge</div>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<span class="ds" aria-hidden="true">Madplan</span><small>700 kr · tilbud · lager</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<span class="ds" aria-hidden="true">Madplan</span><small>700 kr · tilbud</small></button>
             <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Vis opskrifter<span class="ds" aria-hidden="true">Opskrifter</span><small>3 nye retter til 4</small></button>
             <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<span class="ds" aria-hidden="true">Billigste</span><small>nemlig eller Bilka</small></button>
             <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Godkend kurven<span class="ds" aria-hidden="true">Godkend</span><small>Du betaler selv</small></button>
