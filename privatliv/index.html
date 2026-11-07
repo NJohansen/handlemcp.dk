@@ -106,10 +106,12 @@ nav ul a{white-space:nowrap}
 <p>HandleMCP kører på din egen computer. Dine logins, din kurv og dine ordrer bliver der. Vi ser dem aldrig.</p>
 
 <h2>Brugsstatistik fra programmet</h2>
-<p>Programmet tæller anonymt, hvor mange kurve det fylder. Så kan vi vise nemlig.com og BilkaToGo, hvor mange kurve og kroner HandleMCP sender dem. Det sender præcis dette til Umami Cloud:</p>
+<p>Programmet tæller anonymt, hvor langt folk kommer fra installation til fyldt kurv. Så kan vi vise nemlig.com og BilkaToGo, hvor mange kurve og kroner HandleMCP sender dem. Det sender præcis dette til Umami Cloud, altid med version og dato (kun dagen):</p>
 <ul>
-<li><b>cart_filled</b>, én gang pr. fyldt kurv: butik (nemlig eller bilka), beløb rundet til nærmeste 50 kr., antal varer, version og dato.</li>
-<li><b>active</b>, højst én gang om dagen: version og dato.</li>
+<li><b>server_started</b>, højst én gang om dagen: styresystem (Mac, Linux eller Windows).</li>
+<li><b>first_tool_call</b>, højst én gang om dagen: navnet på det første værktøj, fx compare_basket.</li>
+<li><b>login_ok</b>, højst én gang om dagen pr. butik: butik (nemlig eller bilka).</li>
+<li><b>cart_filled</b>, én gang pr. fyldt kurv: butik, beløb rundet til nærmeste 50 kr. og antal varer.</li>
 </ul>
 <p>Aldrig navn, adresse, telefon, e-mail, login, varenavne, ordre-id eller et id for dig eller din computer. Links til kurven har <code>utm_source=handlemcp</code>, så butikken kan se besøget i sin egen statistik.</p>
 <p>Slå det fra med <code>HANDLE_TELEMETRY=0</code> eller <code>handle-mcp --no-telemetry</code>. <a href="https://github.com/NJohansen/handle-mcp#brugsstatistik">Læs mere på GitHub</a>.</p>
