@@ -402,6 +402,8 @@ main>section::before{content:"";position:absolute;top:0;bottom:-44px;left:calc(5
 main section.band::before{bottom:-44px}main>section.band.sand::before,main>section.band.sol::before{background:#f4f0e6}main>section.band:not(.sand):not(.sol)::before{background:var(--sky-soft)}
 footer{z-index:1;border-radius:44px 44px 0 0}
 @media (max-width:640px){main>section::before,footer{border-radius:28px 28px 0 0}}
+/* iOS zooms in on a field under 16px, and then the page pans sideways */
+@media (max-width:900px){input,textarea,select{font-size:16px!important}}
 /* feature overview: white cards on a light green band */
 main>section.band.leaf:not(.sand):not(.sol)::before{background:var(--leaf-soft)}
 #kan .sub{max-width:640px}

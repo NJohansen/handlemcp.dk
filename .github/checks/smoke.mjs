@@ -79,6 +79,12 @@ for (const page of PAGES) for (const size of SIZES) {
   });
   for (const c of corners) check(c.ok, `${tag}: corner between ${c.prev} and ${c.next} shows ${c.corner}, expected ${c.prevColour}`);
 
+  // Phones: every field is 16px or more, or iOS zooms in on tap and the page pans sideways.
+  if (size.width <= 900) {
+    const small = await pg.evaluate(() => [...document.querySelectorAll("input, textarea, select")].filter((e) => parseFloat(getComputedStyle(e).fontSize) < 16).map((e) => e.name || e.tagName));
+    check(small.length === 0, `${tag}: fields 16px or more, no zoom on tap${small.length ? ": " + small.join(", ") : ""}`);
+  }
+
   // Feature card titles stay on one line and inside their card.
   const titles = await pg.evaluate(() => [...document.querySelectorAll(".cans h3")].filter((h) => h.scrollWidth > h.clientWidth + 1).map((h) => h.textContent));
   if (page.path === "/") check(titles.length === 0, `${tag}: feature titles on one line${titles.length ? ": " + titles.join(", ") : ""}`);
