@@ -1,10 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 0 340 304" fill="none">
-  <path d="M120 120 C 120 30, 300 30, 300 120" stroke="#46b35f" stroke-width="26" stroke-linecap="round"/>
-  <path d="M150 130 c -2 -50, 10 -78, 34 -84 c 20 -5, 30 14, 24 40 L 196 130 Z" fill="#ff9f3a"/>
-  <path d="M170 52 c -10 -22, -2 -40, 14 -46 c 6 14, 2 32, -14 46 Z M184 48 c 8 -20, 24 -28, 40 -24 c -6 14, -22 24, -40 24 Z" fill="#46b35f"/>
-  <circle cx="246" cy="104" r="42" fill="#ff705d"/>
-  <ellipse cx="230" cy="86" rx="10" ry="6" transform="rotate(-40 230 86)" fill="#fff"/>
-  <path d="M54 132 C 50 118, 60 110, 76 110 L 344 110 C 360 110, 370 118, 366 132 L 336 276 C 333 292, 322 300, 306 300 L 114 300 C 98 300, 87 292, 84 276 Z" fill="#46b35f"/>
-  <path d="M60 148 C 160 154, 260 154, 360 148" stroke="#2C2E2A" stroke-width="5" stroke-linecap="round"/>
-  <path d="M80 128 C 96 125, 112 124, 128 124" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  <style>
+    /* The basket empties and the groceries drop back in, three times, then it stays full. */
+    .t,.c,.b{transform-box:view-box}
+    .t{animation:t 5s cubic-bezier(.5,0,.5,1) 1.8s 3 both}
+    .c{animation:c 5s cubic-bezier(.5,0,.5,1) 1.8s 3 both}
+    .b{transform-origin:210px 300px;animation:b 5s ease-out 1.8s 3 both}
+    @keyframes t{0%,6%{transform:translateY(0)}16%{transform:translateY(140px)}16.1%,24%{transform:translateY(-190px)}34%{transform:translateY(0)}38%{transform:translateY(-18px)}42%,100%{transform:translateY(0)}}
+    @keyframes c{0%,8%{transform:translateY(0)}18%{transform:translateY(140px)}18.1%,42%{transform:translateY(-200px)}52%{transform:translateY(0)}56%{transform:translateY(-14px)}60%,100%{transform:translateY(0)}}
+    @keyframes b{0%,33%{transform:scale(1)}35%{transform:scale(1.05,.92)}39%{transform:scale(.98,1.03)}43%,51%{transform:scale(1)}53%{transform:scale(1.05,.92)}57%{transform:scale(.98,1.03)}62%,100%{transform:scale(1)}}
+    @media (prefers-reduced-motion:reduce){.t,.c,.b{animation:none}}
+  </style>
+  <g class="b">
+    <path d="M120 120 C 120 30, 300 30, 300 120" stroke="#46b35f" stroke-width="26" stroke-linecap="round"/>
+    <g class="c">
+      <path d="M150 130 c -2 -50, 10 -78, 34 -84 c 20 -5, 30 14, 24 40 L 196 130 Z" fill="#ff9f3a"/>
+      <path d="M170 52 c -10 -22, -2 -40, 14 -46 c 6 14, 2 32, -14 46 Z M184 48 c 8 -20, 24 -28, 40 -24 c -6 14, -22 24, -40 24 Z" fill="#46b35f"/>
+    </g>
+    <g class="t">
+      <circle cx="246" cy="104" r="42" fill="#ff705d"/>
+      <ellipse cx="230" cy="86" rx="10" ry="6" transform="rotate(-40 230 86)" fill="#fff"/>
+    </g>
+    <path d="M54 132 C 50 118, 60 110, 76 110 L 344 110 C 360 110, 370 118, 366 132 L 336 276 C 333 292, 322 300, 306 300 L 114 300 C 98 300, 87 292, 84 276 Z" fill="#46b35f"/>
+    <path d="M60 148 C 160 154, 260 154, 360 148" stroke="#2C2E2A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M80 128 C 96 125, 112 124, 128 124" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  </g>
 </svg>

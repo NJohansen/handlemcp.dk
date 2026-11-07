@@ -471,12 +471,12 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
 }
 /* mobile demo tabs: one scrolling segmented row, no radio circles */
 @media (max-width:640px){
-.demo .side{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;align-self:start;height:auto;gap:2px;margin:10px 10px 0;padding:4px;background:#ebe8de;border:0;border-radius:999px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.demo .side{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;align-self:start;height:auto;gap:2px;margin:10px 10px 0;padding:4px;background:#ebe8de;border:0;border-radius:999px}
 .demo .side::-webkit-scrollbar{display:none}
-.demo .side .item{display:inline-flex;align-items:center;gap:6px;flex:none;width:auto;padding:8px 14px;border:0;border-radius:999px;background:none;color:#5c5d58;font-size:14px;scroll-snap-align:start}
-.demo .side .item:last-child{margin-right:28px}
+.demo .side .item{display:inline-flex;justify-content:center;align-items:center;gap:4px;flex:1 1 auto;width:auto;padding:8px 6px;border:0;border-radius:999px;background:none;color:#5c5d58;font-size:0}
+.demo .side .item .ds{font-size:13.5px;letter-spacing:-.01em}
 .demo .side .item .ic{display:none}
-.demo .side .item.done .ic{display:grid;width:14px;height:14px}
+.demo .side .item.done .ic{display:grid;width:13px;height:13px}
 .demo .side .item.on{background:#fff;color:var(--ink);border:0;box-shadow:0 1px 2px rgba(29,30,27,.08),0 3px 10px -4px rgba(29,30,27,.18)}
 }
 </style>
@@ -552,10 +552,10 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
         <div class="body">
           <div class="side" aria-label="Eksempler">
             <div class="grp">Denne uge</div>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<small>700 kr · tilbud · lager</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Vis opskrifter<small>3 nye retter til 4</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<small>nemlig eller Bilka</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Godkend kurven<small>Du betaler selv</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<span class="ds" aria-hidden="true">Madplan</span><small>700 kr · tilbud · lager</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Vis opskrifter<span class="ds" aria-hidden="true">Opskrifter</span><small>3 nye retter til 4</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<span class="ds" aria-hidden="true">Billigste</span><small>nemlig eller Bilka</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Godkend kurven<span class="ds" aria-hidden="true">Godkend</span><small>Du betaler selv</small></button>
           </div>
           <div class="main">
             <div class="log"></div>
