@@ -14,7 +14,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
-PAGES = ["index.html", "privatliv/index.html"]
+PAGES = ["index.html", "privatliv/index.html", "nemlig-mcp/index.html", "bilkatogo-api/index.html"]
 SITE = "https://handlemcp.dk"
 
 
