@@ -52,7 +52,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 nav ul{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0;font-size:15px}
 nav ul a{text-decoration:none;color:var(--mute)}
 nav ul a:hover{color:var(--ink)}
-.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;background:var(--ink);color:#fff;white-space:nowrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;background:var(--ink);color:#fff}
 .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
 nav ul a.btn{padding:10px 18px;color:#fff}
 
@@ -157,7 +157,7 @@ html{overflow-x:clip}.demo.max .side{padding-top:18px}.demo.max .log{align-items
 .slot.win{border-color:var(--green);background:var(--leaf-soft)}
 .q{background:#fff;border:1px solid #e6e3d9;border-radius:14px;overflow:hidden;font-size:14px}
 .q .qh{display:flex;align-items:center;gap:10px;padding:12px 14px;font-weight:500;line-height:1.3}
-.q .pg{margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--mute);font-size:12.5px;font-weight:400;white-space:nowrap}
+.q .pg{margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--mute);font-size:12.5px;font-weight:400}
 .q .qh svg{width:12px;height:12px;flex:none;fill:none;stroke:var(--mute);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .q .opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:9px 14px;border:0;border-top:1px solid #eeece4;background:none;font:inherit;color:var(--ink);cursor:pointer;transition:background .2s}.q .opt:hover{background:#f7f6f1}.q .opt:focus-visible,.q .qf button:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
 .q .opt i{width:26px;height:26px;flex:none;border-radius:7px;background:#f0eee6;color:var(--mute);font:500 12.5px/26px var(--sans);text-align:center;transition:background .2s,color .2s}
@@ -360,7 +360,7 @@ body{overflow-x:clip}
 @media(max-width:700px){.agent .log{padding:20px 16px 4px}.tool{grid-template-columns:18px 1fr 16px}.tool em{grid-column:2}.agent .conn{display:none}}
 
 /* v6: sand hero, boxed nav, white CTA with round dot */
-:root{--sand:#9ccbf3;--navy:#0a1c35}.hero h1{color:#2c2e2a}#saadan,#kom-i-gang,footer{position:relative}.doodles{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}.doodle{position:absolute;height:auto;transform:rotate(var(--r));animation:bob var(--d) ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px) rotate(calc(var(--r) + 5deg))}}.band>:not(.doodles),#saadan>:not(.doodles),#kom-i-gang>:not(.doodles),footer>:not(.doodles){position:relative;z-index:1}@media (max-width:900px){.doodle{scale:.7}.doodle:not(.m){display:none}}@media (prefers-reduced-motion:reduce){.doodle{animation:none}}nav .navcta .sm{display:none}@media (max-width:640px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}@media (min-width:901px){.hero>div:first-child{align-self:start;padding-top:24px}}.hero .proof,.hero .textlink,.hero .lead strong{color:var(--navy)}.hero .lead{color:#1c3a60}.hero .textlink{text-decoration-color:#5f7a94}.hero h1 .soft{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+:root{--sand:#9ccbf3;--navy:#0a1c35}.hero h1{color:#2c2e2a}#saadan,#kom-i-gang,footer{position:relative}.doodles{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}.doodle{position:absolute;height:auto;transform:rotate(var(--r));animation:bob var(--d) ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px) rotate(calc(var(--r) + 5deg))}}.band>:not(.doodles),#saadan>:not(.doodles),#kom-i-gang>:not(.doodles),footer>:not(.doodles){position:relative;z-index:1}@media (max-width:900px){.doodle{scale:.7}.doodle:not(.m){display:none}}@media (prefers-reduced-motion:reduce){.doodle{animation:none}}nav .navcta .sm{display:none}@media (max-width:640px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}@media (min-width:901px){.hero>div:first-child{align-self:start;padding-top:0}}.hero .proof,.hero .textlink,.hero .lead strong{color:var(--navy)}.hero .lead{color:#1c3a60}.hero .textlink{text-decoration-color:#5f7a94}.hero h1 .soft{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
 .hero{position:relative;padding-bottom:88px}
 .hero::before{content:"";position:absolute;top:-140px;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);z-index:-1;background:var(--sand)}
 .navwrap{position:sticky;top:0;z-index:50}
@@ -451,6 +451,39 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
 @media (max-width:1260px){nav ul li.wide{display:none}.ghmark{display:block}.ghw{display:none}}
 @media (max-width:1100px){nav ul a{padding:10px 9px}}@media (max-width:1000px){nav ul a{padding:10px 5px}}@media (max-width:960px){nav ul a{padding:10px 3px}}
 @media (max-width:1040px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}
+/* hero polish: soft fade at the top of the demo log, calmer italic subline */
+.demo .agent .log{-webkit-mask-image:linear-gradient(transparent,#000 18px);mask-image:linear-gradient(transparent,#000 18px)}
+.hero h1 .soft{display:block;font-size:.86em;line-height:1.08;margin-top:6px;text-wrap:balance}
+/* hero GitHub link: icon, label, live stars */
+.hero .ghl{display:inline-flex;align-items:center;gap:8px}.hero .ghl .ghmark{display:block;width:18px;height:18px;fill:currentColor;flex:none}.hero .textlink{text-decoration:none;font-weight:500;color:var(--navy)}.hero .ghtx{text-decoration:underline;text-decoration-color:#5f7a94;text-underline-offset:4px}
+/* mobile hero: centred, one voice, tight type */
+.hero h1 .chip,.hero h1 br.m,.hero .ds{display:none}
+@media (max-width:640px){
+.hero>div:first-child{text-align:center}
+.hero h1 br.m{display:inline}
+.hero h1{font-size:46px;line-height:1.02;letter-spacing:-.045em;margin-bottom:18px}
+.hero h1 .soft{display:block;font-family:Inter,system-ui,sans-serif;font-style:normal;font-weight:700;letter-spacing:-.045em;color:#3b5064;margin-top:14px;font-size:22px;font-weight:500;line-height:1.25;letter-spacing:-.015em;text-wrap:balance}
+.hero .dl{display:none}.hero .ds{display:inline}
+.hero h1 .chip{display:inline-grid;place-items:center;width:58px;height:48px;margin-left:10px;vertical-align:-6px;border-radius:13px;background:#fff;box-shadow:0 1px 0 rgba(10,28,53,.06),0 8px 20px -8px rgba(10,28,53,.35);transform:rotate(-6deg)}
+.hero h1 .chip img{width:40px;height:auto}
+.hero .lead{font-size:16px;line-height:1.5;margin:0 auto 32px;max-width:32ch;text-wrap:balance;color:#3b5064}
+.hero .ctas{flex-direction:column;gap:16px}
+.hero .ctas .btn{width:100%;justify-content:space-between}
+.hero{gap:40px}
+
+.hero .textlink{font-size:15px}.hero .hstars{margin-left:2px}
+.hero .proof{justify-content:center;gap:10px;font-size:15px;margin:28px auto 0}.hero .proof .avatar{width:32px;height:32px}
+}
+/* mobile demo tabs: one scrolling segmented row, no radio circles */
+@media (max-width:640px){
+.demo .side{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;align-self:start;height:auto;gap:2px;margin:10px 10px 0;padding:4px;background:#ebe8de;border:0;border-radius:999px}
+.demo .side::-webkit-scrollbar{display:none}
+.demo .side .item{display:inline-flex;justify-content:center;align-items:center;gap:4px;flex:1 1 auto;width:auto;padding:8px 6px;border:0;border-radius:999px;background:none;color:#5c5d58;font-size:0}
+.demo .side .item .ds{font-size:13.5px;letter-spacing:-.01em}
+.demo .side .item .ic{display:none}
+.demo .side .item.done .ic{display:grid;width:13px;height:13px}
+.demo .side .item.on{background:#fff;color:var(--ink);border:0;box-shadow:0 1px 2px rgba(29,30,27,.08),0 3px 10px -4px rgba(29,30,27,.18)}
+}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -501,7 +534,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
       <li class="opt"><a class="gh" href="https://github.com/NJohansen/handle-mcp" aria-label="GitHub" data-umami-event="github" data-umami-event-sted="nav"><svg class="ghmark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span class="ghw">GitHub</span><span class="stars" id="stars" hidden aria-label="stjerner på GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .9l2.2 4.5 4.9.7-3.6 3.5.9 4.9L8 12.2l-4.4 2.3.9-4.9L.9 6.1l4.9-.7z"/></svg><span id="stars-n"></span></span></a></li>
     </ul>
     </div>
-    <a class="btn navcta" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="nav"><span class="lg">Kom på ventelisten</span><span class="sm">Venteliste</span> <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+    <a class="btn navcta" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="nav"><span class="lg">Skriv mig på ventelisten</span><span class="sm">Venteliste</span> <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
   </nav>
 </header>
 
@@ -509,13 +542,13 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
   <div class="stage">
   <div class="hero">
     <div>
-      <h1>Din AI handler ind. <span class="soft">Du sparer penge, og får mere tid.</span></h1>
-      <p class="lead">Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. <strong>Du betaler, og pengene holder måneden ud.</strong></p>
+      <h1>Din AI<span class="chip" aria-hidden="true"><img src="chip.svg" alt="" width="40" height="36"></span><br class="m"> handler ind. <span class="soft">Du sparer penge og får mere tid.</span></h1>
+      <p class="lead"><span class="dl">Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. Du betaler, og pengene holder måneden ud.</span><span class="ds">Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. Du betaler.</span></p>
       <div class="ctas">
         <a class="btn coral" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="hero">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
-        <a class="textlink" href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="hero">eller host det selv på GitHub</a>
+        <a class="textlink" href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="hero"><span class="ghl"><svg class="ghmark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span class="ghtx"><span class="dl">Gratis på GitHub</span><span class="ds">Gratis og open source på GitHub</span></span><span class="stars hstars" hidden aria-label="stjerner på GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 .9l2.2 4.5 4.9.7-3.6 3.5.9 4.9L8 12.2l-4.4 2.3.9-4.9L.9 6.1l4.9-.7z"/></svg><span class="hstars-n"></span></span></span></a>
       </div>
-      <p class="proof"><span class="avatar"><img src="niclas.jpg" alt="" width="44" height="44" style="transform:rotate(8deg) scale(1.15)"></span>Vores familie på 4 sparer ca. 2.500 kr. om måneden.</p>
+      <p class="proof"><span class="avatar"><img src="niclas.jpg" alt="" width="44" height="44" style="transform:rotate(8deg) scale(1.15)"></span><span class="dl">Vores familie på 4 sparer ca. 2.500 kr. om måneden.</span><span class="ds">Min familie sparer ca. 2.500 kr./md.</span></p>
     </div>
 
     <div class="demo" id="demo">
@@ -524,10 +557,10 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
         <div class="body">
           <div class="side" aria-label="Eksempler">
             <div class="grp">Denne uge</div>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<small>700 kr · tilbud · lager</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Vis opskrifter<small>3 nye retter til 4</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<small>nemlig eller Bilka</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Godkend kurven<small>Du betaler selv</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<span class="ds" aria-hidden="true">Madplan</span><small>700 kr · tilbud</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Vis opskrifter<span class="ds" aria-hidden="true">Opskrifter</span><small>3 nye retter til 4</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<span class="ds" aria-hidden="true">Billigste</span><small>nemlig eller Bilka</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Godkend kurven<span class="ds" aria-hidden="true">Godkend</span><small>Du betaler selv</small></button>
           </div>
           <div class="main">
             <div class="log"></div>
@@ -661,7 +694,7 @@ claude mcp add handle -- uvx --from git+https://github.com/NJohansen/handle-mcp@
 // Live GitHub star count. If the call fails, the link just says "GitHub".
 (function(){
   var el=document.getElementById('stars'),n=document.getElementById('stars-n');
-  function show(c){if(typeof c==='number'){n.textContent=c.toLocaleString('da-DK');el.hidden=false}}
+  function show(c){if(typeof c==='number'){var t=c.toLocaleString('da-DK');n.textContent=t;el.hidden=false;document.querySelectorAll('.hstars').forEach(function(h){h.querySelector('.hstars-n').textContent=t;h.hidden=false})}}
   try{var c=sessionStorage.getItem('hm-stars');if(c!==null){show(+c);return}}catch(e){}
   fetch('https://api.github.com/repos/NJohansen/handle-mcp',{headers:{Accept:'application/vnd.github+json'}})
     .then(function(r){return r.ok?r.json():null})
@@ -754,7 +787,7 @@ let run=0,pending=null;
   if(pending&&/^(ja|jo|yes|ok|okay|gerne)\b/i.test(t)){window.open(pending,'_blank','noopener');say('ai','Åbner nemlig.com i en ny fane. Sker der ikke noget, så <a href="'+pending+'" target="_blank" rel="noopener">åbn den her</a>. Du vælger tid og betaler selv.')}
   else if(pending)say('ai','Skriv <b>ja tak</b>, så åbner jeg nemlig.com. Jeg bestiller ikke noget.');
   else say('ai','Det her er en demo. Prøv <b>Find billigste</b> i menuen, og skriv <b>ja tak</b>, når kurven er fyldt.')})}
-const PH=matchMedia('(max-width:640px)').matches?'Spørg om noget …':'Stil et spørgsmål eller start en opgave …';async function play(i){const id=++run;pending=null;D.querySelector('.field input').placeholder=PH;items.forEach((c,j)=>{c.classList.toggle('on',j===i);c.classList.toggle('run',j===i);c.setAttribute('aria-pressed',j===i);c.classList.remove('next')});log.innerHTML='';log.setAttribute('aria-busy','true');const c=cases[i];
+const PH=matchMedia('(max-width:640px)').matches?'Spørg om noget …':'Stil et spørgsmål eller start en opgave …';async function play(i){const id=++run;pending=null;D.querySelector('.field input').placeholder=PH;items.forEach((c,j)=>{c.classList.toggle('on',j===i);c.classList.toggle('run',j===i);c.setAttribute('aria-pressed',j===i);c.classList.remove('next')});{const sd=items[i].parentElement;if(sd.scrollWidth>sd.clientWidth){const a=items[i].getBoundingClientRect(),z=sd.getBoundingClientRect();sd.scrollTo({left:sd.scrollLeft+a.left-z.left-4,behavior:'smooth'})}}log.innerHTML='';log.setAttribute('aria-busy','true');const c=cases[i];
  const you=el('<div class="you"><div class="bubble"></div></div>');log.appendChild(you);const b=you.firstChild;
  if(still.matches)b.textContent=c.you;else{for(const ch of c.you){if(id!==run)return;b.textContent+=ch;await wait(11)}}
  const th=el('<div class="think">Tænker …</div>');log.appendChild(th);dn();await wait(1000);if(id!==run)return;th.outerHTML='<div class="thought">Tænkte i 1 sek. <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3"/></svg></div>';if(c.ask&&!asked){const pre=el(`<div class="ai"><div class="bubble">${c.intro}</div></div>`);log.appendChild(pre);dn();await wait(500);items[i].classList.remove('run');log.removeAttribute('aria-busy');await ask(c.ask,id);if(id!==run)return;asked=true;items[i].classList.add('run');log.setAttribute('aria-busy','true');log.appendChild(el('<div class="think">Tænker …</div>'));dn();await wait(1000);if(id!==run)return;log.lastChild.outerHTML='<div class="thought">Tænkte i 1 sek. <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3"/></svg></div>'}const tools=el('<div class="tools"></div>');log.appendChild(tools);
