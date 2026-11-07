@@ -105,9 +105,18 @@ nav ul a{white-space:nowrap}
 <h2>Programmet selv</h2>
 <p>HandleMCP kører på din egen computer. Dine logins, din kurv og dine ordrer bliver der. Vi ser dem aldrig.</p>
 
+<h2>Brugsstatistik fra programmet</h2>
+<p>Programmet tæller anonymt, hvor mange kurve det fylder. Så kan vi vise nemlig.com og BilkaToGo, hvor mange kurve og kroner HandleMCP sender dem. Det sender præcis dette til Umami Cloud:</p>
+<ul>
+<li><b>cart_filled</b>, én gang pr. fyldt kurv: butik (nemlig eller bilka), beløb rundet til nærmeste 50 kr., antal varer, version og dato.</li>
+<li><b>active</b>, højst én gang om dagen: version og dato.</li>
+</ul>
+<p>Aldrig navn, adresse, telefon, e-mail, login, varenavne, ordre-id eller et id for dig eller din computer. Links til kurven har <code>utm_source=handlemcp</code>, så butikken kan se besøget i sin egen statistik.</p>
+<p>Slå det fra med <code>HANDLE_TELEMETRY=0</code> eller <code>handle-mcp --no-telemetry</code>. <a href="https://github.com/NJohansen/handle-mcp#brugsstatistik">Læs mere på GitHub</a>.</p>
+
 <h2>Dine rettigheder</h2>
 <p>Du kan altid få at vide, hvad vi har gemt, få det rettet eller slettet, og trække dit samtykke tilbage. Skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>. Er du utilfreds, kan du klage til <a href="https://www.datatilsynet.dk">Datatilsynet</a>.</p>
-<p class="upd">Opdateret 6. november 2026.</p>
+<p class="upd">Opdateret 7. november 2026.</p>
 </article></main>
 
 <footer>
