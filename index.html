@@ -406,8 +406,9 @@ footer{z-index:1;border-radius:44px 44px 0 0}
 main>section.band.leaf:not(.sand):not(.sol)::before{background:var(--leaf-soft)}
 #kan .sub{max-width:640px}
 .cans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:1180px){.cans{grid-template-columns:1fr 1fr}}
 .cans div{background:#fff;border-radius:40px;padding:32px}
-.cans h3{font-weight:600;font-size:22px;letter-spacing:-.02em;margin:0 0 8px}
+.cans h3{white-space:nowrap;font-weight:600;font-size:22px;letter-spacing:-.02em;margin:0 0 8px}
 .cans p{margin:0;color:#55564f;font-size:16px}
 #kan .never{margin:32px 0 0;max-width:760px;font-size:18px;color:#2c2e2a}
 @media (max-width:900px){.cans{grid-template-columns:1fr 1fr;gap:12px}.cans div{padding:24px;border-radius:28px}}
@@ -589,12 +590,12 @@ nav ul a{white-space:nowrap}
     <div class="cans">
       <div><h3>Holder budgettet</h3><p>Du skriver "700&nbsp;kr. til 4&nbsp;personer". Den planlægger ugen, så kurven ender under 700&nbsp;kr.</p></div>
       <div><h3>Finder alle ugens tilbud</h3><p>Hakket oksekød til halv pris? Så bliver det lasagne tirsdag. Gratis varer kommer også med.</p></div>
-      <div><h3>Sammenligner nemlig.com og BilkaToGo</h3><p>Samme kurv i begge butikker, med levering. Fx nemlig.com 612&nbsp;kr. mod BilkaToGo 655&nbsp;kr. Du handler i den billigste.</p></div>
+      <div><h3>nemlig.com mod BilkaToGo</h3><p>Samme kurv i begge butikker, med levering. Fx nemlig.com 612&nbsp;kr. mod BilkaToGo 655&nbsp;kr. Du handler i den billigste.</p></div>
       <div><h3>Fylder kurven</h3><p>Du skriver "ja". Så ligger alle varerne i kurven hos nemlig.com eller BilkaToGo.</p></div>
-      <div><h3>Finder opskrifter med pris</h3><p>Fx "Kylling i karry, 4&nbsp;personer: 142&nbsp;kr." Varerne kan komme direkte i kurven.</p></div>
-      <div><h3>Giver 5 bud på hver vare</h3><p>Du skriver "2&nbsp;liter mælk". Den viser op til 5 slags med pris og tager 2&nbsp;stk. af 1&nbsp;liter.</p></div>
-      <div><h3>Ved, hvad I plejer at købe</h3><p>Den ser jeres sidste ordrer. Køber I altid havregryn og bananer, kommer de med.</p></div>
-      <div><h3>Viser de 3 billigste leveringstider</h3><p>Fx søndag kl. 8–12 for 29&nbsp;kr. Du vælger selv.</p></div>
+      <div><h3>Opskrifter med pris</h3><p>Fx "Kylling i karry, 4&nbsp;personer: 142&nbsp;kr." Varerne kan komme direkte i kurven.</p></div>
+      <div><h3>5 bud på hver vare</h3><p>Du skriver "2&nbsp;liter mælk". Den viser op til 5 slags med pris og tager 2&nbsp;stk. af 1&nbsp;liter.</p></div>
+      <div><h3>Kender jeres faste varer</h3><p>Den ser jeres sidste ordrer. Køber I altid havregryn og bananer, kommer de med.</p></div>
+      <div><h3>3 billigste tider først</h3><p>Leveringstider med pris. Fx søndag kl. 8–12 for 29&nbsp;kr. Du vælger selv.</p></div>
       <div><h3>Sender dig til kurven</h3><p>Du får ét link. Du trykker, tjekker kurven og betaler i butikken.</p></div>
     </div>
     <p class="never"><b>Det kan den aldrig:</b> bestille, betale, se dit kort eller ændre din adresse. Du godkender og betaler selv. HandleMCP bestiller aldrig.</p>

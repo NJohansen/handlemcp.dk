@@ -79,6 +79,10 @@ for (const page of PAGES) for (const size of SIZES) {
   });
   for (const c of corners) check(c.ok, `${tag}: corner between ${c.prev} and ${c.next} shows ${c.corner}, expected ${c.prevColour}`);
 
+  // Feature card titles stay on one line and inside their card.
+  const titles = await pg.evaluate(() => [...document.querySelectorAll(".cans h3")].filter((h) => h.scrollWidth > h.clientWidth + 1).map((h) => h.textContent));
+  if (page.path === "/") check(titles.length === 0, `${tag}: feature titles on one line${titles.length ? ": " + titles.join(", ") : ""}`);
+
   await pg.screenshot({ path: join(OUT, `${page.name}-${size.name}-top.png`) });
 
   // Front page, wide screens: the basket lands inside the story photo, smaller than the photo.
