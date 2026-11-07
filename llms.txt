@@ -15,6 +15,20 @@ Works with any client that supports the Model Context Protocol, for example Clau
 - [Why the human always pays](https://github.com/NJohansen/handle-mcp/blob/main/docs/adr/0001-the-human-always-pays.md)
 - [Releases](https://github.com/NJohansen/handle-mcp/releases)
 
+## What it can do
+
+Both stores (nemlig.com and BilkaToGo), see [handlemcp.dk/#kan](https://handlemcp.dk/#kan):
+
+- Read this week's offers, including free gifts and daily deals.
+- Search products: price, price per kg/l, offers, the right number of packs.
+- Price a whole shopping list in both stores, with delivery fees and minimum order, and name the cheapest.
+- Plan within a budget the human gives, built on the offers.
+- Read the stores' own recipes, with products and prices for the number of persons.
+- Fill the cart after the human says yes. Only the cart.
+- List free delivery times with the fee per slot, cheapest first. The human chooses.
+- Read past orders, for "what we usually buy".
+- Give one link to the cart, where the human checks and pays.
+
 ## FAQ
 
 The landing page has a short FAQ in Danish, also as FAQPage JSON-LD: [handlemcp.dk/#faq](https://handlemcp.dk/#faq).
