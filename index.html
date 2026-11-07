@@ -469,6 +469,16 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
 .hero .textlink{font-size:15px}.hero .hstars{margin-left:2px}
 .hero .proof{justify-content:center;gap:10px;font-size:15px;margin:28px auto 0}.hero .proof .avatar{width:32px;height:32px}
 }
+/* mobile demo tabs: one scrolling segmented row, no radio circles */
+@media (max-width:640px){
+.demo .side{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;align-self:start;height:auto;gap:2px;margin:10px 10px 0;padding:4px;background:#ebe8de;border:0;border-radius:999px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.demo .side::-webkit-scrollbar{display:none}
+.demo .side .item{display:inline-flex;align-items:center;gap:6px;flex:none;width:auto;padding:8px 14px;border:0;border-radius:999px;background:none;color:#5c5d58;font-size:14px;scroll-snap-align:start}
+.demo .side .item:last-child{margin-right:28px}
+.demo .side .item .ic{display:none}
+.demo .side .item.done .ic{display:grid;width:14px;height:14px}
+.demo .side .item.on{background:#fff;color:var(--ink);border:0;box-shadow:0 1px 2px rgba(29,30,27,.08),0 3px 10px -4px rgba(29,30,27,.18)}
+}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -772,7 +782,7 @@ let run=0,pending=null;
   if(pending&&/^(ja|jo|yes|ok|okay|gerne)\b/i.test(t)){window.open(pending,'_blank','noopener');say('ai','Åbner nemlig.com i en ny fane. Sker der ikke noget, så <a href="'+pending+'" target="_blank" rel="noopener">åbn den her</a>. Du vælger tid og betaler selv.')}
   else if(pending)say('ai','Skriv <b>ja tak</b>, så åbner jeg nemlig.com. Jeg bestiller ikke noget.');
   else say('ai','Det her er en demo. Prøv <b>Find billigste</b> i menuen, og skriv <b>ja tak</b>, når kurven er fyldt.')})}
-const PH=matchMedia('(max-width:640px)').matches?'Spørg om noget …':'Stil et spørgsmål eller start en opgave …';async function play(i){const id=++run;pending=null;D.querySelector('.field input').placeholder=PH;items.forEach((c,j)=>{c.classList.toggle('on',j===i);c.classList.toggle('run',j===i);c.setAttribute('aria-pressed',j===i);c.classList.remove('next')});log.innerHTML='';log.setAttribute('aria-busy','true');const c=cases[i];
+const PH=matchMedia('(max-width:640px)').matches?'Spørg om noget …':'Stil et spørgsmål eller start en opgave …';async function play(i){const id=++run;pending=null;D.querySelector('.field input').placeholder=PH;items.forEach((c,j)=>{c.classList.toggle('on',j===i);c.classList.toggle('run',j===i);c.setAttribute('aria-pressed',j===i);c.classList.remove('next')});{const sd=items[i].parentElement;if(sd.scrollWidth>sd.clientWidth){const a=items[i].getBoundingClientRect(),z=sd.getBoundingClientRect();sd.scrollTo({left:sd.scrollLeft+a.left-z.left-4,behavior:'smooth'})}}log.innerHTML='';log.setAttribute('aria-busy','true');const c=cases[i];
  const you=el('<div class="you"><div class="bubble"></div></div>');log.appendChild(you);const b=you.firstChild;
  if(still.matches)b.textContent=c.you;else{for(const ch of c.you){if(id!==run)return;b.textContent+=ch;await wait(11)}}
  const th=el('<div class="think">Tænker …</div>');log.appendChild(th);dn();await wait(1000);if(id!==run)return;th.outerHTML='<div class="thought">Tænkte i 1 sek. <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3"/></svg></div>';if(c.ask&&!asked){const pre=el(`<div class="ai"><div class="bubble">${c.intro}</div></div>`);log.appendChild(pre);dn();await wait(500);items[i].classList.remove('run');log.removeAttribute('aria-busy');await ask(c.ask,id);if(id!==run)return;asked=true;items[i].classList.add('run');log.setAttribute('aria-busy','true');log.appendChild(el('<div class="think">Tænker …</div>'));dn();await wait(1000);if(id!==run)return;log.lastChild.outerHTML='<div class="thought">Tænkte i 1 sek. <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3"/></svg></div>'}const tools=el('<div class="tools"></div>');log.appendChild(tools);
