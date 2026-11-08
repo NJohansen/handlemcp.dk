@@ -1,0 +1,29 @@
+name: indexnow
+
+# After a push to main, tell IndexNow (Bing and others) which pages changed.
+# Run it by hand to send every page in sitemap.xml.
+on:
+  push:
+    branches: [main]
+    paths: ["**/index.html", "sitemap.xml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Wait for GitHub Pages to publish
+        run: sleep 90
+      - name: Send changed pages
+        if: github.event_name == 'push'
+        run: python3 .github/indexnow/submit.py "${{ github.event.before }}" "${{ github.sha }}"
+      - name: Send every page
+        if: github.event_name == 'workflow_dispatch'
+        run: python3 .github/indexnow/submit.py --all
