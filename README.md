@@ -12,6 +12,10 @@ The MCP server itself, its docs and its MIT licence live in [NJohansen/handle-mc
 
 `nemlig-mcp/`, `bilkatogo-api/`, `ai-madplan-budget/`, `madkonto-hele-maaneden/` and `billigere-end-maaltidskasse/` share `sider.css`. The developer pages show the install pin (`@vX.Y.Z`): bump it there too on a release (`grep -rn "@v" --include=index.html .`).
 
+## IndexNow
+
+After each push to `main` that changes a page, `.github/workflows/indexnow.yml` waits for Pages to publish and sends the changed URLs to IndexNow (Bing, Yandex, Naver). Run the workflow by hand to send every page in `sitemap.xml`. The key file `419c1175c88ecd7a2e7d85219227ab75.txt` must stay in the root. Google does not use IndexNow.
+
 ## Checks
 
 Every pull request runs `.github/workflows/site.yml`:
