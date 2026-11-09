@@ -4,6 +4,8 @@
 - every local file the pages use exists (src, href, CSS url())
 - every JSON-LD block parses, and the FAQ data matches the questions on the page
 - every page in sitemap.xml exists
+- every <img> has a non-empty alt (site scans flag alt="" as missing;
+  hide decorative images with aria-hidden instead)
 """
 
 import json
@@ -87,6 +89,10 @@ def main():
             f = local_file(rel, ref)
             if f is not None and not ref.startswith("#") and not f.exists():
                 errors.append(f"{rel}: {ref} is missing ({f.relative_to(ROOT)})")
+        text = (ROOT / rel).read_text(encoding="utf-8")
+        for tag in re.findall(r"<img\b[^>]*>", text):
+            if not re.search(r'\balt="[^"]+"', tag):
+                errors.append(f"{rel}: {tag[:80]} has no alt text")
         for block in p.jsonld:
             try:
                 data = json.loads(block)
