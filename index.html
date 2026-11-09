@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HandleMCP: spar på madbudgettet med ugens tilbud</title>
-<meta name="description" content="Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. Du betaler, og pengene holder måneden ud. Gratis og open source.">
+<meta name="description" content="Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com, BilkaToGo og REMA 1000 og fylder den billigste kurv. Du betaler, og pengene holder måneden ud. Gratis og open source.">
 <link rel="canonical" href="https://handlemcp.dk/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#2f8f46">
@@ -13,14 +13,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://handlemcp.dk/">
 <meta property="og:title" content="HandleMCP: spar på madbudgettet med ugens tilbud">
-<meta property="og:description" content="Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. Du betaler, og pengene holder måneden ud. Gratis og open source.">
+<meta property="og:description" content="Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com, BilkaToGo og REMA 1000 og fylder den billigste kurv. Du betaler, og pengene holder måneden ud. Gratis og open source.">
 <meta property="og:image" content="https://handlemcp.dk/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="HandleMCP. Din AI kan nu handle ind. Du betaler bare. En blå indkøbskurv med grønt, tomat og brød.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HandleMCP: spar på madbudgettet med ugens tilbud">
-<meta name="twitter:description" content="Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com og BilkaToGo og fylder den billigste kurv. Du betaler, og pengene holder måneden ud. Gratis og open source.">
+<meta name="twitter:description" content="Fortæl din AI dit husholdningsbudget. Den finder tilbud på nemlig.com, BilkaToGo og REMA 1000 og fylder den billigste kurv. Du betaler, og pengene holder måneden ud. Gratis og open source.">
 <meta name="twitter:image" content="https://handlemcp.dk/og.png">
 <meta name="color-scheme" content="light">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -141,7 +141,7 @@ html{overflow-x:clip}.demo.max .side{padding-top:18px}.demo.max .log{align-items
 .recipe ol{margin:0;padding:0;list-style:none;counter-reset:st;font-size:14px;line-height:1.5}
 .recipe ol li{display:grid;grid-template-columns:22px 1fr;gap:10px;margin:0 0 8px}
 .recipe ol li::before{counter-increment:st;content:counter(st);width:22px;height:22px;border-radius:50%;background:#f0eee6;font-size:12px;font-weight:600;display:grid;place-items:center;color:var(--ink)}
-.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0}
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 0}
 .store{border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px;min-width:0}
 .store.win{border-color:var(--green);background:var(--leaf-soft)}
 .store .tot{font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
@@ -519,7 +519,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
       "@id": "https://handlemcp.dk/#software",
       "name": "HandleMCP",
       "alternateName": ["handle-mcp", "Handle MCP"],
-      "description": "Open source MCP-server til danske dagligvarebutikker med hjemlevering (nemlig.com og BilkaToGo): søg, sammenlign priser og fyld kurven. Du betaler altid selv.",
+      "description": "Open source MCP-server til danske dagligvarebutikker (nemlig.com, BilkaToGo og REMA 1000): søg, sammenlign priser og fyld kurven. Du betaler altid selv.",
       "url": "https://handlemcp.dk/",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "macOS, Linux, Windows",
@@ -575,7 +575,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
             <div class="grp">Denne uge</div>
             <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Lav madplan<span class="ds" aria-hidden="true">Madplan</span><small>700 kr · tilbud</small></button>
             <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Vis opskrifter<span class="ds" aria-hidden="true">Opskrifter</span><small>3 nye retter til 4</small></button>
-            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<span class="ds" aria-hidden="true">Billigste</span><small>nemlig eller Bilka</small></button>
+            <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Find billigste<span class="ds" aria-hidden="true">Billigste</span><small>3 butikker</small></button>
             <button class="item" type="button" aria-pressed="false"><span class="ic"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg></span>Godkend kurven<span class="ds" aria-hidden="true">Godkend</span><small>Du betaler selv</small></button>
           </div>
           <div class="main">
@@ -630,19 +630,19 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
     <h2>Sådan virker det</h2>
     <div class="steps">
       <div><span>1</span><h3>Sig budgettet</h3><p>"700 kr til 4 personer." Og hvad I kan lide, og hvad I har hjemme.</p></div>
-      <div><span>2</span><h3>Den planlægger</h3><p>Den læser tilbud i begge butikker, finder gratis varer og bruger butikkens opskrifter.</p></div>
-      <div><span>3</span><h3>Den fylder kurven</h3><p>Den regner hele kurven i begge butikker, med levering, og fylder den billigste.</p></div>
+      <div><span>2</span><h3>Den planlægger</h3><p>Den læser tilbud i alle tre butikker, finder gratis varer og bruger butikkens opskrifter.</p></div>
+      <div><span>3</span><h3>Den fylder kurven</h3><p>Den regner hele kurven i alle tre butikker, med levering, og fylder den billigste.</p></div>
       <div><span>4</span><h3>Du betaler</h3><p>Du tjekker kurven, vælger leveringstid og betaler. Maden kommer til døren.</p></div>
     </div>
   </section>
 
   <section id="kan" class="band leaf"><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/carrot.svg" alt="Tegning af en gulerod" width="90" style="top:64px;right:7%;--r:12deg;--d:8s"><img class="doodle" src="doodles/egg.svg" alt="Tegning af et æg" width="54" style="bottom:56px;left:4%;--r:-10deg;--d:7s"><img class="doodle" src="doodles/spark.svg" alt="Tegning af en lille stjerne" width="26" style="top:120px;left:40%;--r:0deg;--d:5s"></div>
     <h2>Det kan den</h2>
-    <p class="sub">Virker i nemlig.com og BilkaToGo. Du skriver, som du taler.</p>
+    <p class="sub">Virker i nemlig.com, BilkaToGo og REMA 1000. Du skriver, som du taler.</p>
     <div class="cans">
       <div><h3>Holder budgettet</h3><p>Du skriver "700&nbsp;kr. til 4&nbsp;personer". Den planlægger ugen, så kurven ender under 700&nbsp;kr. <a href="/ai-madplan-budget/">Se, hvordan HandleMCP laver en AI madplan med budget</a>.</p></div>
       <div><h3>Finder alle ugens tilbud</h3><p>Hakket oksekød til halv pris? Så bliver det lasagne tirsdag. Gratis varer kommer også med.</p></div>
-      <div><h3>nemlig.com mod BilkaToGo</h3><p>Samme kurv i begge butikker, med levering. Fx nemlig.com 612&nbsp;kr. mod BilkaToGo 655&nbsp;kr. Du handler i den billigste.</p></div>
+      <div><h3>Sammenligner 3 butikker</h3><p>Samme kurv i nemlig.com, BilkaToGo og REMA 1000 (Køb &amp; Hent). Fx nemlig.com 612&nbsp;kr. mod BilkaToGo 655&nbsp;kr. Du handler i den billigste.</p></div>
       <div><h3>Opskrifter med pris</h3><p>Fx "Kylling i karry, 4&nbsp;personer: 142&nbsp;kr." Varerne kan komme direkte i kurven. <a href="/billigere-end-maaltidskasse/">Billigere end en måltidskasse?</a></p></div>
       <div><h3>Kender jeres faste varer</h3><p>Den ser jeres sidste ordrer. Køber I altid havregryn og bananer, kommer de med.</p></div>
       <div><h3>3 billigste tider først</h3><p>Leveringstider med pris. Fx søndag kl. 8–12 for 29&nbsp;kr. Du vælger selv.</p></div>
@@ -679,7 +679,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
     <div class="start">
       <div>
         <h2>Kom i gang</h2>
-        <p class="sub" style="margin-bottom:0">Ærligt: i dag kræver det lidt teknik. Du skal bruge en AI-assistent, der kan bruge værktøjer (fx Claude), og terminalen. Udvikler? Se <a href="/nemlig-mcp/">nemlig.com MCP</a> og <a href="/bilkatogo-api/">BilkaToGo API</a>.</p>
+        <p class="sub" style="margin-bottom:0">Ærligt: i dag kræver det lidt teknik. Du skal bruge en AI-assistent, der kan bruge værktøjer (fx Claude), og terminalen. Udvikler? Se <a href="/nemlig-mcp/">nemlig.com MCP</a>, <a href="/bilkatogo-api/">BilkaToGo API</a> og <a href="/rema-1000-mcp/">REMA 1000 MCP</a>.</p>
       </div>
       <div>
         <p class="small mo-only">Sæt det op på din computer. Det tager ca. 3 minutter. <a href="https://github.com/NJohansen/handle-mcp#readme" data-umami-event="github" data-umami-event-sted="kom-i-gang">Se hvordan på GitHub</a>.</p>
@@ -687,7 +687,7 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
         <p class="small" style="margin-bottom:16px">Installer <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Gem dit nemlig-login, og tilføj HandleMCP til Claude:</p>
 <pre>uvx handle-mcp@latest login nemlig
 claude mcp add handle -- uvx handle-mcp@latest</pre>
-        <p class="small">BilkaToGo og Claude Desktop: se <a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md">vejledningen</a> (på engelsk).</p>
+        <p class="small">BilkaToGo, REMA 1000 og Claude Desktop: se <a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md">vejledningen</a> (på engelsk).</p>
         </div>
         <div class="extra" id="venteliste">
           <p class="small" style="margin-bottom:14px">Snart med ét klik, uden terminal. Skriv dig op, så får du besked først. Formularen ligger hos Tally. Vi bruger kun din e-mail til ventelisten. <a href="/privatliv/">Læs mere</a></p>
@@ -705,9 +705,9 @@ claude mcp add handle -- uvx handle-mcp@latest</pre>
 <footer><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/kitchenroll.svg" alt="Tegning af en køkkenrulle" width="84" style="top:56px;right:9%;--r:-12deg;--d:8s"><img class="doodle" src="doodles/cloud.svg" alt="Tegning af en sky" width="120" style="top:24px;right:22%;--r:0deg;--d:10s"><img class="doodle" src="doodles/spark.svg" alt="Tegning af en lille stjerne" width="24" style="bottom:70px;right:40%;--r:0deg;--d:5s"></div>
   <div class="wrap">
     <p class="big">Handl én gang.<br>Spis hele ugen.</p>
-    <p>Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com eller Salling Group.</p>
+    <p>Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p>
     <div><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/">Privatliv</a></div>
-    <div><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a></div>
+    <div><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a><a href="/rema-1000-mcp/">REMA 1000 MCP</a></div>
   </div>
 </footer>
 <script>
@@ -772,7 +772,7 @@ const cases=[
   ask:[{t:'Hvem skal jeg handle til?',o:[['2 voksne og 2 børn','7 og 2 år'],['2 voksne',''],['Flere personer','Skriv hvem under Noget andet']]},
        {t:'Hvad må en uge koste?',o:[['Under 500 kr',''],['Ca. 700 kr','Det, du skrev'],['Over 1.000 kr','']]},
        {t:'Hvad elsker børnene? Vælg alle, der passer.',multi:true,o:[['Spaghetti med kødsovs',''],['Pizza',''],['Kylling i karry',''],['Rugbrødsaften','']]}],
-  tools:[['doc','Tjekker hvad I har og mangler','røde linser, ris, laks i fryseren · mangler toiletpapir og opvasketabs'],['','Finder ugens tilbud hos nemlig.com og BilkaToGo','214 tilbud · 1 gratis vare'],['','Regner hele ugens indkøb ud i begge butikker','28 varer · nemlig.com 693 kr · BilkaToGo 741 kr']],
+  tools:[['doc','Tjekker hvad I har og mangler','røde linser, ris, laks i fryseren · mangler toiletpapir og opvasketabs'],['','Finder ugens tilbud hos nemlig.com, BilkaToGo og REMA 1000','214 tilbud · 1 gratis vare'],['','Regner hele ugens indkøb ud i alle tre butikker','28 varer · nemlig.com 693 kr · REMA 1000 712 kr · BilkaToGo 741 kr']],
   ai:'Hele ugen, to aftener er rester. Toiletpapir og opvasketabs er med. nemlig.com: <b>693 kr, 7 kr under budget.</b>',
   html:'<div class="plan"><b>Tir</b><span>One pot-lasagne med kylling (stor portion)</span><b>Ons</b><span>Lasagne, dag 2</span><b>Tor</b><span>Rugbrødsaften med frikadeller</span><b>Fre</b><span>Sprøde kyllingenuggets</span><b>Lør</b><span>Laks i citronsauce <span class="lager">· fra fryseren</span></span><b>Søn</b><span>Harira på jeres linser <span class="lager">· fra lageret</span></span></div>'},
  {t:'Vis opskrifter',you:'Vis mig de tre retter, børnene ikke har prøvet før.',
@@ -781,9 +781,9 @@ const cases=[
   html:recipe(0,4),
   after(a){let k=0,n=4;const w=a.querySelector('.fade');const bind=()=>{w.querySelectorAll('.ph').forEach(p=>{p.onclick=()=>{k=+p.dataset.k;n=4;w.innerHTML=recipe(k,n);bind();dispatchEvent(new Event('resize'))};p.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();p.onclick()}}});w.querySelectorAll('.serv button').forEach(b=>b.onclick=()=>{n=Math.min(12,Math.max(2,n+ +b.dataset.d));w.innerHTML=recipe(k,n);bind();w.querySelector(`.serv button[data-d="${b.dataset.d}"]`).focus();dispatchEvent(new Event('resize'))})};bind()}},
  {t:'Find billigste',you:'Hvilken butik er billigst for hele ugen? Fyld kurven der.',
-  tools:[['','Sammenligner nemlig.com og BilkaToGo','28 varer · samme mængder i begge butikker'],['','Lægger varerne i kurven hos nemlig.com','28 varer i kurven · intet bestilt']],
-  ai:'nemlig.com er <b>48 kr billigere</b> i denne uge. Forskellen er kyllingen, skyren og en gratis vare. Kurven er fyldt. Skriv <b>ja tak</b>, så åbner jeg den hos nemlig.com, hvor du vælger tid og betaler.',go:'https://www.nemlig.com/',
-  html:'<div class="cmp"><div class="store win"><div class="tag">Billigst ✓</div><div class="tot">693 kr</div>nemlig.com<ul><li><span>Kyllingeinderfilet 1 kg</span><span>100,00</span></li><li><span>Skyr 2 kg</span><span>40,00</span></li><li class="free"><span>Rosinboller</span><span>gratis</span></li><li><span>Levering</span><span>29,00</span></li><li><span>+ 25 varer</span><span>524,00</span></li></ul></div><div class="store"><div class="tag">&nbsp;</div><div class="tot">741 kr</div>BilkaToGo<ul><li><span>Kyllingeinderfilet 1 kg</span><span>129,00</span></li><li><span>Skyr 2 kg</span><span>52,00</span></li><li><span>Rosinboller</span><span>18,00</span></li><li><span>Levering</span><span>39,00</span></li><li><span>+ 25 varer</span><span>503,00</span></li></ul></div></div><div class="cartrow"><a class="btn" href="https://www.nemlig.com/" target="_blank" rel="noopener">Se kurv hos nemlig.com <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></i></a></div>'},
+  tools:[['','Sammenligner nemlig.com, BilkaToGo og REMA 1000','28 varer · samme mængder i alle tre butikker'],['','Lægger varerne i kurven hos nemlig.com','28 varer i kurven · intet bestilt']],
+  ai:'nemlig.com er <b>19 kr billigere</b> end REMA 1000 og <b>48 kr billigere</b> end BilkaToGo i denne uge. Forskellen er kyllingen, skyren og en gratis vare. Kurven er fyldt. Skriv <b>ja tak</b>, så åbner jeg den hos nemlig.com, hvor du vælger tid og betaler.',go:'https://www.nemlig.com/',
+  html:'<div class="cmp"><div class="store win"><div class="tag">Billigst ✓</div><div class="tot">693 kr</div>nemlig.com<ul><li><span>Kyllingeinderfilet 1 kg</span><span>100,00</span></li><li><span>Skyr 2 kg</span><span>40,00</span></li><li class="free"><span>Rosinboller</span><span>gratis</span></li><li><span>Levering</span><span>29,00</span></li><li><span>+ 25 varer</span><span>524,00</span></li></ul></div><div class="store"><div class="tag">&nbsp;</div><div class="tot">712 kr</div>REMA 1000<ul><li><span>Kyllingeinderfilet 1 kg</span><span>109,00</span></li><li><span>Skyr 2 kg</span><span>44,00</span></li><li><span>Rosinboller</span><span>15,00</span></li><li><span>Køb &amp; Hent</span><span>–</span></li><li><span>+ 25 varer</span><span>544,00</span></li></ul></div><div class="store"><div class="tag">&nbsp;</div><div class="tot">741 kr</div>BilkaToGo<ul><li><span>Kyllingeinderfilet 1 kg</span><span>129,00</span></li><li><span>Skyr 2 kg</span><span>52,00</span></li><li><span>Rosinboller</span><span>18,00</span></li><li><span>Levering</span><span>39,00</span></li><li><span>+ 25 varer</span><span>503,00</span></li></ul></div></div><div class="cartrow"><a class="btn" href="https://www.nemlig.com/" target="_blank" rel="noopener">Se kurv hos nemlig.com <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></i></a></div>'},
  {t:'Godkend kurven',you:'Er kurven klar? Så vil jeg godkende og betale.',
   tools:[['','Tjekker kurven hos nemlig.com','28 varer · 693 kr · intet bestilt'],['','Finder ledige leveringstider hos nemlig.com','søndag · 6 ledige tider']],
   ai:'Kurven er klar. Billigste levering søndag er <b>kl. 8–12 for 29 kr.</b> Jeg bestiller aldrig. Skriv <b>ja tak</b>, så åbner jeg nemlig.com, hvor du godkender kurven, vælger tid og betaler.',go:'https://www.nemlig.com/',
