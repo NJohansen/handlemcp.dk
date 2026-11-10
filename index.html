@@ -698,6 +698,38 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 .start{margin-top:0}
 @media (max-width:900px){.cap{margin-bottom:32px}.band{padding-top:64px;padding-bottom:88px}.band+section,section{padding-top:64px}#losning.band{padding-top:130px}.steps{grid-template-columns:1fr;gap:0;margin-top:32px}.steps div,.steps div+div{display:grid;grid-template-columns:56px 1fr;align-items:baseline;gap:0 8px;padding:20px 0 22px;border-left:0;border-radius:0;border-bottom:1px solid var(--hair)}.steps span{margin:0;font-size:36px}.steps h3{margin:0}.steps p{grid-column:2;margin-top:6px}}
 @media (max-width:640px){section .doodle.m{top:auto!important;bottom:16px!important}.num{line-height:.9}}
+/* v29: "Det kan den". Heading and intro share one row. Every card opens with a small picture from the product: budget meter, offers, three stores, recipe with price, staple items, delivery times. The numbers are the numbers in the demo. */
+.head2{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:end;margin-bottom:48px}
+.head2 h2{margin:0}
+.head2 .sub,#kan .head2 .sub{margin:0 0 10px;max-width:none}
+.cans>div{padding:12px 12px 32px}
+.cans h3{margin:24px 20px 8px}
+.cans p{margin:0 20px}
+.cans .vg div{background:none;border-radius:0;padding:0}
+.cans div.vg{height:152px;border-radius:28px;background:var(--leaf-soft);padding:0;display:grid;place-content:center;font:500 13px/1.3 var(--sans);color:var(--ink)}
+.cans .vg small{color:var(--mute2);font-weight:400;font-size:12px}
+.cans .vg div.row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:12px;padding:9px 12px;min-width:230px}
+.cans .vg .row+.row{margin-top:6px}
+.cans .vg .row span small{display:block;margin-top:1px}
+.cans .vg .tag{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--sun)}
+.cans .vg .tag.g{background:var(--leaf)}
+.cans .vg .meter{width:250px}
+.cans .vg .meter .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.cans .vg .meter .top b{font-weight:600;font-variant-numeric:tabular-nums}
+.cans .vg .meter div.bar{height:10px;border-radius:999px;background:#fff;overflow:hidden}
+.cans .vg .meter .bar i{display:block;height:100%;width:99%;background:var(--green);border-radius:999px}
+.cans .vg .meter small{display:block;margin-top:9px}
+.cans .vg .cmpr{display:grid;grid-template-columns:auto 96px auto;gap:9px 12px;align-items:center}
+.cans .vg .cmpr i{display:block;height:8px;border-radius:999px;background:#fff}
+.cans .vg .cmpr i.w{background:var(--green)}
+.cans .vg .cmpr b{font-weight:500;font-variant-numeric:tabular-nums;text-align:right;color:var(--mute2)}
+.cans .vg .cmpr b.w,.cans .vg .cmpr span.w{font-weight:600;color:var(--ink)}
+.cans .vg .chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:270px}
+.cans .vg .chip{background:#fff;border-radius:999px;padding:6px 12px;white-space:nowrap}
+.cans .vg .chip svg{width:11px;height:11px;margin-right:5px;fill:none;stroke:var(--green);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cans .vg .chip.on{box-shadow:inset 0 0 0 1.5px var(--ink);font-weight:600}
+@media (max-width:900px){.head2{grid-template-columns:1fr;gap:16px;margin-bottom:32px}}
+@media (max-width:640px){.cans div.vg{height:140px}}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -840,17 +872,15 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 
   <section id="kan" class="band leaf"><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/carrot.svg" alt="Tegning af en gulerod" width="90" style="bottom:36px;right:6%;--r:12deg;--d:8s"><img class="doodle" src="doodles/egg.svg" alt="Tegning af et æg" width="54" style="bottom:56px;left:4%;--r:-10deg;--d:7s"></div>
     <p class="cap"><span>Det kan den</span><i>04</i></p>
-    <h2>Seks ting, den klarer for jer</h2>
-    <p class="sub">Virker i nemlig.com, BilkaToGo og REMA 1000. Du skriver, som du taler.</p>
+    <div class="head2"><h2>Seks ting, den klarer for jer</h2><p class="sub">Virker i nemlig.com, BilkaToGo og REMA 1000. Du skriver, som du taler.</p></div>
     <div class="cans">
-      <div><h3>Holder budgettet</h3><p>Du skriver ”700&nbsp;kr. til 4&nbsp;personer”. Den planlægger ugen, så kurven ender under 700&nbsp;kr. <a href="/ai-madplan-budget/">Se, hvordan HandleMCP laver en AI madplan med budget</a>.</p></div>
-      <div><h3>Finder alle ugens tilbud</h3><p>Hakket oksekød til halv pris? Så bliver det lasagne tirsdag. Gratis varer kommer også med.</p></div>
-      <div><h3>Sammenligner 3 butikker</h3><p>Samme kurv i nemlig.com, BilkaToGo og REMA 1000 (Køb &amp; Hent). Fx nemlig.com 693&nbsp;kr. mod BilkaToGo 741&nbsp;kr. I handler i den billigste.</p></div>
-      <div><h3>Opskrifter med pris</h3><p>Fx ”Kylling i karry, 4&nbsp;personer: 142&nbsp;kr.” Varerne kan komme direkte i kurven. <a href="/billigere-end-maaltidskasse/">Billigere end en måltidskasse?</a></p></div>
-      <div><h3>Kender jeres faste varer</h3><p>Den ser jeres sidste ordrer. Køber I altid havregryn og bananer, kommer de med.</p></div>
-      <div><h3>3 billigste tider først</h3><p>Leveringstider med pris. Fx søndag kl. 8–12 for 29&nbsp;kr. Du vælger selv.</p></div>
+      <div><div class="vg" aria-hidden="true"><div class="meter"><div class="top"><span>Ugens budget</span><b>693 af 700&nbsp;kr.</b></div><div class="bar"><i></i></div><small>7 kr. til overs</small></div></div><h3>Holder budgettet</h3><p>Du skriver ”700&nbsp;kr. til 4&nbsp;personer”. Den planlægger ugen, så kurven ender under 700&nbsp;kr. <a href="/ai-madplan-budget/">Se, hvordan HandleMCP laver en AI madplan med budget</a>.</p></div>
+      <div><div class="vg" aria-hidden="true"><div><div class="row"><span>Hakket oksekød</span><span class="tag">halv pris</span></div><div class="row"><span>Rosinboller</span><span class="tag g">gratis</span></div></div></div><h3>Finder alle ugens tilbud</h3><p>Hakket oksekød til halv pris? Så bliver det lasagne tirsdag. Gratis varer kommer også med.</p></div>
+      <div><div class="vg" aria-hidden="true"><div class="cmpr"><span class="w">nemlig.com</span><i class="w" style="width:78%"></i><b class="w">693&nbsp;kr.</b><span>REMA 1000</span><i style="width:88%"></i><b>712&nbsp;kr.</b><span>BilkaToGo</span><i style="width:100%"></i><b>741&nbsp;kr.</b></div></div><h3>Sammenligner 3 butikker</h3><p>Samme kurv i nemlig.com, BilkaToGo og REMA 1000 (Køb &amp; Hent). Fx nemlig.com 693&nbsp;kr. mod BilkaToGo 741&nbsp;kr. I handler i den billigste.</p></div>
+      <div><div class="vg" aria-hidden="true"><div class="row"><span><b>Kylling i karry</b><small>30 min · 4 personer</small></span><b>142&nbsp;kr.</b></div></div><h3>Opskrifter med pris</h3><p>Fx ”Kylling i karry, 4&nbsp;personer: 142&nbsp;kr.” Varerne kan komme direkte i kurven. <a href="/billigere-end-maaltidskasse/">Billigere end en måltidskasse?</a></p></div>
+      <div><div class="vg" aria-hidden="true"><div class="chips"><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Havregryn</span><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Bananer</span><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Mælk</span><span class="chip"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg>Rugbrød</span></div></div><h3>Kender jeres faste varer</h3><p>Den ser jeres sidste ordrer. Køber I altid havregryn og bananer, kommer de med.</p></div>
+      <div><div class="vg" aria-hidden="true"><div class="chips"><span class="chip on">Søn 8–12 · 29&nbsp;kr.</span><span class="chip">12–16 · 39&nbsp;kr.</span><span class="chip">20–22 · 39&nbsp;kr.</span></div></div><h3>3 billigste tider først</h3><p>Leveringstider med pris. Fx søndag kl. 8–12 for 29&nbsp;kr. Du vælger selv.</p></div>
     </div>
-    <p class="never"><b>Det kan den aldrig:</b> bestille, betale, se dit kort eller ændre din adresse. Du godkender og betaler selv. HandleMCP bestiller aldrig.</p>
   </section>
 
   <section class="band sky"><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/milk.svg" alt="Tegning af en mælkekarton" width="72" style="bottom:60px;left:18%;--r:8deg;--d:8s"><img class="doodle" src="doodles/chili.svg" alt="Tegning af en chili" width="96" style="bottom:56px;left:6%;--r:-6deg;--d:7s"><img class="doodle" src="doodles/bread.svg" alt="Tegning af et rugbrød" width="70" style="bottom:64px;left:27%;--r:0deg;--d:6s"></div>
