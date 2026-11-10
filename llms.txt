@@ -23,6 +23,7 @@ For developers:
 - [REMA 1000 MCP](https://handlemcp.dk/rema-1000-mcp/): REMA 1000 has no public API; search and offers without login, the shopping list "handle-mcp" as the cart (never the order or payment), REMA vs nemlig.com and BilkaToGo, five pitfalls (never resend a POST blindly, never read a list with its users, one product on two lines, ids as numbers and strings, short capitalised names)
 
 For families:
+- [Installation](https://handlemcp.dk/installation/): step-by-step setup for non-developers on Mac and Windows: Claude Desktop, Codex, Grok Build and Grok Bot, a prompt that lets the assistant install it, first prompts to try, troubleshooting
 - [AI madplan med budget](https://handlemcp.dk/ai-madplan-budget/): a meal-plan-on-a-budget prompt to copy, and what HandleMCP adds (real prices and offers)
 - [Madkontoen hele måneden](https://handlemcp.dk/madkonto-hele-maaneden/): weekly amount = food account balance ÷ weeks left, five rules for making the food budget last the month
 - [Billigere end måltidskasse](https://handlemcp.dk/billigere-end-maaltidskasse/): how to compare price per portion with a meal kit, and an honest comparison
