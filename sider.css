@@ -97,6 +97,7 @@ pre code{background:none;padding:0;font:inherit}
 .cmp tbody th{font-weight:500}
 /* prompt to copy */
 .copy{position:relative;background:var(--paper);border-radius:22px;padding:22px 24px;margin:16px 0 14px;font-size:17px;line-height:1.6}
+.copy,.cmp code{overflow-wrap:anywhere}
 .copy p{margin:0 0 8px}.copy p:last-child{margin:0}
 .copy em{font-style:normal;background:#fff;border-radius:6px;padding:0 6px}
 /* faq: like the front page */
