@@ -625,6 +625,8 @@ nav .navcta i{background:var(--ink);color:#fff}
 /* v25: on desktop the sky fills the whole first screen; the sky also runs under the rounded corners of the next section */
 .hero::before{bottom:-44px}
 @media (min-width:901px){.hero.g{min-height:calc(100svh - var(--herotop,82px));padding-top:clamp(32px,14vh - 78px,112px);padding-bottom:clamp(32px,14vh - 78px,112px)}}
+/* v26: text block on a 16/32/48 rhythm, centred against the demo card; low windows keep the tight values */
+@media (min-width:901px) and (min-height:880px){.hero.g>div:first-child{align-self:center}.hero.g .pill{margin-bottom:24px}.hero.g h1{margin-bottom:32px}.hero.g .sub{margin-bottom:40px}.hero.g .ctas{margin-bottom:16px}.hero.g .works{margin-bottom:48px}}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
