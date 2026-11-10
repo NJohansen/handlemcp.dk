@@ -622,6 +622,11 @@ nav .navcta i{background:var(--ink);color:#fff}
 .hero.g .demo:not(.max){width:calc(100% + max(32px,(100vw - 1337px)/2 + 32px));border-radius:12px 0 0 12px}}
 /* v23: green watercolour behind the demo */
 .hero.g .demo:not(.max){background:url(korn.svg) 0 0/220px 220px repeat,#cfe8a8 url(akvarel.jpg) center/cover no-repeat}
+/* v25: on desktop the sky fills the whole first screen; the sky also runs under the rounded corners of the next section */
+.hero::before{bottom:-44px}
+@media (min-width:901px){.hero.g{min-height:calc(100svh - var(--herotop,82px));padding-top:clamp(32px,14vh - 78px,112px);padding-bottom:clamp(32px,14vh - 78px,112px)}}
+/* v26: text block on a 16/32/48 rhythm, centred against the demo card; low windows keep the tight values */
+@media (min-width:901px) and (min-height:880px){.hero.g>div:first-child{align-self:center}.hero.g .pill{margin-bottom:24px}.hero.g h1{margin-bottom:32px}.hero.g .sub{margin-bottom:40px}.hero.g .ctas{margin-bottom:16px}.hero.g .works{margin-bottom:48px}}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -852,7 +857,7 @@ claude mcp add handle -- uvx handle-mcp@latest</pre>
 const still=matchMedia('(prefers-reduced-motion: reduce)'),coins=X&&X.querySelector('.coins');let a,T=1,dim=0,sm=false,raf=0;
 const box=e=>{const r=e.getBoundingClientRect(),m=main.getBoundingClientRect();return{x:r.left-m.left,y:r.top-m.top,w:r.width,h:r.height}};
 function measure(){hero.style.position='relative';hero.style.top='';const m0=main.getBoundingClientRect().top+scrollY,h=box(hero),c=box(hero.querySelector('.ctas')),pr=box(hero.querySelector('.quote')||hero.querySelector('.proof')||hero.querySelector('.ctas')),w=b.offsetWidth,bh=b.offsetHeight;
-sm=innerWidth<900;a=sm?{x:h.x+h.w/2-w/2,y:h.y+h.h-bh*0.62}:{x:c.x+c.w/2-w/2,y:Math.max(pr.y+pr.h+4,Math.min(h.y+h.h-bh*0.62,innerHeight-m0-bh*0.62))};
+sm=innerWidth<900;a=sm?{x:h.x+h.w/2-w/2,y:h.y+h.h-bh*0.62}:{x:c.x+c.w/2-w/2,y:Math.max(pr.y+pr.h+4,Math.min(h.y+h.h,innerHeight-m0)-56)};
 T=Math.max(1,m0+box(story.querySelector('.split')).y-150);
 hero.style.position='';hero.style.top=Math.min(0,innerHeight-h.h)+'px';dim=m0+h.y+Math.max(0,h.h-innerHeight)}
 function draw(){raf=0;const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,cl=t=>Math.min(1,Math.max(0,t)),w=b.offsetWidth,bh=b.offsetHeight;const p=still.matches?0:ease(cl(scrollY/T));
