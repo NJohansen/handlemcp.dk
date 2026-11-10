@@ -642,6 +642,33 @@ nav .navcta i{background:var(--ink);color:#fff}
 @media (min-width:901px){.hero.g{min-height:calc(100svh - var(--herotop,82px));padding-top:clamp(32px,14vh - 78px,112px);padding-bottom:clamp(32px,14vh - 78px,112px)}}
 /* v26: text block on a 16/32/48 rhythm, centred against the demo card; low windows keep the tight values */
 @media (min-width:901px) and (min-height:880px){.hero.g>div:first-child{align-self:center}.hero.g .pill{margin-bottom:24px}.hero.g h1{margin-bottom:32px}.hero.g .sub{margin-bottom:40px}.hero.g .ctas{margin-bottom:16px}.hero.g .works{margin-bottom:48px}}
+/* v27: one button system (yellow first, white second, black dot on both), a text link for the coffee, a copy button on the code, and a footer with a call to action and three labelled columns */
+:root{--head:#1b2f55}
+::selection{background:var(--sun);color:var(--ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--head);outline-offset:3px}
+.btn.coral{background:var(--sun);box-shadow:none;transition:background .2s}
+.btn.coral:hover{background:#eedc0a}
+.btn.coral i,.btn i{background:var(--ink);color:#fff}
+.btn i svg{transition:transform .2s cubic-bezier(.2,.7,.2,1)}
+.btn:hover i svg{transform:translateX(3px)}
+.code{position:relative}
+.code pre{border-radius:12px;padding:22px 24px}
+.code .copy{position:absolute;top:10px;right:10px;border:0;border-radius:8px;padding:6px 10px;background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);font:500 12px var(--sans);cursor:pointer}
+.small a,.sub a{border-bottom:0;color:var(--ink);text-decoration:underline;text-decoration-color:#c9c4b5;text-underline-offset:3px}
+.alink{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:16px;color:var(--ink);text-decoration:underline;text-decoration-color:#c9c4b5;text-underline-offset:4px}
+.alink svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.alink:hover svg{transform:translateX(3px)}
+footer{padding:96px 0 44px}
+footer .wrap{display:block}
+.ftop{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:72px}
+footer p.big{margin:0;width:auto}
+footer .btn{background:#fff;box-shadow:none;margin:0}
+.fcols{display:grid;grid-template-columns:auto auto auto 1fr;gap:16px 72px;padding-top:28px;border-top:1px solid rgba(29,30,27,.22);font-size:15px}
+.fcols b{display:block;margin-bottom:12px;font:600 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.fcols a{display:block;margin:0;padding:5px 0;font-weight:500;text-decoration:none}
+.fcols a:hover{text-decoration:underline;text-underline-offset:3px}
+footer .fcols .disc{justify-self:end;max-width:340px;margin:0;font-size:13px;line-height:1.5;opacity:.75}
+@media (max-width:900px){.ftop{margin-bottom:44px}.fcols{grid-template-columns:1fr 1fr;gap:28px 24px}footer .fcols .disc{grid-column:1/-1;justify-self:start;max-width:none}.fcols a{padding:8px 0}}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -829,8 +856,8 @@ nav .navcta i{background:var(--ink);color:#fff}
         <p class="small mo-only">Sæt det op på din computer. Det tager ca. 3 minutter. <a href="https://github.com/NJohansen/handle-mcp#readme" data-umami-event="github" data-umami-event-sted="kom-i-gang">Se hvordan på GitHub</a>.</p>
         <div class="mo-hide">
         <p class="small" style="margin-bottom:16px">Installer <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Gem dit nemlig-login, og tilføj HandleMCP til Claude:</p>
-<pre>uvx handle-mcp@latest login nemlig
-claude mcp add handle -- uvx handle-mcp@latest</pre>
+<div class="code"><button type="button" class="copy" hidden>Kopiér</button><pre>uvx handle-mcp@latest login nemlig
+claude mcp add handle -- uvx handle-mcp@latest</pre></div>
         <p class="small">BilkaToGo, REMA 1000 og Claude Desktop: se <a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md">vejledningen</a> (på engelsk).</p>
         </div>
         <div class="extra" id="venteliste">
@@ -839,19 +866,22 @@ claude mcp add handle -- uvx handle-mcp@latest</pre>
         </div>
         <div class="extra">
           <p class="small" style="margin-bottom:14px">Gratis, og det bliver det ved med. Sparer den jer tid eller penge? En kop kaffe holder projektet i gang.</p>
-          <a class="btn line" href="https://buymeacoffee.com/niclasjohansen" data-umami-event="kaffe">Giv en kop kaffe <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+          <a class="alink" href="https://buymeacoffee.com/niclasjohansen" data-umami-event="kaffe">Giv en kop kaffe <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/kitchenroll.svg" alt="Tegning af en køkkenrulle" width="84" style="top:56px;right:9%;--r:-12deg;--d:8s"><img class="doodle" src="doodles/cloud.svg" alt="Tegning af en sky" width="120" style="top:24px;right:22%;--r:0deg;--d:10s"><img class="doodle" src="doodles/spark.svg" alt="Tegning af en lille stjerne" width="24" style="bottom:70px;right:40%;--r:0deg;--d:5s"></div>
+<footer><div class="doodles" aria-hidden="true"><img class="doodle m" src="doodles/kitchenroll.svg" alt="Tegning af en køkkenrulle" width="84" style="top:56px;right:9%;--r:-12deg;--d:8s"><img class="doodle" src="doodles/cloud.svg" alt="Tegning af en sky" width="120" style="top:40px;right:30%;--r:0deg;--d:10s"></div>
   <div class="wrap">
-    <p class="big">Handl én gang.<br>Spis hele ugen.</p>
-    <p>Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p>
-    <div><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/">Privatliv</a></div>
-    <div><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a><a href="/rema-1000-mcp/">REMA 1000 MCP</a></div>
+    <div class="ftop"><p class="big">Handl én gang.<br>Spis hele ugen.</p><a class="btn" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="footer">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></div>
+    <div class="fcols">
+      <div><b>Guides</b><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></div>
+      <div><b>Butikker</b><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a><a href="/rema-1000-mcp/">REMA 1000 MCP</a></div>
+      <div><b>Projektet</b><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/">Privatliv</a></div>
+      <p class="disc">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p>
+    </div>
   </div>
 </footer>
 <script>
@@ -1007,6 +1037,18 @@ items.forEach((c,i)=>c.addEventListener('click',()=>play(i)));
     var b=e.target.closest&&e.target.closest('.side .item');if(!b)return;
     var t=b.firstChild,n='';for(;t;t=t.nextSibling)if(t.nodeType===3){n=t.textContent.trim();if(n)break}
     track('demo',{case:n||'ukendt'});
+  });
+})();
+</script>
+<script>
+// Copy button on the install commands. It shows only when the browser can copy.
+(function(){
+  var b=document.querySelector('.code .copy');if(!b||!navigator.clipboard)return;
+  b.hidden=false;
+  b.addEventListener('click',function(){
+    navigator.clipboard.writeText(b.parentNode.querySelector('pre').textContent).then(function(){
+      b.textContent='Kopieret';setTimeout(function(){b.textContent='Kopiér'},1600);
+    },function(){});
   });
 })();
 </script>
