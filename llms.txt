@@ -26,6 +26,7 @@ For families:
 - [Installation](https://handlemcp.dk/installation/): step-by-step setup for non-developers on Mac and Windows: Claude Desktop, Codex, Grok Build and Grok Bot, a prompt that lets the assistant install it, first prompts to try, troubleshooting
 - [AI madplan med budget](https://handlemcp.dk/ai-madplan-budget/): a meal-plan-on-a-budget prompt to copy, and what HandleMCP adds (real prices and offers)
 - [Madkontoen hele måneden](https://handlemcp.dk/madkonto-hele-maaneden/): weekly amount = food account balance ÷ weeks left, five rules for making the food budget last the month
+- [Madbudget med AI](https://handlemcp.dk/madbudget-med-ai/): how one family of four keeps a food budget of 4,000 kr. a month with an AI assistant: weekly budget = balance ÷ weeks left, five steps, two ways to give the balance (type it, or read-only via BankMCP)
 - [Billigere end måltidskasse](https://handlemcp.dk/billigere-end-maaltidskasse/): how to compare price per portion with a meal kit, and an honest comparison
 
 ## What it can do
