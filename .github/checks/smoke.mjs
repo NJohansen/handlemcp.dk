@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = resolve(fileURLToPath(import.meta.url), "../../..");
 const OUT = process.argv[2] || "screenshots";
 const TYPES = { ".html": "text/html; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".ico": "image/x-icon", ".woff2": "font/woff2", ".css": "text/css", ".js": "text/javascript", ".txt": "text/plain", ".xml": "application/xml" };
-const PAGES = [{ name: "forside", path: "/" }, { name: "privatliv", path: "/privatliv/" }, ...["nemlig-mcp", "bilkatogo-api", "rema-1000-mcp", "ai-madplan-budget", "madkonto-hele-maaneden", "billigere-end-maaltidskasse", "installation"].map((s) => ({ name: s, path: `/${s}/` }))];
+const PAGES = [{ name: "forside", path: "/" }, { name: "privatliv", path: "/privatliv/" }, ...["nemlig-mcp", "bilkatogo-api", "rema-1000-mcp", "ai-madplan-budget", "madkonto-hele-maaneden", "madbudget-med-ai", "billigere-end-maaltidskasse", "installation"].map((s) => ({ name: s, path: `/${s}/` }))];
 const SIZES = [{ name: "desktop", width: 1440, height: 900 }, { name: "tablet", width: 1024, height: 768 }, { name: "nav-min", width: 901, height: 800 }, { name: "mobil", width: 390, height: 844 }];
 
 const server = createServer(async (req, res) => {
