@@ -72,7 +72,7 @@
      "name": "Kan den lægge en ordre?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Nej. Den fylder kun listen \"handle-mcp\" i REMA-appen. Du gør listen til en Køb & Hent-ordre, vælger tid og betaler selv i appen."
+      "text": "Nej. Den fylder kun listen ”handle-mcp” i REMA-appen. Du gør listen til en Køb & Hent-ordre, vælger tid og betaler selv i appen."
      }
     },
     {
@@ -88,7 +88,7 @@
      "name": "Rører den mine andre lister?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Nej. Den læser og skriver kun listen, der hedder \"handle-mcp\". Den gør den aldrig til din primære liste og sletter aldrig en liste."
+      "text": "Nej. Den læser og skriver kun listen, der hedder ”handle-mcp”. Den gør den aldrig til din primære liste og sletter aldrig en liste."
      }
     },
     {
@@ -143,7 +143,7 @@
 <div class="wrap"><div class="intro">
 <ol class="crumbs" aria-label="Brødkrumme"><li><a href="/">HandleMCP</a></li><li aria-current="page">REMA 1000 MCP</li></ol>
 <h1>REMA 1000 MCP</h1>
-<p class="lead">REMA 1000 har ikke et offentligt API, så vidt vi ved. HandleMCP bruger REMA's eget og gør det til værktøjer, din AI kan bruge. Den kan søge, se ugens tilbud og fylde din indkøbsliste i REMA-appen. Den bestiller og betaler aldrig.</p>
+<p class="lead">REMA 1000 har ikke et offentligt API, så vidt vi ved. HandleMCP bruger REMA's eget og gør det til værktøjer, en AI-assistent kan bruge. Den kan søge, se ugens tilbud og fylde din indkøbsliste i REMA-appen. Den bestiller og betaler aldrig.</p>
 <p class="proof">Gratis og open source (MIT). Med i HandleMCP fra version 1.6.0 (november 2026).</p>
 <p class="toplink"><a href="https://github.com/NJohansen/handle-mcp?ref=seo-rema-1000-mcp-top" data-umami-event="github" data-umami-event-sted="seo-rema-1000-mcp-top">Gratis og open source på GitHub</a></p>
 </div></div>
@@ -156,43 +156,43 @@
 <ol class="steps">
 <li><h3>Gem dit login</h3><p>Med <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. Den gemmer kun sessionen i din nøglering.</p></li>
 <li><h3>Vælg din butik</h3><p>Søg på postnummer, by eller navn. Valget gemmes på din maskine. Intet ændres hos REMA.</p></li>
-<li><h3>Tilføj den til din AI</h3><p>Én kommando i Claude Code. Så kan du spørge.</p></li>
+<li><h3>Tilføj den til Claude</h3><p>Én kommando i Claude Code. Så kan du spørge.</p></li>
 </ol>
 <pre><code>uvx handle-mcp@latest login rema1000
 claude mcp add handle -- uvx handle-mcp@latest</code></pre>
 <p class="small">Søgning og tilbud virker også uden login. Claude Desktop, andre AI-apps og servere uden skærm: se <a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md">vejledningen</a> (på engelsk).</p>
 
 <h2 id="eksempel">Skriv én sætning</h2>
-<p>Din AI vælger værktøjerne selv. Den spørger, før noget kommer på listen.</p>
+<p>AI-assistenten vælger værktøjerne selv. Den spørger, før noget kommer på listen.</p>
 <div class="chat"><p class="hd"><span>Sådan kan et svar se ud</span></p>
 <p class="you"><span>Hvad koster ugens liste i REMA 1000? Læg den på min liste.</span></p>
-<div class="tools"><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>compare_basket</b>REMA 1000, nemlig.com og BilkaToGo</div><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>set_cart_quantities</b>listen "handle-mcp"</div></div>
-<p class="ai">Listen ligger nu i REMA-appen under "handle-mcp". Åbn den, vælg Køb &amp; Hent eller tag den med i butikken. Du betaler selv i appen.</p></div>
+<div class="tools"><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>compare_basket</b>REMA 1000, nemlig.com og BilkaToGo</div><div class="tool"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2 5 8.5l4.5-5"/></svg><b>set_cart_quantities</b>listen ”handle-mcp”</div></div>
+<p class="ai">Listen ligger nu i REMA-appen under ”handle-mcp”. Åbn den, vælg Køb &amp; Hent eller tag den med i butikken. Du betaler selv i appen.</p></div>
 <p class="label try">Flere at prøve</p>
 <ul class="rows">
-<li>"Hvad er på tilbud i REMA 1000 i denne uge?"</li>
-<li>"Søg efter hakket oksekød i REMA. Vis pris pr. kg."</li>
-<li>"Hvornår kan jeg hente i min REMA i morgen?"</li>
+<li>”Hvad er på tilbud i REMA 1000 i denne uge?”</li>
+<li>”Søg efter hakket oksekød i REMA. Vis pris pr. kg.”</li>
+<li>”Hvornår kan jeg hente i min REMA i morgen?”</li>
 </ul>
 
 <h2 id="liste">Listen er kurven</h2>
-<p>REMA's egen kurv hænger sammen med butik, afhentningstid og betaling. Den rører HandleMCP ikke. I stedet fylder den en indkøbsliste, der hedder "handle-mcp".</p>
+<p>REMA's egen kurv hænger sammen med butik, afhentningstid og betaling. Den rører HandleMCP ikke. I stedet fylder den en indkøbsliste, der hedder ”handle-mcp”.</p>
 <ul class="rows">
 <li><b>Kun den liste.</b> Dine andre lister bliver ikke læst eller ændret. Listen bliver aldrig din primære.</li>
 <li><b>Du ser den i appen.</b> Gør den til en Køb &amp; Hent-ordre, eller tag den med i butikken.</li>
-<li><b>Krydser du af, er den købt.</b> Næste gang din AI skriver, ryger de afkrydsede varer af.</li>
+<li><b>Krydser du af, er den købt.</b> Næste gang AI-assistenten skriver, ryger de afkrydsede varer af.</li>
 <li><b>Pakkegebyret er ikke med.</b> REMA viser det først i appen. Summen er varer og pant.</li>
 </ul>
 
 <h2 id="forskelle">REMA 1000 mod de andre</h2>
-<p>De tre butikker virker forskelligt. Det skal din kode, og din AI, vide.</p>
+<p>De tre butikker virker forskelligt. Det skal både din kode og AI-assistenten vide.</p>
 <table class="cmp">
 <thead><tr><th></th><th>REMA 1000</th><th>nemlig.com</th><th>BilkaToGo</th></tr></thead>
 <tbody>
 <tr><th>Søgning uden login</th><td>Ja</td><td>Nej</td><td>Nej</td></tr>
 <tr><th>Tilbud uden login</th><td>Ja</td><td>Ja</td><td>Nej</td></tr>
 <tr><th>Hjemlevering</th><td>Nej, Køb &amp; Hent</td><td>Ja</td><td>Ja</td></tr>
-<tr><th>Kurven</th><td>Listen "handle-mcp"</td><td>Kurven</td><td>Kurven</td></tr>
+<tr><th>Kurven</th><td>Listen ”handle-mcp”</td><td>Kurven</td><td>Kurven</td></tr>
 <tr><th>Opskrifter</th><td>Ikke endnu</td><td>Ja</td><td>Ja</td></tr>
 </tbody>
 </table>
@@ -205,15 +205,15 @@ claude mcp add handle -- uvx handle-mcp@latest</code></pre>
 <li><b>Hent aldrig en liste med brugerne.</b> Så får du navne og e-mails på alle, listen er delt med.</li>
 <li><b>Samme vare kan stå på to linjer.</b> Læg dem sammen, og ryd op ved næste skrivning.</li>
 <li><b>Id'er kommer som tal og som tekst.</b> Og en liste kan sende <code>items: null</code>. Tjek begge.</li>
-<li><b>Varenavne er korte og med store bogstaver.</b> "HK. OKSEKØD" er hakket. Stryhns bacon-peber hedder "BACON-PEBER POSTEJ".</li>
+<li><b>Varenavne er korte og med store bogstaver.</b> ”HK. OKSEKØD” er hakket. Stryhns bacon-peber hedder ”BACON-PEBER POSTEJ”.</li>
 </ul>
 
 <h2 id="faq">Spørgsmål og svar</h2>
 <div class="faq">
   <details><summary>Har REMA 1000 et officielt API?</summary><p>Ikke et offentligt, så vidt vi ved. HandleMCP bruger det, REMA's egen hjemmeside og app bruger. Det kan ændre sig uden varsel. HandleMCP er ikke tilknyttet REMA 1000.</p></details>
-  <details><summary>Kan den lægge en ordre?</summary><p>Nej. Den fylder kun listen "handle-mcp" i REMA-appen. Du gør listen til en Køb &amp; Hent-ordre, vælger tid og betaler selv i appen.</p></details>
+  <details><summary>Kan den lægge en ordre?</summary><p>Nej. Den fylder kun listen ”handle-mcp” i REMA-appen. Du gør listen til en Køb &amp; Hent-ordre, vælger tid og betaler selv i appen.</p></details>
   <details><summary>Hvorfor en liste og ikke kurven?</summary><p>REMA's kurv hænger sammen med butik, afhentningstid og betaling. Den rører vi ikke. Listen er din egen, og du ser den i appen.</p></details>
-  <details><summary>Rører den mine andre lister?</summary><p>Nej. Den læser og skriver kun listen, der hedder "handle-mcp". Den gør den aldrig til din primære liste og sletter aldrig en liste.</p></details>
+  <details><summary>Rører den mine andre lister?</summary><p>Nej. Den læser og skriver kun listen, der hedder ”handle-mcp”. Den gør den aldrig til din primære liste og sletter aldrig en liste.</p></details>
   <details><summary>Skal jeg logge ind?</summary><p>Ikke for at søge og se tilbud. Login skal til for listen og for afhentningstider. Ved login vælger du din butik.</p></details>
 </div>
 
@@ -229,9 +229,16 @@ claude mcp add handle -- uvx handle-mcp@latest</code></pre>
 <div class="more"><h2>Læs også</h2><div class="cards"><a href="/nemlig-mcp/"><b>nemlig.com MCP</b><span>Setup til Claude Desktop, ugens tilbud og det, vi lærte om nemlig.com.</span></a><a href="/bilkatogo-api/"><b>BilkaToGo API</b><span>Søg, priser og kurv, og 5 fælder i BilkaToGo's API.</span></a></div></div>
 </main>
 
-<footer>
-  <div class="wrap"><div class="cols"><div><h2>Til familier</h2><ul><li><a href="/ai-madplan-budget/">AI madplan med budget</a></li><li><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a></li><li><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></li></ul></div><div><h2>Til udviklere</h2><ul><li><a href="/nemlig-mcp/">nemlig.com MCP</a></li><li><a href="/bilkatogo-api/">BilkaToGo API</a></li><li><a href="/rema-1000-mcp/" aria-current="page">REMA 1000 MCP</a></li><li><a href="https://github.com/NJohansen/handle-mcp">GitHub</a></li></ul></div><div><h2>HandleMCP</h2><ul><li><a href="/">Forside</a></li><li><a href="/installation/">Installation</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a></li><li><a href="/privatliv/">Privatliv</a></li></ul></div></div>
-  <p class="note">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p></div>
+<footer><div class="doodles" aria-hidden="true"><img class="doodle" src="/doodles/kitchenroll.svg" alt="Tegning af en køkkenrulle" width="84" style="top:56px;right:9%;--r:-12deg"><img class="doodle d2" src="/doodles/cloud.svg" alt="Tegning af en sky" width="120" style="top:40px;right:30%;--r:0deg"></div>
+  <div class="wrap">
+    <div class="ftop"><p class="big">Handl én gang.<br>Spis hele ugen.</p><a class="btn" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="footer">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></div>
+    <div class="fcols">
+      <div><b>Guides</b><a href="/installation/">Installation for begyndere</a><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></div>
+      <div><b>Butikker</b><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a><a href="/rema-1000-mcp/" aria-current="page">REMA 1000 MCP</a></div>
+      <div><b>Projektet</b><a href="/">Forside</a><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/sponsors/NJohansen" data-umami-event="sponsor" data-umami-event-sted="footer">Bliv sponsor</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/">Privatliv</a></div>
+      <p class="disc">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p>
+    </div>
+  </div>
 </footer>
 <script>
 // Live GitHub star count. If the call fails, the link just says "GitHub".

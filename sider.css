@@ -148,3 +148,27 @@ footer .note{margin:40px 0 0;color:#4a4b3f}
 /* wordmark: bold, tight, muted mcp */
 .brand{font-weight:600!important;letter-spacing:-.035em!important;gap:8px!important}.brand .mcp{color:#5f7a94;font-weight:500}
 @media (min-width:901px){.brand{font-size:24px!important}.logo,.logo svg{width:36px!important;height:30px!important}}
+
+/* v2: cream top. The top of the page stands on the cream of the boxes, not on blue. The rest of the page is white, and the boxes keep their cream. Headings stay Inter. Text lines are shorter. One button system: black dot. The footer is the footer of the front page. */
+::selection{background:var(--sun);color:var(--ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.top{background:var(--paper)}
+.crumbs,.proof{color:#55564f}
+.btn i{background:var(--ink);color:#fff}
+.btn i svg{transition:transform .2s cubic-bezier(.2,.7,.2,1)}
+.btn:hover i svg{transform:translateX(3px)}
+article{max-width:620px}
+.lead{max-width:660px}
+.steps li{align-content:start}
+footer{position:relative;margin-top:96px;padding:96px 0 44px;border-radius:44px 44px 0 0}
+footer>:not(.doodles){position:relative;z-index:1}
+.ftop{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:72px}
+footer p.big{margin:0;font-weight:600;font-size:clamp(44px,7vw,88px);line-height:.95;letter-spacing:-.055em;color:var(--ink)}
+footer .btn{padding:8px 8px 8px 22px}
+.fcols{display:grid;grid-template-columns:auto auto auto 1fr;gap:16px 72px;padding-top:28px;border-top:1px solid rgba(29,30,27,.22)}
+.fcols b{display:block;margin-bottom:12px;font:600 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+.fcols a{display:block;padding:5px 0}
+.fcols a:hover{text-underline-offset:3px}
+.fcols .disc{justify-self:end;max-width:340px;margin:0;font-size:13px;line-height:1.5;opacity:.75}
+@media (max-width:900px){.ftop{margin-bottom:44px}.fcols{grid-template-columns:1fr 1fr;gap:28px 24px}.fcols .disc{grid-column:1/-1;justify-self:start;max-width:none}.fcols a{padding:8px 0}}
+@media (max-width:640px){footer{margin-top:72px;padding-top:64px;border-radius:28px 28px 0 0}}
