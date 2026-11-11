@@ -745,6 +745,8 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 @media (min-width:641px) and (max-width:900px){nav ul li.opt:last-child{display:flex}}
 .demo .side .grp,.demo .item small,.demo .agent .input .field,.demo .agent .input .field input::placeholder,.demo .foot,.q .opt i{color:#6d6b63}
 .cmp thead small,.cmp .free{color:#2f4a22}
+/* v32: the first-time questions stay long enough to read. A question waits 8 s before it answers itself (was 2.6 s). The script uses the same 8 s. */
+.q.auto .opt.cd{animation-duration:8s}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -1052,12 +1054,19 @@ async function ask(qs,id){const card=el('<div class="q fade"></div>');log.append
  for(let n=0;n<qs.length;n++){const q=qs[n];if(id!==run)return;card.classList.toggle('multi',!!q.multi);
   card.innerHTML=`<div class="qin"><div class="qh"><span>${q.t}</span><span class="pg"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M7.5 3 4.5 6l3 3"/></svg><span>${n+1} af ${qs.length}</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 3 7.5 6l-3 3"/></svg></span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></div>${q.o.map((o,j)=>`<button type="button" class="opt"${q.multi?' role="checkbox" aria-checked="false"':''}><i>${q.multi?'✓':j+1}</i><span><b>${o[0]}</b>${o[1]?`<small>${o[1]}</small>`:''}</span></button>`).join('')}<button type="button" class="opt other"${q.multi?' role="checkbox" aria-checked="false"':''}><i>✎</i><span><b>Noget andet</b></span></button><div class="qf"><span class="hint">Klik selv<i>, eller se med</i></span>${q.multi?'<span class="cnt">0 valgt</span>':''}<button type="button" class="skip">Spring over</button>${q.multi?`<button type="button" class="go" aria-label="Videre">${ARR}</button>`:''}</div></div>`;dn();
   const opts=[...card.querySelectorAll('.opt')],cnt=card.querySelector('.cnt'),go=card.querySelector('.go'),skip=card.querySelector('.skip');
-  const picked=await new Promise(res=>{const sel=new Set();
+  const ac=new AbortController(),on={signal:ac.signal};const picked=await new Promise(res=>{const sel=new Set();
    opts.forEach((o,j)=>o.onclick=()=>{if(q.multi){const on=o.classList.toggle('pick');o.setAttribute('aria-checked',on);on?sel.add(j):sel.delete(j);cnt.textContent=sel.size+' valgt';go.classList.toggle('hot',sel.size>0)}else{opts.forEach(x=>x.classList.remove('pick'));o.classList.add('pick');setTimeout(()=>res([j]),still.matches?0:350)}});
    skip.onclick=()=>res([]);if(go)go.onclick=()=>res([...sel].sort((x,y)=>x-y));
    // Nobody answers: the demo answers itself. One click or key in the card and the visitor is in charge.
-   if(!hands&&q.auto){const first=opts[q.auto[0]],d=still.matches?0:2600;let t=q.auto.map((j,k)=>setTimeout(()=>{if(id===run)opts[j].click()},d+k*450));if(q.multi)t.push(setTimeout(()=>{if(id===run)go.click()},d+q.auto.length*450+350));
-    const take=e=>{if(!e.isTrusted)return;hands=true;t.forEach(clearTimeout);card.classList.remove('auto');first.classList.remove('cd')};card.addEventListener('pointerdown',take);card.addEventListener('keydown',take);card.classList.add('auto');first.classList.add('cd')}});
+   // The mouse over the card holds the wait, so nobody is cut off while they read. It starts again when the mouse leaves.
+   if(!hands&&q.auto){const first=opts[q.auto[0]],d=still.matches?0:8000;let t=[],fired=false;
+    const arm=()=>{t=q.auto.map((j,k)=>setTimeout(()=>{fired=true;if(id===run)opts[j].click()},d+k*450));if(q.multi)t.push(setTimeout(()=>{if(id===run)go.click()},d+q.auto.length*450+350));first.classList.add('cd')};
+    const hold=()=>{t.forEach(clearTimeout);t=[];first.classList.remove('cd')};
+    const take=e=>{if(!e.isTrusted)return;hands=true;hold();card.classList.remove('auto')};
+    card.addEventListener('pointerdown',take,on);card.addEventListener('keydown',take,on);
+    card.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'&&!hands&&!fired)hold()},on);
+    card.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&!hands&&!fired&&!t.length&&id===run){void first.offsetWidth;arm()}},on);
+    card.classList.add('auto');arm()}});ac.abort();
   if(id!==run)return;const lab=opts.map(o=>o.querySelector('b').textContent);ans.push([q.s||q.t,picked.length?picked.map(j=>lab[j]).join(', '):'Sprunget over']);if(q.multi)await wait(250)}
  if(id!==run)return;card.outerHTML=`<div class="sum fade">${ans.map(a=>`<div><span>${a[0]}</span><b>${a[1]}</b></div>`).join('')}</div>`;dn();await wait(500)}
 let asked=false,hands=false;
@@ -1076,8 +1085,8 @@ const sugg=D.querySelector('.sugg');const PH=matchMedia('(max-width:640px)').mat
  await wait(300);if(id!==run)return;const ai=el('<div class="ai"><div class="bubble"><span class="txt"></span></div></div>');log.appendChild(ai);pin=ai;const tx=ai.querySelector('.txt');
  if(still.matches)tx.innerHTML=c.ai;else{const parts=c.ai.split(/(<[^>]+>|\s+)/).filter(Boolean);let acc='';for(const w of parts){if(id!==run)return;acc+=(w.startsWith('<')||/^\s+$/.test(w))?w:`<span class="w">${w}</span>`;tx.innerHTML=acc;dn();if(!/^\s+$/.test(w)&&!w.startsWith('<'))await wait(24)}}if(c.html){await wait(150);if(id!==run)return;tx.insertAdjacentHTML('afterend',`<div class="fade">${c.html}</div>`);dn()}if(c.after)c.after(ai);if(c.go){pending=c.go;D.querySelector('.field input').placeholder='Skriv ja tak …'}log.removeAttribute('aria-busy');items[i].classList.remove('run');items[i].classList.add('done');
  const n=items[i+1];if(n&&!n.classList.contains('done')){n.classList.add('next');const b=el(`<button type="button" class="fade"><span>Prøv selv:</span> ${cases[i+1].t} ${ARR}</button>`);b.onclick=()=>play(i+1);sugg.appendChild(b);dn()}dispatchEvent(new Event('resize'))}
-items.forEach((c,i)=>c.addEventListener('click',()=>play(i)));
-{const sb=D.querySelector('.sbt');if(sb)sb.addEventListener('click',()=>{const on=D.classList.toggle('open');sb.setAttribute('aria-expanded',on);sb.setAttribute('aria-label',on?'Skjul eksempler':'Vis eksempler')})}
+items.forEach((c,i)=>c.addEventListener('click',e=>{if(e.isTrusted&&cases[i].ask){asked=false;hands=true}play(i)}));
+{const sb=D.querySelector('.sbt');if(sb)sb.addEventListener('click',()=>{const on=D.classList.toggle('open');sb.setAttribute('aria-expanded',on);sb.setAttribute('aria-label',on?'Skjul eksempler':'Vis eksempler')});if(sb&&matchMedia('(min-width:901px) and (max-width:1200px)').matches)sb.click()}
 // Start when the visitor can see the window, so the first run is not over before a phone scrolls down to it.
 {const start=()=>setTimeout(()=>play(0),document.documentElement.classList.contains('pl')?1900:300);
  if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){io.disconnect();start()}},{threshold:.5});io.observe(D.querySelector('.agent'))}else start()}
