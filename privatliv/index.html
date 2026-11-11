@@ -12,59 +12,17 @@
 <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/sider.css">
 <style>
-@font-face{font-family:Inter;src:url(/fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
-:root{--sand:#9ccbf3;--line:#e6e6e1;--ink:#1d1e1b;--mute:#6d6e69;--sans:Inter,ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--sand);color:var(--ink);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-[hidden]{display:none!important}
-.wrap{max-width:1337px;margin:0 auto;padding:0 32px}
-/* nav: same as the front page */
-.navwrap{padding-top:14px}
-nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.navbox{flex:1;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border-radius:12px;padding:10px 12px 10px 18px;min-height:68px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:400;letter-spacing:-.02em;text-decoration:none;font-size:20px;color:#1c241e}
-.logo,.logo svg{display:block;width:42px;height:35px}
-nav ul{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
-nav ul a{display:block;padding:10px 14px;border-radius:8px;color:var(--ink);font-size:16px;text-decoration:none}
-nav ul a:hover{background:#eaf3fc}
-nav ul a.gh{display:flex;align-items:center}
-.stars{display:inline-flex;align-items:center;gap:4px;margin-left:8px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;font-variant-numeric:tabular-nums}
-.stars svg{width:12px;height:12px;fill:currentColor}
-.btn{display:inline-flex;align-items:center;gap:16px;border-radius:12px;background:#fff;color:var(--ink);font-size:16px;font-weight:500;text-decoration:none;white-space:nowrap}
-.btn i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#8ed462;color:#1c241e}
-.btn i svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-nav .navcta{min-height:68px;padding:8px 12px 8px 22px}
-nav .navcta .sm{display:none}
-/* page */
-.card{max-width:760px;margin:48px auto 0;background:#fff;border-radius:12px;padding:48px 56px}
-h1{font-weight:700;font-size:clamp(36px,5vw,56px);line-height:1.06;letter-spacing:-.03em;margin:0 0 16px;color:#2c2e2a}
-.lead{font-size:20px;color:var(--mute);margin:0 0 32px}
-h2{font-size:20px;font-weight:600;letter-spacing:-.01em;margin:32px 0 8px}
-p,ul{margin:0 0 12px}
-ul{padding-left:20px}
-.card a{text-underline-offset:3px;text-decoration-color:#c9c4b5}
-.card a:hover{text-decoration-color:var(--ink)}
-.upd{margin-top:32px;font-size:14px;color:var(--mute)}
-footer{padding:40px 0 56px;font-size:15px}
-footer .wrap{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
-footer a{text-decoration:none;font-weight:500}
-footer a:hover{text-decoration:underline}
-@media (max-width:900px){.navwrap{padding-top:12px}.navbox{min-height:56px;padding:8px 12px}nav .navcta{min-height:56px;padding:6px 8px 6px 16px}nav ul li.opt{display:none}}
-@media (max-width:640px){.wrap{padding:0 16px}nav .navcta .lg{display:none}nav .navcta .sm{display:inline}.card{margin-top:24px;padding:32px 22px}}
-/* nav: one line from 901px up */
-nav ul a{white-space:nowrap}
-.ghmark{display:none;width:20px;height:20px;fill:currentColor}nav ul li{display:flex;align-items:center;height:44px}
-nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav .navcta{letter-spacing:-.01em}
-@media (max-width:1260px){nav ul li.wide{display:none}.ghmark{display:block}.ghw{display:none}}
-@media (max-width:1100px){nav ul a{padding:10px 9px}}@media (max-width:1000px){nav ul a{padding:10px 5px}}@media (max-width:960px){nav ul a{padding:10px 3px}}
-@media (max-width:1040px){nav .navcta .lg{display:none}nav .navcta .sm{display:inline}}
+/* privatliv: the guide style from /sider.css, with smaller headings for short answers */
+.legal h2{font-size:24px;letter-spacing:-.02em;line-height:1.2;margin:40px 0 8px}
+.legal h2:first-child{margin-top:48px}
+.upd{margin-top:32px;font-size:15px;color:var(--mute)}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
 </head>
 <body>
+<div class="top">
 <header class="wrap navwrap">
   <nav>
     <div class="navbox">
@@ -80,10 +38,16 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
     <a class="btn navcta" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="nav"><span class="lg">Skriv mig på ventelisten</span><span class="sm">Venteliste</span> <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
   </nav>
 </header>
-
-<main class="wrap"><article class="card">
+<div class="wrap"><div class="intro">
+<ol class="crumbs" aria-label="Brødkrumme"><li><a href="/">HandleMCP</a></li><li aria-current="page">Privatliv</li></ol>
 <h1>Privatliv</h1>
 <p class="lead">Kort sagt: vi gemmer kun din e-mail, hvis du skriver dig på ventelisten. Vi sletter den senest efter 12 måneder, eller når du beder om det.</p>
+</div></div>
+</div>
+
+<main class="wrap">
+<div class="page">
+<article class="legal">
 
 <h2>Hvem</h2>
 <p>Niclas Johansen står bag HandleMCP og er dataansvarlig. Skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p>
@@ -115,19 +79,29 @@ nav ul a{font-size:15px;font-weight:500;letter-spacing:-.01em;color:#2c2e2a}nav 
 <li><b>first_tool_call</b>, højst én gang om dagen: navnet på det første værktøj, fx compare_basket.</li>
 <li><b>login_ok</b>, højst én gang om dagen pr. butik: butik (nemlig, bilka eller rema1000).</li>
 <li><b>cart_filled</b>, én gang pr. fyldt kurv: butik, beløb rundet til nærmeste 50 kr. og antal varer.</li>
-<li><b>list_filled</b>, det samme for REMA 1000, hvor kurven er indkøbslisten "handle-mcp": butik, beløb rundet til nærmeste 50 kr. og antal varer.</li>
+<li><b>list_filled</b>, det samme for REMA 1000, hvor kurven er indkøbslisten ”handle-mcp”: butik, beløb rundet til nærmeste 50 kr. og antal varer.</li>
 </ul>
 <p>Aldrig navn, adresse, telefon, e-mail, login, varenavne, ordre-id eller et id for dig eller din computer. Links til kurven har <code>utm_source=handlemcp</code>, så butikken kan se besøget i sin egen statistik.</p>
-<p>Umami ser din IP-adresse, når programmet sender et event. Den bruges til at svare og til at gætte landet. Umami gemmer den ikke. Første gang du bruger programmet, fortæller din AI dig, hvad der tælles.</p>
+<p>Umami ser din IP-adresse, når programmet sender et event. Den bruges til at svare og til at gætte landet. Umami gemmer den ikke. Første gang du bruger programmet, fortæller AI-assistenten dig, hvad der tælles.</p>
 <p>Slå det fra med <code>HANDLE_TELEMETRY=0</code> eller <code>handle-mcp --no-telemetry</code>. <a href="https://github.com/NJohansen/handle-mcp#brugsstatistik">Læs mere på GitHub</a>.</p>
 
 <h2>Dine rettigheder</h2>
 <p>Du kan altid få at vide, hvad vi har gemt, få det rettet eller slettet, og trække dit samtykke tilbage. Skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>. Er du utilfreds, kan du klage til <a href="https://www.datatilsynet.dk">Datatilsynet</a>.</p>
 <p class="upd">Opdateret 9. november 2026.</p>
-</article></main>
+</article>
+</div>
+</main>
 
-<footer>
-  <div class="wrap"><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/" aria-current="page">Privatliv</a><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a></div>
+<footer><div class="doodles" aria-hidden="true"><img class="doodle" src="/doodles/kitchenroll.svg" alt="Tegning af en køkkenrulle" width="84" style="top:56px;right:9%;--r:-12deg"><img class="doodle d2" src="/doodles/cloud.svg" alt="Tegning af en sky" width="120" style="top:40px;right:30%;--r:0deg"></div>
+  <div class="wrap">
+    <div class="ftop"><p class="big">Handl én gang.<br>Spis hele ugen.</p><a class="btn" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="footer">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></div>
+    <div class="fcols">
+      <div><b>Guides</b><a href="/installation/">Installation for begyndere</a><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></div>
+      <div><b>Butikker</b><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a><a href="/rema-1000-mcp/">REMA 1000 MCP</a></div>
+      <div><b>Projektet</b><a href="/">Forside</a><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/sponsors/NJohansen" data-umami-event="sponsor" data-umami-event-sted="footer">Bliv sponsor</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/" aria-current="page">Privatliv</a></div>
+      <p class="disc">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p>
+    </div>
+  </div>
 </footer>
 <script>
 // Live GitHub star count. If the call fails, the link just says "GitHub".

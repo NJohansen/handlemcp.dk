@@ -174,9 +174,9 @@
 
 <h2 id="uv">2. Installer uv</h2>
 <p>uv er et lille program, der henter HandleMCP og holder den opdateret. Kommandoen er uv's egen, fra <a href="https://docs.astral.sh/uv/getting-started/installation/">docs.astral.sh/uv</a>.</p>
-<p><b>Mac:</b> Tryk ⌘ + mellemrum, skriv "Terminal", tryk Enter. Indsæt linjen, og tryk Enter:</p>
+<p><b>Mac:</b> Tryk ⌘ + mellemrum, skriv ”Terminal”, tryk Enter. Indsæt linjen, og tryk Enter:</p>
 <pre><code>curl -LsSf https://astral.sh/uv/install.sh | sh</code></pre>
-<p><b>Windows:</b> Tryk på Start, skriv "PowerShell", tryk Enter. Indsæt linjen, og tryk Enter:</p>
+<p><b>Windows:</b> Tryk på Start, skriv ”PowerShell”, tryk Enter. Indsæt linjen, og tryk Enter:</p>
 <pre><code>powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"</code></pre>
 <p>Luk vinduet, når den er færdig. Åbn et nyt til trin 3.</p>
 
@@ -202,7 +202,7 @@ uvx handle-mcp@latest login rema1000</code></pre>
 <li>Er filen tom, eller står der kun <code>{}</code>? Slet alt, og indsæt blokken herunder.</li>
 <li>Gem filen.</li>
 <li>Luk Claude helt. Mac: ⌘ + Q. Windows: højreklik på Claude-ikonet ved uret, og vælg <b>Quit</b>. Åbn Claude igen.</li>
-<li>Tjek: tryk <b>+</b> under skrivefeltet, og vælg <b>Connectors</b>. "handle" skal stå på listen.</li>
+<li>Tjek: tryk <b>+</b> under skrivefeltet, og vælg <b>Connectors</b>. ”handle” skal stå på listen.</li>
 </ol>
 <pre><code>{
   &quot;mcpServers&quot;: {
@@ -212,12 +212,12 @@ uvx handle-mcp@latest login rema1000</code></pre>
     }
   }
 }</code></pre>
-<p class="small">Står der andet i filen? Slet ikke noget. Kopiér hele filen ind i en chat med Claude, og skriv: "Tilføj denne server til min config, og giv mig hele filen tilbage." Indsæt blokken ovenfor. Erstat filens indhold med svaret.</p>
+<p class="small">Står der andet i filen? Slet ikke noget. Kopiér hele filen ind i en chat med Claude, og skriv: ”Tilføj denne server til min config, og giv mig hele filen tilbage.” Indsæt blokken ovenfor. Erstat filens indhold med svaret.</p>
 
 <h3 id="codex" style="margin-top:36px">Codex</h3>
 <p>Indsæt linjen i Terminal (Windows: PowerShell), og tryk Enter:</p>
 <pre><code>codex mcp add handle -- uvx handle-mcp@latest</code></pre>
-<p>Tjek med <code>codex mcp list</code>. "handle" skal stå på listen. Start Codex igen.</p>
+<p>Tjek med <code>codex mcp list</code>. ”handle” skal stå på listen. Start Codex igen.</p>
 
 <h3 id="grok-build" style="margin-top:36px">Grok Build</h3>
 <p>Indsæt linjen i Terminal (Windows: PowerShell), og tryk Enter:</p>
@@ -226,11 +226,11 @@ uvx handle-mcp@latest login rema1000</code></pre>
 
 <h3 id="grok-bot" style="margin-top:36px">Grok Bot</h3>
 <p>Grok Bot kører på en computer i skyen, ikke på din egen. Du sætter ikke noget op selv. Spring trin 2 og 3 over, og skriv til den:</p>
-<div class="copy"><p>Sæt MCP-serveren handle-mcp op på din computer. Følg afsnittet "Headless / AI agent" i https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md</p></div>
+<div class="copy"><p>Sæt MCP-serveren handle-mcp op på din computer. Følg afsnittet ”Headless / AI agent” i https://github.com/NJohansen/handle-mcp/blob/main/docs/setup.md</p></div>
 <p>Den beder om dit login til butikken. Det er den eneste vej her, fordi den ikke har din computers nøglering.</p>
 
 <h3 id="anden" style="margin-top:36px">En anden assistent</h3>
-<p>Alle assistenter skal bruge de samme to oplysninger. Find "MCP" eller "Tools" i indstillingerne, tilføj en server, og skriv:</p>
+<p>Alle assistenter skal bruge de samme to oplysninger. Find ”MCP” eller ”Tools” i indstillingerne, tilføj en server, og skriv:</p>
 <ul class="rows">
 <li><b>Kommando (command):</b> <code>uvx</code></li>
 <li><b>Argumenter (args):</b> <code>handle-mcp@latest</code></li>
@@ -239,13 +239,13 @@ uvx handle-mcp@latest login rema1000</code></pre>
 <h2 id="proev">5. Prøv det</h2>
 <p>Start med en nem besked til din assistent:</p>
 <div class="copy"><p>Hvad er på tilbud i nemlig i denne uge?</p></div>
-<p>Første gang spørger assistenten, om den må bruge "handle". Svar ja. På Mac kan computeren også spørge, om nøgleringen må bruges. Vælg <b>Tillad altid</b>.</p>
+<p>Første gang spørger assistenten, om den må bruge ”handle”. Svar ja. På Mac kan computeren også spørge, om nøgleringen må bruges. Vælg <b>Tillad altid</b>.</p>
 <p>Virker det? Så prøv det rigtige:</p>
 <div class="copy"><p>Vi har 4.000 kr. til mad om måneden. Lav ugens madplan.</p></div>
 <p>Første gang spørger den, hvor mange I er, hvad I kan lide, og hvilken butik I bruger. Den deler månedens budget med de uger, der er tilbage, og viser regnestykket.</p>
 <div class="copy"><p>Sammenlign min indkøbsliste i nemlig og Bilka. Hvad er billigst?</p></div>
 <p>Assistenten spørger dig, før den lægger noget i kurven. Til sidst åbner du selv butikkens hjemmeside, tjekker kurven, vælger tid og betaler. HandleMCP kan aldrig bestille eller betale.</p>
-<p class="small">Hos REMA 1000 fylder den ikke kurven. Den fylder indkøbslisten "handle-mcp" i REMA-appen.</p>
+<p class="small">Hos REMA 1000 fylder den ikke kurven. Den fylder indkøbslisten ”handle-mcp” i REMA-appen.</p>
 
 <h2 id="hjaelp">Virker det ikke?</h2>
 <table class="cmp">
@@ -253,10 +253,10 @@ uvx handle-mcp@latest login rema1000</code></pre>
 <tbody>
 <tr><th>Assistenten kender ikke HandleMCP</th><td>Luk den helt, og åbn den igen. Claude: tjek, at filen er gemt.</td></tr>
 <tr><th>Claude viser en fejl om config-filen ved start</th><td>Der er en skrivefejl i filen. Gør punkt 5 under Claude Desktop igen.</td></tr>
-<tr><th>"spawn uvx ENOENT" i Claude (Mac)</th><td>Skriv <code>which uvx</code> i Terminal. Du får en sti, fx <code>/Users/dig/.local/bin/uvx</code>. Sæt den ind i filen i stedet for <code>uvx</code>.</td></tr>
-<tr><th>"spawn uvx ENOENT" i Claude (Windows)</th><td>Genstart computeren. Hjælper det ikke: skriv <code>where.exe uvx</code> i PowerShell, og sæt stien ind i filen i stedet for <code>uvx</code>. Skriv hver <code>\</code> to gange: <code>C:\\Users\\dig\\.local\\bin\\uvx.exe</code>.</td></tr>
-<tr><th>"Intet login til nemlig"</th><td>Gør trin 3 igen.</td></tr>
-<tr><th>"nemlig.com har kø lige nu"</th><td>Vent et par minutter, og prøv igen.</td></tr>
+<tr><th>”spawn uvx ENOENT” i Claude (Mac)</th><td>Skriv <code>which uvx</code> i Terminal. Du får en sti, fx <code>/Users/dig/.local/bin/uvx</code>. Sæt den ind i filen i stedet for <code>uvx</code>.</td></tr>
+<tr><th>”spawn uvx ENOENT” i Claude (Windows)</th><td>Genstart computeren. Hjælper det ikke: skriv <code>where.exe uvx</code> i PowerShell, og sæt stien ind i filen i stedet for <code>uvx</code>. Skriv hver <code>\</code> to gange: <code>C:\\Users\\dig\\.local\\bin\\uvx.exe</code>.</td></tr>
+<tr><th>”Intet login til nemlig”</th><td>Gør trin 3 igen.</td></tr>
+<tr><th>”nemlig.com har kø lige nu”</th><td>Vent et par minutter, og prøv igen.</td></tr>
 </tbody>
 </table>
 <p>Sidder du fast? <a href="https://github.com/NJohansen/handle-mcp/issues" data-umami-event="github" data-umami-event-sted="guide-hjaelp">Skriv til os på GitHub</a>.</p>
@@ -282,9 +282,16 @@ uvx handle-mcp@latest login rema1000</code></pre>
 <div class="more"><h2>Læs også</h2><div class="cards"><a href="/ai-madplan-budget/"><b>AI madplan med budget</b><span>Sådan laver assistenten ugens madplan efter tilbud og budget.</span></a><a href="/nemlig-mcp/"><b>nemlig.com MCP</b><span>Setup, ugens tilbud og det, vi lærte om nemlig.com.</span></a></div></div>
 </main>
 
-<footer>
-  <div class="wrap"><div class="cols"><div><h2>Til familier</h2><ul><li><a href="/ai-madplan-budget/">AI madplan med budget</a></li><li><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a></li><li><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></li></ul></div><div><h2>Til udviklere</h2><ul><li><a href="/nemlig-mcp/">nemlig.com MCP</a></li><li><a href="/bilkatogo-api/">BilkaToGo API</a></li><li><a href="/rema-1000-mcp/">REMA 1000 MCP</a></li><li><a href="https://github.com/NJohansen/handle-mcp">GitHub</a></li></ul></div><div><h2>HandleMCP</h2><ul><li><a href="/">Forside</a></li><li><a href="/installation/" aria-current="page">Installation</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a></li><li><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a></li><li><a href="/privatliv/">Privatliv</a></li></ul></div></div>
-  <p class="note">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p></div>
+<footer><div class="doodles" aria-hidden="true"><img class="doodle" src="/doodles/kitchenroll.svg" alt="Tegning af en køkkenrulle" width="84" style="top:56px;right:9%;--r:-12deg"><img class="doodle d2" src="/doodles/cloud.svg" alt="Tegning af en sky" width="120" style="top:40px;right:30%;--r:0deg"></div>
+  <div class="wrap">
+    <div class="ftop"><p class="big">Handl én gang.<br>Spis hele ugen.</p><a class="btn" href="https://tally.so/r/ArKdkW" data-tally="ArKdkW" data-sted="footer">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></div>
+    <div class="fcols">
+      <div><b>Guides</b><a href="/installation/" aria-current="page">Installation for begyndere</a><a href="/ai-madplan-budget/">AI madplan med budget</a><a href="/madkonto-hele-maaneden/">Madkontoen hele måneden</a><a href="/billigere-end-maaltidskasse/">Billigere end måltidskasse</a></div>
+      <div><b>Butikker</b><a href="/nemlig-mcp/">nemlig.com MCP</a><a href="/bilkatogo-api/">BilkaToGo API</a><a href="/rema-1000-mcp/">REMA 1000 MCP</a></div>
+      <div><b>Projektet</b><a href="/">Forside</a><a href="https://github.com/NJohansen/handle-mcp" data-umami-event="github" data-umami-event-sted="footer">GitHub</a><a href="https://github.com/sponsors/NJohansen" data-umami-event="sponsor" data-umami-event-sted="footer">Bliv sponsor</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/docs/security.md">Sikkerhed</a><a href="https://github.com/NJohansen/handle-mcp/blob/main/LICENSE">MIT-licens</a><a href="/privatliv/">Privatliv</a></div>
+      <p class="disc">Ikke officiel. Bruger butikkernes egne hjemmesider, så det kan gå i stykker uden varsel. Ikke tilknyttet nemlig.com, Salling Group eller REMA 1000.</p>
+    </div>
+  </div>
 </footer>
 <script>
 // Live GitHub star count. If the call fails, the link just says "GitHub".
