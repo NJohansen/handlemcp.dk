@@ -23,7 +23,7 @@ jobs:
         working-directory: .github/checks
         run: |
           npm install --no-save --no-package-lock playwright@1.63.0
-          npx playwright install --with-deps chromium
+          npx playwright install chromium
       - name: Browser checks (errors, layout, corners, basket)
         run: node .github/checks/smoke.mjs screenshots
       - name: Upload screenshots
