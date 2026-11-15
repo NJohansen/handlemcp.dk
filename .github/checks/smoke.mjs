@@ -48,7 +48,8 @@ for (const page of PAGES) for (const size of SIZES) {
   const wide = await pg.evaluate(() => document.documentElement.scrollWidth - innerWidth);
   check(wide <= 0, `${tag}: no sideways scroll (${wide}px too wide)`);
 
-  if (size.width > 900) {
+  // A page with one job (/kom-i-gang/) has no waitlist button in the menu.
+  if (size.width > 900 && (await pg.$(".navcta"))) {
     const nav = await pg.evaluate(() => {
       const box = document.querySelector(".navbox").getBoundingClientRect();
       const cta = document.querySelector(".navcta").getBoundingClientRect();
