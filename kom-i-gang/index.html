@@ -24,6 +24,8 @@
 .chat{margin:0 0 40px}
 .chat .you{margin:0}
 .chat .hd{margin-bottom:12px}
+.chat .ask{margin:16px 0 0;text-align:right}
+.chat .ask .btn{padding:8px 8px 8px 20px;min-height:56px;white-space:normal;text-align:left}
 .end{margin:28px 0 0;font-size:15px;color:var(--mute)}
 @media (max-width:900px){.steps{grid-template-columns:1fr}}
 </style>
@@ -52,9 +54,9 @@
 <ol class="steps">
 <li><h3>Tryk på den gule knap</h3><p>Claude åbner med alt udfyldt og viser en advarsel. Den er normal. Vælg <b>Continue</b>, og ret ingenting.</p></li>
 <li><h3>Vælg Connect</h3><p>Log ind med dit nemlig-login.</p></li>
-<li><h3>Spørg Claude</h3><p>Start en ny chat, og skriv det her:</p></li>
+<li><h3>Spørg Claude</h3><p>Tryk på knappen under beskeden. Eller start en ny chat, og skriv den selv.</p></li>
 </ol>
-<div class="chat"><p class="hd"><span>Claude</span><span>HandleMCP</span></p><p class="you"><span>Vi har 1.000 kr. til mad i denne uge. Lav en madplan, og læg varerne i kurven.</span></p></div>
+<div class="chat"><p class="hd"><span>Claude</span><span>HandleMCP</span></p><p class="you"><span>Vi har 1.000 kr. til mad i denne uge. Lav en madplan, og læg varerne i kurven.</span></p><p class="ask"><a class="btn" href="https://claude.ai/new?q=Vi%20har%201.000%20kr.%20til%20mad%20i%20denne%20uge.%20Lav%20en%20madplan%2C%20og%20l%C3%A6g%20varerne%20i%20kurven." target="_blank" rel="noopener" data-umami-event="aabn-claude-med-besked">Åbn Claude med beskeden <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></p></div>
 
 <div class="faq">
 <details><summary>Hvorfor viser Claude en advarsel?</summary><p>Claude advarer ved forbindelser, der åbnes fra et link, og kalder dem "Unverified", når de ikke står i Claudes eget katalog. Det gør HandleMCP ikke endnu. Tjek, at adressen er <code>https://mcp.handlemcp.dk/mcp</code>. Så er det os.</p></details>
