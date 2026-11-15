@@ -14,14 +14,14 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/sider.css">
 <style>
-/* kom-i-gang: one column of steps, one yellow button */
-article{padding-top:24px}
-.steps{grid-template-columns:1fr}
-.add{display:inline-flex;margin:8px 0 6px;background:var(--sun);padding:8px 8px 8px 22px;min-height:56px}
+/* kom-i-gang: one yellow button, three short steps */
+article{padding-top:8px}
+.steps{grid-template-columns:1fr;margin-top:32px}
+.steps li{align-items:center}
+.steps li::before{grid-row:auto}
+.add{display:inline-flex;margin:12px 0 0;background:var(--sun);padding:8px 8px 8px 22px;min-height:60px;font-size:18px}
 .add:hover{background:#eedc0a}
 .add i{background:var(--ink);color:#fff}
-.note{background:var(--sky-soft);border-radius:22px;padding:18px 22px;margin:20px 0}
-.note p:last-child{margin:0}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
 </head>
@@ -44,8 +44,9 @@ article{padding-top:24px}
 </header>
 <div class="wrap"><div class="intro">
 <ol class="crumbs" aria-label="Brødkrumme"><li><a href="/">HandleMCP</a></li><li aria-current="page">Kom i gang</li></ol>
-<h1>Føj HandleMCP til Claude</h1>
-<p class="lead">Tre trin. Det tager cirka to minutter. Du skal have en invitation og dit login til nemlig.com klar.</p>
+<h1>Kom i gang</h1>
+<p class="lead">Føj HandleMCP til Claude. Det tager to minutter.</p>
+<p><a class="btn add" href="https://claude.ai/customize/connectors?modal=add-custom-connector&amp;connectorName=HandleMCP&amp;connectorUrl=https%3A%2F%2Fmcp.handlemcp.dk%2Fmcp" target="_blank" rel="noopener" data-umami-event="tilfoej-til-claude">Føj til Claude <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></p>
 </div></div>
 </div>
 
@@ -53,29 +54,17 @@ article{padding-top:24px}
 <div class="page">
 <article>
 
-<div class="note"><p><b>Gør det på en computer.</b> Claude kan kun tilføje HandleMCP i en browser på en computer. Bagefter virker det også i Claude-appen på telefonen.</p></div>
-
 <ol class="steps">
-<li><h3>Tryk på den gule knap</h3><p>Claude åbner med navn og adresse udfyldt. Er du ikke logget ind i Claude, så log ind først, og tryk på knappen igen.</p></li>
-<li><h3>Tryk Continue, og ret ingenting</h3><p>Claude viser en rød advarsel om et eksternt link. Det gør den ved alle forbindelser, den ikke selv har i sit katalog. Tryk <b>Continue</b>. På den næste skærm retter du ingenting. Tryk på knappen nederst og derefter <b>Connect</b>.</p></li>
-<li><h3>Log ind med dit nemlig-login</h3><p>Du kommer til vores side. Skriv den e-mail og adgangskode, du bruger hos nemlig.com. Vi gemmer ikke adgangskoden. Det kan tage op til et halvt minut. Så sender vi dig tilbage til Claude.</p></li>
+<li><h3>Tryk på knappen</h3></li>
+<li><h3>Tryk Continue og Connect. Ret ingenting.</h3></li>
+<li><h3>Log ind med dit nemlig-login</h3></li>
 </ol>
 
-<p><a class="btn add" href="https://claude.ai/customize/connectors?modal=add-custom-connector&amp;connectorName=HandleMCP&amp;connectorUrl=https%3A%2F%2Fmcp.handlemcp.dk%2Fmcp" target="_blank" rel="noopener" data-umami-event="tilfoej-til-claude">Føj HandleMCP til Claude <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a></p>
-<p class="small">Knappen åbner claude.ai i en ny fane.</p>
+<p>Færdig. Skriv til Claude: <em>”Vis min nemlig-kurv.”</em></p>
+<p class="small">Claude viser en advarsel undervejs. Det gør den ved alle forbindelser uden for sit eget katalog. Du bestiller og betaler altid selv på nemlig.com.</p>
 
-<h2>Prøv det</h2>
-<p>Start en ny chat i Claude, og skriv:</p>
-<div class="copy"><p>Vis min nemlig-kurv.</p></div>
-<p>Svarer Claude med din kurv, virker det. Prøv så: <em>”Vi har 4.000 kr. til mad om måneden. Lav ugens madplan.”</em></p>
-<p>Claude lægger varer i kurven, når du har sagt ja. Du bestiller og betaler altid selv på nemlig.com.</p>
-
-<h2>Hvis noget driller</h2>
 <div class="faq">
-<details><summary>Knappen virker ikke</summary><p>Gør det i hånden: Åbn claude.ai på en computer. Gå til Settings, så Connectors. Tryk Add custom connector. Skriv navnet <code>HandleMCP</code> og adressen <code>https://mcp.handlemcp.dk/mcp</code>. Tryk Add, og derefter Connect.</p></details>
-<details><summary>Siden siger, at min e-mail ikke er inviteret</summary><p>HandleMCP uden det tekniske er kun åbent for inviterede lige nu. Brug den e-mail, du har hos nemlig.com, og som du gav os. Ellers skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p></details>
-<details><summary>Claude skriver ”Unverified” ved HandleMCP</summary><p>Det skriver Claude ved alle forbindelser, som ikke er i Claudes eget katalog. Det er forventet.</p></details>
-<details><summary>Jeg vil fjerne det igen</summary><p>Gå til Settings, så Connectors i Claude. Vælg HandleMCP, og tryk Disconnect eller Delete. Vil du have dit gemte nemlig-login slettet hos os, så skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p></details>
+<details><summary>Virker knappen ikke?</summary><p>Åbn claude.ai. Gå til Settings, så Connectors, og tryk Add custom connector. Navn: <code>HandleMCP</code>. Adresse: <code>https://mcp.handlemcp.dk/mcp</code>. Tryk Add, og derefter Connect. Går det stadig ikke, så skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p></details>
 </div>
 
 </article>
