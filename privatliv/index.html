@@ -64,7 +64,7 @@
 <h2>Hvem hjælper os</h2>
 <ul>
 <li><a href="https://tally.so">Tally</a> (Belgien) gemmer ventelisten.</li>
-<li><a href="https://umami.is">Umami Cloud</a> tæller besøg og klik. Uden cookies, og uden at gemme din IP-adresse. Vi kan ikke se, hvem du er.</li>
+<li><a href="https://umami.is">Umami Cloud</a> tæller besøg og klik. Uden cookies. Din IP-adresse står ikke i statistikken, men Umami kan have den i sine driftslogs. Vi kan ikke se, hvem du er.</li>
 <li><a href="https://pages.github.com">GitHub Pages</a> viser siden. GitHub kan logge din IP-adresse af sikkerhedshensyn.</li>
 </ul>
 <p>Umami og GitHub er amerikanske firmaer. Data kan derfor blive behandlet i USA. Det sker under EU's regler for overførsel, fx EU's standardkontrakter.</p>
@@ -73,7 +73,8 @@
 <p>HandleMCP kører på din egen computer. Dine logins, din kurv og dine ordrer bliver der. Vi ser dem aldrig.</p>
 
 <h2>Brugsstatistik fra programmet</h2>
-<p>Programmet tæller anonymt, hvor langt folk kommer fra installation til fyldt kurv. Så kan vi vise nemlig.com og BilkaToGo, hvor mange kurve og kroner HandleMCP sender dem. Det sender præcis dette til Umami Cloud, altid med version og dato (kun dagen):</p>
+<p>Programmet tæller kun, hvis du siger ja. Det spørger dig i terminalen, når du logger ind på en butik. Før et ja sender det intet og gemmer ingen fil.</p>
+<p>Siger du ja, tæller det anonymt, hvor langt folk kommer fra installation til fyldt kurv. Så kan vi vise nemlig.com, BilkaToGo og REMA 1000, hvor mange kurve og kroner HandleMCP sender dem. Det sender præcis dette til Umami Cloud, altid med version og dato (kun dagen):</p>
 <ul>
 <li><b>server_started</b>, højst én gang om dagen: styresystem (Mac, Linux eller Windows).</li>
 <li><b>first_tool_call</b>, højst én gang om dagen: navnet på det første værktøj, fx compare_basket.</li>
@@ -82,12 +83,12 @@
 <li><b>list_filled</b>, det samme for REMA 1000, hvor kurven er indkøbslisten ”handle-mcp”: butik, beløb rundet til nærmeste 50 kr. og antal varer.</li>
 </ul>
 <p>Aldrig navn, adresse, telefon, e-mail, login, varenavne, ordre-id eller et id for dig eller din computer. Links til kurven har <code>utm_source=handlemcp</code>, så butikken kan se besøget i sin egen statistik.</p>
-<p>Umami ser din IP-adresse, når programmet sender et event. Den bruges til at svare og til at gætte landet. Umami gemmer den ikke. Første gang du bruger programmet, fortæller AI-assistenten dig, hvad der tælles.</p>
-<p>Slå det fra med <code>HANDLE_TELEMETRY=0</code> eller <code>handle-mcp --no-telemetry</code>. <a href="https://github.com/NJohansen/handle-mcp#brugsstatistik">Læs mere på GitHub</a>.</p>
+<p>Umami ser din IP-adresse, når programmet sender et event. Den bruges til at svare, til at gætte landet og til Umamis egen tælling af besøgende. Den står ikke i statistikken, men Umami kan have den i sine driftslogs.</p>
+<p>Du vælger med <code>handle-mcp telemetry on</code> og <code>handle-mcp telemetry off</code>. <code>HANDLE_TELEMETRY=0</code> slår det altid fra. <a href="https://github.com/NJohansen/handle-mcp#brugsstatistik">Læs mere på GitHub</a>.</p>
 
 <h2>Dine rettigheder</h2>
 <p>Du kan altid få at vide, hvad vi har gemt, få det rettet eller slettet, og trække dit samtykke tilbage. Skriv til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>. Er du utilfreds, kan du klage til <a href="https://www.datatilsynet.dk">Datatilsynet</a>.</p>
-<p class="upd">Opdateret 9. november 2026.</p>
+<p class="upd">Opdateret 16. november 2026.</p>
 </article>
 </div>
 </main>
