@@ -18,10 +18,17 @@
 .top{padding-bottom:56px}
 .intro{max-width:980px}
 .body{max-width:980px;margin:0 auto;padding:40px 0 0}
-.hi{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;align-items:center;margin:0 0 48px}
+.hi{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:56px;align-items:center;margin:0 0 48px}
 .hi h2{margin:0 0 16px}
 .hi p{max-width:560px}
-.hi .shot{margin:0}
+/* the photo: the blob and the handwritten name from the front page story */
+@font-face{font-family:"Homemade Apple";src:url(/fonts/homemade-apple.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+.me{margin:0}
+.me .blob{display:block;width:100%;height:auto;aspect-ratio:6/7;object-fit:cover;border-radius:62% 38% 55% 45%/42% 58% 42% 58%}
+.me figcaption{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:20px;text-align:center}
+.me figcaption b{display:flex;align-items:center;gap:10px;font:400 30px/1.3 "Homemade Apple",cursive;color:var(--ink);transform:rotate(-4deg)}
+.me figcaption b svg{width:64px;height:16px;flex:none}
+.me figcaption span{font-size:16px;color:var(--ink)}
 .kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .kinds>div{background:var(--paper);border-radius:22px;padding:22px 24px 10px}
 .kinds h2{font-size:24px;letter-spacing:-.02em;line-height:1.2;margin:0 0 8px}
@@ -31,7 +38,7 @@
 .cta{margin-top:40px}
 .cta p{max-width:620px}
 .cta .addr{margin:18px 0 0;font-size:15px}
-@media (max-width:900px){.kinds{grid-template-columns:1fr}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
+@media (max-width:900px){.kinds{grid-template-columns:1fr}.me{max-width:420px;justify-self:center;width:100%}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
 </head>
@@ -68,7 +75,7 @@
 <p>Nu får jeg mange henvendelser om samarbejde. Fra butikker, madplansapps og folk med en god idé. Det er jeg glad for.</p>
 <p>Derfor denne side. Find jer selv herunder, og skriv kort. Jeg læser alt selv.</p>
 </div>
-<figure class="shot"><img src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption>Ugens indkøb, leveret til døren.</figcaption></figure>
+<figure class="me"><img class="blob" src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption><b><svg viewBox="0 0 64 16" aria-hidden="true"><path d="M2 3c8 6 20 10 60 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Niclas</b><span>Far til 2. Har bygget HandleMCP.</span></figcaption></figure>
 </div>
 <div class="kinds">
 <div id="butikker"><h2>Butikker</h2><p>Dagligvarer med levering eller afhentning. Også de små.</p><p class="get"><b>Det får I:</b> kunder, der lander hos jer med en fyldt kurv.</p></div>
