@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Partnere · HandleMCP</title>
-<meta name="description" content="Butik, madplansapp eller noget tredje? Se hvad I får ud af et samarbejde med HandleMCP, og skriv til os.">
+<meta name="description" content="Se hvad en butik eller en madplansapp får ud af et samarbejde med HandleMCP, og hvad vi søger.">
 <link rel="canonical" href="https://handlemcp.dk/partnere/">
 <meta name="robots" content="index, follow">
 <meta name="color-scheme" content="light">
@@ -18,21 +18,39 @@
 .top{padding-bottom:56px}
 .intro{max-width:980px}
 .body{max-width:980px;margin:0 auto;padding:40px 0 0}
-.hi{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;align-items:center;margin:0 0 48px}
+.hi{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:56px;align-items:center;margin:72px 0 0}
 .hi h2{margin:0 0 16px}
 .hi p{max-width:560px}
-.hi .by{margin:24px 0 0}
-.hi .shot{margin:0}
+/* the photo: the blob and the handwritten name from the front page story */
+@font-face{font-family:"Homemade Apple";src:url(/fonts/homemade-apple.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+.me{margin:0}
+.me .blob{display:block;width:100%;height:auto;aspect-ratio:6/7;object-fit:cover;border-radius:62% 38% 55% 45%/42% 58% 42% 58%}
+.me figcaption{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:20px;text-align:center}
+.me figcaption b{display:flex;align-items:center;gap:10px;font:400 30px/1.3 "Homemade Apple",cursive;color:var(--ink);transform:rotate(-4deg)}
+.me figcaption b svg{width:64px;height:16px;flex:none}
+.me figcaption span{font-size:16px;color:var(--ink)}
 .kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .kinds>div{background:var(--paper);border-radius:22px;padding:22px 24px 10px}
 .kinds h2{font-size:24px;letter-spacing:-.02em;line-height:1.2;margin:0 0 8px}
 .kinds p{font-size:16px;line-height:1.5;color:#55564f}
 .kinds .get{color:var(--ink)}
-.rule{max-width:620px;margin:28px 0 0}
+/* facts: a short proof block. Only things a reader can check. */
+.eyebrow{margin:0 0 12px;font-size:15px;color:#55564f}
+.add{background:var(--sun);padding:8px 8px 8px 24px;min-height:60px;font-size:18px;font-weight:600}
+.add:hover{background:#eedc0a}
+.sec{margin:8px 0 20px}
+.facts{list-style:none;margin:0 0 28px;padding:0}
+.facts li{position:relative;padding:6px 0 6px 26px;font-size:17px}
+.facts li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;background:var(--green)}
+.works{margin:20px 0 0;font-size:15px;color:#55564f}
+.works b{font-weight:600;color:var(--ink)}
+h1{font-size:clamp(40px,5.6vw,68px);max-width:none}
+.facts{margin-bottom:24px}
 .cta{margin-top:40px}
 .cta p{max-width:620px}
 .cta .addr{margin:18px 0 0;font-size:15px}
-@media (max-width:900px){.kinds{grid-template-columns:1fr}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
+@media (max-width:640px){.hi{margin-top:52px}}
+@media (max-width:900px){.kinds{grid-template-columns:1fr}.me{max-width:420px;justify-self:center;width:100%}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
 </head>
@@ -55,36 +73,43 @@
 </header>
 <div class="wrap"><div class="intro">
 <ol class="crumbs" aria-label="Brødkrumme"><li><a href="/">HandleMCP</a></li><li aria-current="page">Partnere</li></ol>
-<h1>Partnere</h1>
-<p class="lead">HandleMCP er et bud på fremtidens måde at handle ind på for travle familier. Har I en butik, en madplansapp eller en idé, der passer til det? Skriv.</p>
+<p class="eyebrow">Open source på GitHub<span class="pstars" hidden> · <span class="pstars-n"></span> stjerner</span></p>
+<h1>Få kunder med en fyldt kurv</h1>
+<p class="lead">HandleMCP er et bud på fremtidens måde at handle ind på for travle familier. Jeg er åben for idéer til samarbejde.</p>
+<ul class="facts">
+<li>Søger varer, sammenligner hele kurven og fylder den billigste</li>
+<li>MIT-licens. Står i den officielle MCP Registry</li>
+<li>Kan aldrig bestille eller betale. Det gælder også i et samarbejde</li>
+</ul>
+<a class="btn add" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail" data-umami-event-sted="top">Skriv til mig <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+<p class="works">Virker med <b>nemlig.com</b><span aria-hidden="true"> · </span><b>BilkaToGo</b><span aria-hidden="true"> · </span><b>REMA 1000</b>. Uofficielt, og ikke tilknyttet dem.</p>
 </div></div>
 </div>
 
 <main class="wrap">
 <div class="body">
+<h2 class="sec">Hvad får I ud af det?</h2>
+<div class="kinds">
+<div id="butikker"><h2>Butikker</h2><p>Dagligvarer med levering eller afhentning. Også de små.</p><p class="get"><b>Det får I:</b> kunder, der lander hos jer med en fyldt kurv.</p><p class="get"><b>Skriv gerne:</b> om I har et API, og hvad I vil opnå.</p></div>
+<div id="madplansapps"><h2>Madplansapps</h2><p>Opskrifter og madplaner.</p><p class="get"><b>Det får I:</b> jeres madplan som en kurv med rigtige priser og ugens tilbud.</p><p class="get"><b>Skriv gerne:</b> hvordan jeres opskrifter ser ud, og hvad I vil opnå.</p></div>
+<div id="andre"><h2>Noget andet</h2><p>Passer I ikke i de to?</p><p class="get">Skriv alligevel. To linjer er nok.</p></div>
+</div>
 <div class="hi">
 <div>
 <h2>Hej, jeg er Niclas</h2>
 <p>Jeg byggede HandleMCP til min egen familie. Jeg gad ikke i Rema 6 gange om ugen mere.</p>
-<p>Nu får jeg mange henvendelser om samarbejde. Fra butikker, madplansapps og folk med en god idé. Det er jeg glad for.</p>
-<p>Derfor denne side. Find jer selv herunder, og skriv kort. Jeg læser alt selv.</p>
-<p class="by"><span class="avatar"><img src="/niclas.jpg" alt="Niclas Johansen" width="48" height="48"></span><span><b>Niclas Johansen</b><br>Far til 2. Har bygget HandleMCP.</span></p>
+<p>Nu får jeg mange henvendelser om samarbejde. Jeg søger ikke noget bestemt lige nu, men jeg er åben for gode idéer.</p>
+<p>Jeg læser alt selv.</p>
 </div>
-<figure class="shot"><img src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption>Ugens indkøb, leveret til døren.</figcaption></figure>
+<figure class="me"><img class="blob" src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption><b><svg viewBox="0 0 64 16" aria-hidden="true"><path d="M2 3c8 6 20 10 60 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Niclas</b><span>Far til 2. Har bygget HandleMCP.</span></figcaption></figure>
 </div>
-<div class="kinds">
-<div id="butikker"><h2>Butikker</h2><p>Dagligvarer med levering eller afhentning. Også de små.</p><p class="get"><b>Det får I:</b> kunder, der lander hos jer med en fyldt kurv.</p></div>
-<div id="madplansapps"><h2>Madplansapps</h2><p>Opskrifter, madplaner og indkøbslister.</p><p class="get"><b>Det får I:</b> jeres madplan bliver til en kurv med rigtige priser og ugens tilbud.</p></div>
-<div id="andre"><h2>Andre</h2><p>Budget, bank eller noget, vi ikke har tænkt på.</p><p class="get"><b>Det får I:</b> en vej fra jeres app til familiens indkøb.</p></div>
-</div>
-<p class="rule"><b>Én ting ændrer vi ikke.</b> Mennesket betaler altid selv. HandleMCP kan aldrig bestille eller betale.</p>
-
 <div class="cta" id="skriv">
-<h2>Skriv til mig</h2>
+<h2>Har I en idé?</h2>
 <p>Tre ting er nok: firma, type og jeres idé. Jeg svarer selv.</p>
-<a class="btn" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail">Skriv en mail <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+<a class="btn" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail" data-umami-event-sted="bund">Skriv en mail <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
 <p class="addr">Eller skriv direkte til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p>
 </div>
+
 </div>
 </main>
 
@@ -103,7 +128,7 @@
 // Live GitHub star count. If the call fails, the link just says "GitHub".
 (function(){
   var el=document.getElementById('stars'),n=document.getElementById('stars-n');
-  function show(c){if(typeof c==='number'){n.textContent=c.toLocaleString('da-DK');el.hidden=false}}
+  function show(c){if(typeof c==='number'){var s=c.toLocaleString('da-DK');n.textContent=s;el.hidden=false;var ps=document.querySelector('.pstars');if(ps){ps.querySelector('.pstars-n').textContent=s;ps.hidden=false}}}
   try{var c=sessionStorage.getItem('hm-stars');if(c!==null){show(+c);return}}catch(e){}
   fetch('https://api.github.com/repos/NJohansen/handle-mcp',{headers:{Accept:'application/vnd.github+json'}})
     .then(function(r){return r.ok?r.json():null})
