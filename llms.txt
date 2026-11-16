@@ -29,6 +29,9 @@ For families:
 - [Madbudget med AI](https://handlemcp.dk/madbudget-med-ai/): how one family of four keeps a food budget of 4,000 kr. a month with an AI assistant: weekly budget = balance ÷ weeks left, five steps, two ways to give the balance (type it, or read-only via BankMCP)
 - [Billigere end måltidskasse](https://handlemcp.dk/billigere-end-maaltidskasse/): how to compare price per portion with a meal kit, and an honest comparison
 
+For companies:
+- [Partnere](https://handlemcp.dk/partnere/): for stores, meal-plan apps and others who want to work with HandleMCP: what each gets, and how to write
+
 ## What it can do
 
 nemlig.com and BilkaToGo, see [handlemcp.dk/#kan](https://handlemcp.dk/#kan):
