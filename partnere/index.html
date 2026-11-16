@@ -18,7 +18,7 @@
 .top{padding-bottom:56px}
 .intro{max-width:980px}
 .body{max-width:980px;margin:0 auto;padding:40px 0 0}
-.hi{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:56px;align-items:center;margin:0 0 48px}
+.hi{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:56px;align-items:center;margin:72px 0 0}
 .hi h2{margin:0 0 16px}
 .hi p{max-width:560px}
 /* the photo: the blob and the handwritten name from the front page story */
@@ -35,13 +35,14 @@
 .kinds p{font-size:16px;line-height:1.5;color:#55564f}
 .kinds .get{color:var(--ink)}
 /* facts: a short proof block. Only things a reader can check. */
-.proof2{margin-top:40px;background:var(--paper);border-radius:28px;padding:36px}
-.proof2 .eyebrow{margin:0 0 12px;font-size:15px;color:#55564f}
-.proof2 h2{margin:0 0 20px}
+.eyebrow{margin:0 0 12px;font-size:15px;color:#55564f}
+.add{background:var(--sun);padding:8px 8px 8px 24px;min-height:60px;font-size:18px;font-weight:600}
+.add:hover{background:#eedc0a}
+.sec{margin:56px 0 20px}
 .facts{list-style:none;margin:0 0 28px;padding:0}
 .facts li{position:relative;padding:6px 0 6px 26px;font-size:17px}
 .facts li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;background:var(--green)}
-.with{background:#fff;border-radius:22px;padding:24px 24px 20px;text-align:center}
+.with{background:var(--paper);border-radius:22px;padding:24px 24px 20px;text-align:center}
 .with p{margin:0 0 14px;font:600 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 .with ul{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 48px}
 .with li{font-size:24px;font-weight:600;letter-spacing:-.03em;color:#55564f}
@@ -49,7 +50,7 @@
 .cta{margin-top:40px}
 .cta p{max-width:620px}
 .cta .addr{margin:18px 0 0;font-size:15px}
-@media (max-width:640px){.proof2{padding:26px 20px}.with li{font-size:20px}}
+@media (max-width:640px){.with li{font-size:20px}.hi{margin-top:52px}}
 @media (max-width:900px){.kinds{grid-template-columns:1fr}.me{max-width:420px;justify-self:center;width:100%}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
@@ -73,44 +74,42 @@
 </header>
 <div class="wrap"><div class="intro">
 <ol class="crumbs" aria-label="Brødkrumme"><li><a href="/">HandleMCP</a></li><li aria-current="page">Partnere</li></ol>
-<h1>Partnere</h1>
-<p class="lead">HandleMCP er et bud på fremtidens måde at handle ind på for travle familier. Her står, hvad en butik eller en madplansapp får ud af at være med.</p>
-</div></div>
-</div>
-
-<main class="wrap">
-<div class="body">
-<div class="hi">
-<div>
-<h2>Hej, jeg er Niclas</h2>
-<p>Jeg byggede HandleMCP til min egen familie. Jeg gad ikke i Rema 6 gange om ugen mere.</p>
-<p>Nu får jeg mange henvendelser om samarbejde. Jeg læser alt selv.</p>
-<p>Så skriv kort, og skriv hvad I vil.</p>
-</div>
-<figure class="me"><img class="blob" src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption><b><svg viewBox="0 0 64 16" aria-hidden="true"><path d="M2 3c8 6 20 10 60 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Niclas</b><span>Far til 2. Har bygget HandleMCP.</span></figcaption></figure>
-</div>
-<div class="kinds">
-<div id="butikker"><h2>Butikker</h2><p>Dagligvarer med levering eller afhentning. Også de små.</p><p class="get"><b>Det får I:</b> kunder, der lander hos jer med en fyldt kurv.</p><p class="get"><b>Det søger jeg:</b> et API, eller lov til at bruge jeres side.</p></div>
-<div id="madplansapps"><h2>Madplansapps</h2><p>Opskrifter og madplaner.</p><p class="get"><b>Det får I:</b> jeres madplan som en kurv med rigtige priser og ugens tilbud.</p><p class="get"><b>Det søger jeg:</b> opskrifter med mængder, som kan slås op i butikken.</p></div>
-<div id="andre"><h2>Noget andet</h2><p>Passer I ikke i de to?</p><p class="get">Skriv alligevel. To linjer er nok.</p></div>
-</div>
-<div class="proof2" id="fakta">
 <p class="eyebrow">Open source på GitHub<span class="pstars" hidden> · <span class="pstars-n"></span> stjerner</span></p>
-<h2>Virker i dag med tre butikker</h2>
+<h1>Partnere</h1>
+<p class="lead">HandleMCP er et bud på fremtidens måde at handle ind på for travle familier. Virker i dag med tre butikker.</p>
 <ul class="facts">
 <li>Søger varer, sammenligner hele kurven og fylder den billigste</li>
 <li>MIT-licens. Står i den officielle MCP Registry</li>
 <li>Kan aldrig bestille eller betale. Det gælder også i et samarbejde</li>
 </ul>
-<div class="with"><p>Virker med</p><ul><li>nemlig.com</li><li>BilkaToGo</li><li>REMA 1000</li></ul><p class="un">Uofficielt. Vi bruger butikkernes egne hjemmesider og er ikke tilknyttet dem.</p></div>
+<a class="btn add" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail" data-umami-event-sted="top">Skriv til mig <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+</div></div>
 </div>
 
+<main class="wrap">
+<div class="body">
+<div class="with"><p>Virker med</p><ul><li>nemlig.com</li><li>BilkaToGo</li><li>REMA 1000</li></ul><p class="un">Uofficielt. Vi bruger butikkernes egne hjemmesider og er ikke tilknyttet dem.</p></div>
+<h2 class="sec">Hvad får I, og hvad søger jeg?</h2>
+<div class="kinds">
+<div id="butikker"><h2>Butikker</h2><p>Dagligvarer med levering eller afhentning. Også de små.</p><p class="get"><b>Det får I:</b> kunder, der lander hos jer med en fyldt kurv.</p><p class="get"><b>Det søger jeg:</b> et API, eller lov til at bruge jeres side.</p></div>
+<div id="madplansapps"><h2>Madplansapps</h2><p>Opskrifter og madplaner.</p><p class="get"><b>Det får I:</b> jeres madplan som en kurv med rigtige priser og ugens tilbud.</p><p class="get"><b>Det søger jeg:</b> opskrifter med mængder, som kan slås op i butikken.</p></div>
+<div id="andre"><h2>Noget andet</h2><p>Passer I ikke i de to?</p><p class="get">Skriv alligevel. To linjer er nok.</p></div>
+</div>
+<div class="hi">
+<div>
+<h2>Hej, jeg er Niclas</h2>
+<p>Jeg byggede HandleMCP til min egen familie. Jeg gad ikke i Rema 6 gange om ugen mere.</p>
+<p>Nu får jeg mange henvendelser om samarbejde. Jeg læser alt selv.</p>
+</div>
+<figure class="me"><img class="blob" src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption><b><svg viewBox="0 0 64 16" aria-hidden="true"><path d="M2 3c8 6 20 10 60 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Niclas</b><span>Far til 2. Har bygget HandleMCP.</span></figcaption></figure>
+</div>
 <div class="cta" id="skriv">
 <h2>Skriv til mig</h2>
 <p>Tre ting er nok: firma, type og jeres idé. Jeg svarer selv.</p>
-<a class="btn" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail">Skriv en mail <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
+<a class="btn" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail" data-umami-event-sted="bund">Skriv en mail <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
 <p class="addr">Eller skriv direkte til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p>
 </div>
+
 </div>
 </main>
 
