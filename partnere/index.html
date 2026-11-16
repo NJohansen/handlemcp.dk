@@ -34,10 +34,22 @@
 .kinds h2{font-size:24px;letter-spacing:-.02em;line-height:1.2;margin:0 0 8px}
 .kinds p{font-size:16px;line-height:1.5;color:#55564f}
 .kinds .get{color:var(--ink)}
-.rule{max-width:620px;margin:28px 0 0}
+/* facts: a short proof block. Only things a reader can check. */
+.proof2{margin-top:40px;background:var(--paper);border-radius:28px;padding:36px}
+.proof2 .eyebrow{margin:0 0 12px;font-size:15px;color:#55564f}
+.proof2 h2{margin:0 0 20px}
+.facts{list-style:none;margin:0 0 28px;padding:0}
+.facts li{position:relative;padding:6px 0 6px 26px;font-size:17px}
+.facts li::before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;background:var(--green)}
+.with{background:#fff;border-radius:22px;padding:24px 24px 20px;text-align:center}
+.with p{margin:0 0 14px;font:600 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.with ul{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 48px}
+.with li{font-size:24px;font-weight:600;letter-spacing:-.03em;color:#55564f}
+.with .un{margin:0;font:400 13px/1.5 var(--sans);letter-spacing:0;text-transform:none}
 .cta{margin-top:40px}
 .cta p{max-width:620px}
 .cta .addr{margin:18px 0 0;font-size:15px}
+@media (max-width:640px){.proof2{padding:26px 20px}.with li{font-size:20px}}
 @media (max-width:900px){.kinds{grid-template-columns:1fr}.me{max-width:420px;justify-self:center;width:100%}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
@@ -82,7 +94,16 @@
 <div id="madplansapps"><h2>Madplansapps</h2><p>Opskrifter og madplaner.</p><p class="get"><b>Det får I:</b> jeres madplan som en kurv med rigtige priser og ugens tilbud.</p><p class="get"><b>Det søger jeg:</b> opskrifter med mængder, som kan slås op i butikken.</p></div>
 <div id="andre"><h2>Noget andet</h2><p>Passer I ikke i de to?</p><p class="get">Skriv alligevel. To linjer er nok.</p></div>
 </div>
-<p class="rule"><b>Mennesket betaler altid selv.</b> HandleMCP kan aldrig bestille eller betale. Det gælder også i et samarbejde.</p>
+<div class="proof2" id="fakta">
+<p class="eyebrow">Open source på GitHub<span class="pstars" hidden> · <span class="pstars-n"></span> stjerner</span></p>
+<h2>Virker i dag med tre butikker</h2>
+<ul class="facts">
+<li>Søger varer, sammenligner hele kurven og fylder den billigste</li>
+<li>MIT-licens. Står i den officielle MCP Registry</li>
+<li>Kan aldrig bestille eller betale. Det gælder også i et samarbejde</li>
+</ul>
+<div class="with"><p>Virker med</p><ul><li>nemlig.com</li><li>BilkaToGo</li><li>REMA 1000</li></ul><p class="un">Uofficielt. Vi bruger butikkernes egne hjemmesider og er ikke tilknyttet dem.</p></div>
+</div>
 
 <div class="cta" id="skriv">
 <h2>Skriv til mig</h2>
@@ -108,7 +129,7 @@
 // Live GitHub star count. If the call fails, the link just says "GitHub".
 (function(){
   var el=document.getElementById('stars'),n=document.getElementById('stars-n');
-  function show(c){if(typeof c==='number'){n.textContent=c.toLocaleString('da-DK');el.hidden=false}}
+  function show(c){if(typeof c==='number'){var s=c.toLocaleString('da-DK');n.textContent=s;el.hidden=false;var ps=document.querySelector('.pstars');if(ps){ps.querySelector('.pstars-n').textContent=s;ps.hidden=false}}}
   try{var c=sessionStorage.getItem('hm-stars');if(c!==null){show(+c);return}}catch(e){}
   fetch('https://api.github.com/repos/NJohansen/handle-mcp',{headers:{Accept:'application/vnd.github+json'}})
     .then(function(r){return r.ok?r.json():null})
