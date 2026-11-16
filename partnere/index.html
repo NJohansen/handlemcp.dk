@@ -18,7 +18,10 @@
 .top{padding-bottom:56px}
 .intro{max-width:980px}
 .body{max-width:980px;margin:0 auto;padding:40px 0 0}
-.note{max-width:620px;margin:0 0 28px}
+.hi{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;align-items:center;margin:0 0 48px}
+.hi h2{margin:0 0 16px}
+.hi p{max-width:560px}
+.hi .shot{margin:0}
 .kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .kinds>div{background:var(--paper);border-radius:22px;padding:22px 24px 10px}
 .kinds h2{font-size:24px;letter-spacing:-.02em;line-height:1.2;margin:0 0 8px}
@@ -28,7 +31,7 @@
 .cta{margin-top:40px}
 .cta p{max-width:620px}
 .cta .addr{margin:18px 0 0;font-size:15px}
-@media (max-width:900px){.kinds{grid-template-columns:1fr}}
+@media (max-width:900px){.kinds{grid-template-columns:1fr}.hi{grid-template-columns:1fr;gap:28px;margin-bottom:36px}}
 </style>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="a6431afb-4982-436d-8b11-bfb33da3baa9" data-domains="handlemcp.dk" data-do-not-track="true"></script>
 </head>
@@ -58,7 +61,15 @@
 
 <main class="wrap">
 <div class="body">
-<p class="note">Vi får mange henvendelser om samarbejde. Derfor denne side. Find jer selv herunder, og skriv kort.</p>
+<div class="hi">
+<div>
+<h2>Hej, jeg er Niclas</h2>
+<p>Jeg byggede HandleMCP til min egen familie. Jeg gad ikke i Rema 6 gange om ugen mere.</p>
+<p>Nu får jeg mange henvendelser om samarbejde. Fra butikker, madplansapps og folk med en god idé. Det er jeg glad for.</p>
+<p>Derfor denne side. Find jer selv herunder, og skriv kort. Jeg læser alt selv.</p>
+</div>
+<figure class="shot"><img src="/niclas-nemlig.jpg" alt="Niclas ved hoveddøren med ugens kasser fra nemlig.com" width="864" height="1008" loading="lazy"><figcaption>Ugens indkøb, leveret til døren.</figcaption></figure>
+</div>
 <div class="kinds">
 <div id="butikker"><h2>Butikker</h2><p>Dagligvarer med levering eller afhentning. Også de små.</p><p class="get"><b>Det får I:</b> kunder, der lander hos jer med en fyldt kurv.</p></div>
 <div id="madplansapps"><h2>Madplansapps</h2><p>Opskrifter, madplaner og indkøbslister.</p><p class="get"><b>Det får I:</b> jeres madplan bliver til en kurv med rigtige priser og ugens tilbud.</p></div>
@@ -67,8 +78,8 @@
 <p class="rule"><b>Én ting ændrer vi ikke.</b> Mennesket betaler altid selv. HandleMCP kan aldrig bestille eller betale.</p>
 
 <div class="cta" id="skriv">
-<h2>Skriv til os</h2>
-<p>Tre ting er nok: firma, type og jeres idé. Vi læser alt.</p>
+<h2>Skriv til mig</h2>
+<p>Tre ting er nok: firma, type og jeres idé. Jeg svarer selv.</p>
 <a class="btn" href="mailto:nwj@mail.grokbot.com?subject=Partner%3A%20&amp;body=Firma%3A%0AType%20(butik%2C%20madplansapp%2C%20andet)%3A%0AId%C3%A9%3A%0A" data-umami-event="partner-mail">Skriv en mail <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
 <p class="addr">Eller skriv direkte til <a href="mailto:nwj@mail.grokbot.com">nwj@mail.grokbot.com</a>.</p>
 </div>
