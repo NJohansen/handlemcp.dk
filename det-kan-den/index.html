@@ -144,6 +144,19 @@
 <main class="wrap">
 <div class="page">
 <article>
+<h2 id="overblik">Overblik</h2>
+<table class="cmp kan ov">
+<thead><tr><th>Emne</th><th><a href="/nemlig-mcp/">nemlig</a></th><th><a href="/bilkatogo-api/">Bilka</a></th><th><a href="/rema-1000-mcp/">REMA</a></th></tr></thead>
+<tbody>
+<tr><th><a href="#madplan">Madplan med budget</a></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td></tr>
+<tr><th><a href="#tilbud">Ugens tilbud</a></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td></tr>
+<tr><th><a href="#priser">Priser og sammenligning</a></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td></tr>
+<tr><th><a href="#opskrifter">Opskrifter</a></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="nej" aria-label="Nej">–</span></td></tr>
+<tr><th><a href="#kurv">Kurven</a><small>I REMA 1000: indkøbslisten i appen.</small></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td></tr>
+<tr><th><a href="#kurv">Tidligere ordrer</a></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="nej" aria-label="Nej">–</span></td></tr>
+<tr><th><a href="#levering">Leveringstider</a><small>I REMA 1000: Køb &amp; Hent.</small></th><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td><td><span class="ja" aria-label="Ja">✓</span></td></tr>
+</tbody></table>
+<p class="small">Et flueben betyder, at det virker i den butik. Tryk på et emne for at se alt det enkelte.</p>
 <h2 id="madplan">Kan en AI lave ugens madplan og handle ind?</h2>
 <p>Ja. Det er det, de fleste bruger HandleMCP til. Du giver et budget. Den planlægger ugen på tilbud, finder den billigste butik og fylder kurven.</p>
 <div class="copy"><p>Vi har 4.000 kr. til mad om måneden. Lav ugens madplan.</p></div>
@@ -155,7 +168,6 @@
 <li><b>Den fylder kurven efter dit ja.</b> Du tjekker, vælger tid og betaler selv.</li>
 </ol>
 <p>Læs mere om <a href="/ai-madplan-budget/">AI madplan med budget</a>.</p>
-<p class="small">Tabellerne herunder viser alt det enkelte. Et flueben betyder, at det virker i den butik.</p>
 <h2 id="tilbud">Kan den finde ugens tilbud?</h2>
 <p>Ja. Den læser ugens tilbud i alle tre butikker, også varer du ikke selv ville søge på. Gratis varer kommer med.</p>
 <table class="cmp kan">
@@ -245,7 +257,7 @@
 <a class="btn" href="https://tally.so/r/ArKdkW?ref=seo-det-kan-den" data-tally="ArKdkW" data-sted="seo-det-kan-den">Skriv mig på ventelisten <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5"/></svg></i></a>
 </div>
 </article>
-<aside class="toc" aria-label="På siden"><b>På siden</b><ul><li><a href="#madplan">Madplan</a></li><li><a href="#tilbud">Tilbud</a></li><li><a href="#priser">Priser</a></li><li><a href="#opskrifter">Opskrifter</a></li><li><a href="#kurv">Kurven</a></li><li><a href="#levering">Levering</a></li><li><a href="#ikke">Det kan den ikke</a></li><li><a href="#faq">Spørgsmål</a></li></ul></aside>
+<aside class="toc tocpick" aria-label="På siden"><b>På siden</b><ul><li><a href="#overblik">Overblik</a></li><li><a href="#madplan">Madplan</a></li><li><a href="#tilbud">Tilbud</a></li><li><a href="#priser">Priser</a></li><li><a href="#opskrifter">Opskrifter</a></li><li><a href="#kurv">Kurven</a></li><li><a href="#levering">Levering</a></li><li><a href="#ikke">Det kan den ikke</a></li><li><a href="#faq">Spørgsmål</a></li></ul><div class="pick" hidden><b>Vis kun</b><div role="group" aria-label="Vis kun det, der virker i én butik"><button type="button" aria-pressed="true">Alle</button><button type="button" data-store="1" aria-pressed="false">nemlig.com</button><button type="button" data-store="2" aria-pressed="false">BilkaToGo</button><button type="button" data-store="3" aria-pressed="false">REMA 1000</button></div></div></aside>
 </div>
 
 <div class="more"><h2>Læs også</h2><div class="cards"><a href="/installation/"><b>Installation for begyndere</b><span>Trin for trin på Mac og Windows. Ca. 10 minutter.</span></a><a href="/ai-madplan-budget/"><b>AI madplan med budget</b><span>En prompt til at kopiere, og hvad HandleMCP lægger til.</span></a><a href="/privatliv/"><b>Privatliv</b><span>Hvad der tælles, og hvad der aldrig forlader din computer.</span></a></div></div>
@@ -315,6 +327,21 @@
   var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')}})},{rootMargin:'0px 0px -70% 0px'});
   Object.keys(map).forEach(function(id){var h=document.getElementById(id);if(h)io.observe(h)});
+})();
+</script>
+<script>
+// "Vis kun": hide the lines that do not work in the chosen store. Without JS every line shows.
+(function(){
+  var box=document.querySelector('.pick');if(!box)return;box.hidden=false;
+  var btns=[].slice.call(box.querySelectorAll('button'));
+  box.addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;var n=+b.getAttribute('data-store')||0;
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    [].forEach.call(document.querySelectorAll('.kan:not(.ov)'),function(t){
+      var shown=0;[].forEach.call(t.tBodies[0].rows,function(r){var off=n&&r.cells[n].querySelector('.nej');r.hidden=!!off;if(!off)shown++});
+      t.hidden=!shown;
+    });
+  });
 })();
 </script>
 </body>
