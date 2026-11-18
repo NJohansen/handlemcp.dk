@@ -23,6 +23,7 @@ For developers:
 - [REMA 1000 MCP](https://handlemcp.dk/rema-1000-mcp/): REMA 1000 has no public API; search and offers without login, the shopping list "handle-mcp" as the cart (never the order or payment), REMA vs nemlig.com and BilkaToGo, five pitfalls (never resend a POST blindly, never read a list with its users, one product on two lines, ids as numbers and strings, short capitalised names)
 
 For families:
+- [Hvad kan HandleMCP?](https://handlemcp.dk/det-kan-den/): the full list of what it can do, line by line, with a mark per store (nemlig.com, BilkaToGo, REMA 1000); what it can never do and what it cannot do yet
 - [Installation](https://handlemcp.dk/installation/): step-by-step setup for non-developers on Mac and Windows: Claude Desktop, Codex, Grok Build and Grok Bot, a prompt that lets the assistant install it, first prompts to try, troubleshooting
 - [AI madplan med budget](https://handlemcp.dk/ai-madplan-budget/): a meal-plan-on-a-budget prompt to copy, and what HandleMCP adds (real prices and offers)
 - [Madkontoen hele måneden](https://handlemcp.dk/madkonto-hele-maaneden/): weekly amount = food account balance ÷ weeks left, five rules for making the food budget last the month
@@ -34,19 +35,23 @@ For companies:
 
 ## What it can do
 
-nemlig.com and BilkaToGo, see [handlemcp.dk/#kan](https://handlemcp.dk/#kan):
+The full list, with a mark per store: [handlemcp.dk/det-kan-den/](https://handlemcp.dk/det-kan-den/).
 
-- Read this week's offers, including free gifts and daily deals.
-- Search products: price, price per kg/l, offers, the right number of packs.
-- Price a whole shopping list in both stores, with delivery fees and minimum order, and name the cheapest.
+In nemlig.com, BilkaToGo and REMA 1000:
+
+- Read this week's offers, also per category, including free gifts.
+- Search products: price, price per kg/l, offers; sort by the cheapest.
+- Read nutrition per 100 g/ml from the label.
+- Price a whole shopping list in every store, with fees and minimum order, and name the cheapest.
 - Plan within a budget the human gives, built on the offers.
-- Read the stores' own recipes, with products and prices for the number of persons.
-- Fill the cart after the human says yes. Only the cart.
-- List free delivery times with the fee per slot, cheapest first. The human chooses.
-- Read past orders, for "what we usually buy".
+- Show the cart, and fill it after the human says yes. Only the cart. At REMA 1000 the cart is the shopping list "handle-mcp" in REMA's app.
+- List free delivery times with the fee per slot, cheapest first (REMA 1000: Køb & Hent pickup times). The human chooses.
 - Give one link to the cart, where the human checks and pays.
 
-REMA 1000: search and offers without login; with login, Køb & Hent pickup times and the shopping list "handle-mcp" in REMA's app as the cart. The human turns the list into an order, picks the time and pays in REMA's app. No recipes yet.
+In nemlig.com and BilkaToGo only:
+
+- Read the stores' own recipes, with products and prices, and put a recipe's products in the cart after a yes.
+- Read past orders, for "what we usually buy".
 
 ## What it cannot do
 
