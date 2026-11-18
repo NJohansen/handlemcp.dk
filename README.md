@@ -10,7 +10,7 @@ The MCP server itself, its docs and its MIT licence live in [NJohansen/handle-mc
 
 ## Topic pages
 
-`nemlig-mcp/`, `bilkatogo-api/`, `ai-madplan-budget/`, `madkonto-hele-maaneden/` and `billigere-end-maaltidskasse/` share `sider.css`. Install commands say `handle-mcp@latest`, so a release needs no change here.
+`det-kan-den/`, `nemlig-mcp/`, `bilkatogo-api/`, `ai-madplan-budget/`, `madkonto-hele-maaneden/` and `billigere-end-maaltidskasse/` share `sider.css`. Install commands say `handle-mcp@latest`, so a release needs no change here.
 
 ## IndexNow
 
