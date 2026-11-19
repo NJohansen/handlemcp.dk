@@ -752,6 +752,9 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 .cmp thead small,.cmp .free{color:#2f4a22}
 /* v32: the first-time questions stay long enough to read. A question waits 8 s before it answers itself (was 2.6 s). The script uses the same 8 s. */
 .q.auto .opt.cd{animation-duration:8s}
+/* v33: a faint sky behind the hero. The flat blue lies over the picture at 25 %, so the sky is a feeling, not a photo. The blue alone shows while the picture loads. */
+.hero::before{background:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),var(--sand) url(himmel.webp) center/cover no-repeat}
+@media (max-width:900px){.hero::before{background-image:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),url(himmel-m.webp)}}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
