@@ -755,6 +755,8 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 /* v33: a faint sky behind the hero. The flat blue lies over the picture at 25 %, so the sky is a feeling, not a photo. The blue alone shows while the picture loads. */
 .hero::before{background:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),var(--sand) url(himmel.webp) center/cover no-repeat}
 @media (max-width:900px){.hero::before{background-image:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),url(himmel-m.webp)}}
+/* v34: the star badges in the menu and the hero are dark with a white star and number, like the dot in the buttons. */
+.stars,nav .stars,.hero.g .textlink .stars{background:var(--ink);border-color:var(--ink);color:#fff}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
