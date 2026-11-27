@@ -755,6 +755,8 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 /* v33: a faint sky behind the hero. The flat blue lies over the picture at 25 %, so the sky is a feeling, not a photo. The blue alone shows while the picture loads. */
 .hero::before{background:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),var(--sand) url(himmel.webp) center/cover no-repeat}
 @media (max-width:900px){.hero::before{background-image:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),url(himmel-m.webp)}}
+/* v34: the label in the hero pill is as dark as the dot in the buttons, and its corners follow the pill's. */
+.hero.g .pill b{background:var(--ink);border-radius:8px}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
@@ -813,7 +815,7 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
   <div class="stage">
   <div class="hero g">
     <div>
-      <a class="pill" href="rema-1000-mcp/"><b>Nyhed</b> REMA 1000 tilføjet <span aria-hidden="true">→</span></a>
+      <a class="pill" href="https://www.dr.dk/lyd/special-radio/prompt/prompt-2026/huang-more-time-og-chatgpt-dots-11802621047" data-umami-event="dr-prompt" data-umami-event-sted="hero"><b>Nyhed</b> Omtalt i DR's podcast Prompt <span aria-hidden="true">→</span></a>
       <h1>Ugens indkøb<br class="d"> for familier,<br class="d"> der har travlt.<span class="chip" aria-hidden="true"><img src="chip.svg" alt="Indkøbskurv der fyldes med varer" width="40" height="36"></span></h1>
       <p class="sub">Mindre tid på indkøb, mere tid til familien.<br>Sig, hvad ugen må koste. Du får en madplan med opskrifter og en fyldt kurv i den billigste butik. Du betaler selv.</p>
       <div class="ctas">
