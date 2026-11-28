@@ -25,6 +25,7 @@ For developers:
 For families:
 - [Hvad kan HandleMCP?](https://handlemcp.dk/det-kan-den/): the full list of what it can do, line by line, with a mark per store (nemlig.com, BilkaToGo, REMA 1000); what it can never do and what it cannot do yet
 - [Installation](https://handlemcp.dk/installation/): step-by-step setup for non-developers on Mac and Windows: Claude Desktop, Codex, Grok Build and Grok Bot, a prompt that lets the assistant install it, first prompts to try, troubleshooting
+- [Ugens madplan på tilbud](https://handlemcp.dk/ugens-madplan/): a new plan every Saturday: five family dinners for four built on the week's offers in one store, with the full shopping list and the price per portion
 - [AI madplan med budget](https://handlemcp.dk/ai-madplan-budget/): a meal-plan-on-a-budget prompt to copy, and what HandleMCP adds (real prices and offers)
 - [Madkontoen hele måneden](https://handlemcp.dk/madkonto-hele-maaneden/): weekly amount = food account balance ÷ weeks left, five rules for making the food budget last the month
 - [Madbudget med AI](https://handlemcp.dk/madbudget-med-ai/): how one family of four keeps a food budget of 4,000 kr. a month with an AI assistant: weekly budget = balance ÷ weeks left, five steps, two ways to give the balance (type it, or read-only via BankMCP)

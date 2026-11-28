@@ -17,7 +17,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 PAGES = ["index.html", "privatliv/index.html", "kom-i-gang/index.html", "partnere/index.html"] + [f"{s}/index.html" for s in (
-    "nemlig-mcp", "bilkatogo-api", "rema-1000-mcp", "ai-madplan-budget", "madkonto-hele-maaneden", "madbudget-med-ai", "billigere-end-maaltidskasse", "installation", "det-kan-den")]
+    "nemlig-mcp", "bilkatogo-api", "rema-1000-mcp", "ugens-madplan", "ai-madplan-budget", "madkonto-hele-maaneden", "madbudget-med-ai", "billigere-end-maaltidskasse", "installation", "det-kan-den")]
 SITE = "https://handlemcp.dk"
 
 
