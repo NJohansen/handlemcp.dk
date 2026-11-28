@@ -757,6 +757,8 @@ footer p.big{font-size:clamp(44px,6.6vw,100px)}
 @media (max-width:900px){.hero::before{background-image:linear-gradient(rgba(156,203,243,.25),rgba(156,203,243,.25)),url(himmel-m.webp)}}
 /* v34: the label in the hero pill is as dark as the dot in the buttons, and its corners follow the pill's. */
 .hero.g .pill b{background:var(--ink);border-radius:8px}
+/* v35: the star badge in the menu is dark with a white star and number, like the dot in the buttons. The one in the hero stays light, so the yellow button is the heaviest thing there. */
+nav .stars{background:var(--ink);border-color:var(--ink);color:#fff}
 </style>
 <script>try{if(!sessionStorage.getItem('pl')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('pl','1');document.documentElement.classList.add('pl');setTimeout(function(){document.documentElement.classList.remove('pl')},2600)}}catch(e){}</script>
 <script type="application/ld+json">
